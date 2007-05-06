@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+<Description about="urn:mozilla:install-manifest">
+	<em:id>{C4A22BA1-6D61-45F1-82A9-140FD33F1110}</em:id>
+	<em:version>1.0.4.47</em:version>
+
+	<!-- Mozilla Firefox -->	
+	<em:targetApplication>
+		<Description>
+			<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+			<em:minVersion>1.0</em:minVersion>
+			<em:maxVersion>2.0.0.*</em:maxVersion>
+		</Description>
+	</em:targetApplication>
+
+	<!-- Thunderbird -->
+		
+	<em:targetApplication>
+			
+	<Description>
+				
+		<em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+				
+		<em:minVersion>0.5</em:minVersion>
+				
+		<em:maxVersion>2.0.0.*</em:maxVersion>
+			
+	</Description>
+		
+	</em:targetApplication>
+		
+		
+
+	<!-- Mozilla Suite -->
+   
+	<em:targetApplication>
+      
+		<Description>
+        
+			<em:id>{86c18b42-e466-45a9-ae7a-9b95ba6f5640}</em:id>
+        
+			<em:minVersion>1.7</em:minVersion>
+        
+			<em:maxVersion>1.7</em:maxVersion>
+      
+		</Description>
+   
+	</em:targetApplication>
+
+
+	<!-- Sunbird -->
+   
+	<em:targetApplication>
+      
+		<Description>
+        
+			<em:id>{718e30fb-e89b-41dd-9da7-e25a45638b28}</em:id>
+        
+			<em:minVersion>0.3</em:minVersion>
+        
+			<em:maxVersion>0.3.1</em:maxVersion>
+
+		</Description>
+   
+	</em:targetApplication>
+
+
+	<!-- Netscape -->
+	<em:targetApplication> 
+      
+		<Description>
+        
+			<em:id>{3db10fab-e461-4c80-8b97-957ad5f8ea47}</em:id>
+        
+			<em:minVersion>8.0</em:minVersion>
+        
+			<em:maxVersion>8.0.4</em:maxVersion>
+      
+		</Description>
+    
+	</em:targetApplication>
+    
+    
+
+	<!-- Flock -->
+	<em:targetApplication>
+  		<Description>
+    			<em:id>{a463f10c-3994-11da-9945-000d60ca027b}</em:id>
+    			<em:maxVersion>1.0+</em:maxVersion>
+    			<em:minVersion>1.0+</em:minVersion>
+  		</Description>
+	</em:targetApplication>
+	
+	<em:name>Hebrew Calendar</em:name>
+	<em:description>Show the Hebrew date in your browser's status bar.</em:description>
+	<em:creator>Igor Ziselman (http://hcalendar@gmail.com)</em:creator>
+	<em:homepageURL>http://hcalendar.blogspot.com/</em:homepageURL>
+	<em:contributor>Hebrew Calendar engine by Abu Mami (http://kaluach.org/)</em:contributor>
+	<em:contributor>Jewish Calendar engine by Gabriel Zerbib (http://calj.net/)</em:contributor>
+	<em:contributor>Web Service ZipCodes by Sergey Kats (http://www.webservicelist.com/webservices/f.asp?fid=74105)</em:contributor>
+	<em:contributor>Hebrew (he-IL) Localized by Reuven Gonen</em:contributor>
+
+	<em:optionsURL>chrome://hcalendar/content/options.xul</em:optionsURL>
+	<em:aboutURL></em:aboutURL>
+	
+	<em:file>
+		<Description about="urn:mozilla:extension:file:hcalendar.jar">
+			<em:package>content/hcalendar/</em:package>
+			<em:locale>locale/en-US/hcalendar/</em:locale>
+			<em:locale>locale/he-IL/hcalendar/</em:locale>
+		</Description>
+	</em:file>
+</Description>
+
+</RDF>
