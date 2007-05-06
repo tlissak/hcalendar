@@ -1,0 +1,182 @@
+1.0.4.47
+	- translate few holiday names to Hebrew (by Zvi);
+1.0.4.46
+	- Montreal is added;
+	- improvement (Hebrew language) of Omer showing; 
+1.0.4.45
+	- fix the problem with displaying "Israel Independence Day" (thanks to David);
+1.0.4.44
+	- improvement of Omer showing;
+1.0.4.43
+	- Support Thunderbird 2.0.0.0;
+1.0.4.42
+	- Show "Count Today's Omer";
+	- Buenos Aires, Argentina is added;
+1.0.4.41
+	- translated to Hebrew by Reuven;
+	- Hong Kong coordinates are changed;
+1.0.4.40
+	- Converter "Hebrew to Civil" is implemented;
+	- Dallas, Texas is added;
+	- Firefox 2 Release Candidate is supported;
+1.0.4.39
+	- "year showing problem" is fixed (Language "Hebrew (+numbers)");
+1.0.4.38
+	- Hong Kong is added;
+	- Mexico City is reincluded;
+	- Denver is added;
+1.0.4.37
+	- fix spell error;
+1.0.4.36
+	- hide error window "ReferenceError: JEvent is not defined";
+1.0.4.35
+	- Show Hebrew week's day (thanks for Stan).
+1.0.4.34
+	- "Leil Shabbat" is shown from Friday sunset to Shabbat sunrise (thanks for Stan).
+1.0.4.33
+	- Seoul is added;
+	- Frankfurt is added;
+	- Showing and calculation of Hebrew year's are changed (thanks for Mendel);
+1.0.4.32
+	- Mexico is added;
+	- support Mozilla Firefox 2.0b2;
+1.0.4.31
+	- Vienna (Austria) is added;
+1.0.4.30
+	- support Mozilla Firefox 2.0;
+1.0.4.29
+	- translated to Hebrew by Reuven; 
+1.0.4.28
+	- show "Shema" and "Minha Gdola" times in hint;
+1.0.4.27
+	- new strings are translated to Hebrew;
+1.0.4.26
+	- new options "Show Parsha in Israel" is added;
+1.0.4.25 
+	- Jewish Calendar Engine by by Gabriel Zerbib (http://calj.net/) is inserted;
+1.0.4.24
+	- gematria: fixing of problems (mem, nun, kaf, tzadi, pe);
+1.0.4.23
+	- gematriya window is added;
+	- Hebrew locale version is fixed (new strings are used by English only);
+	- Parsha names are added for few monthes;
+1.0.4.22
+	- date converter (Civil -> Hebrew) is added;
+1.0.4.21
+	- few locations are added;
+1.0.4.20
+	- hint viewing optimization
+1.0.4.19
+	- "Erev Shabbat" is changed to "Leil Shabbat"
+1.0.4.18
+	- "Options" dialog improvements;
+        - "evening" GUI improvements;
+1.0.4.17
+	- "Options" dialog improvements;
+1.0.4.16
+        - "Shabbat begins" is translated to Hebrew;
+	- "Parsha hint" optimization (ask Parsha name once in week);
+1.0.4.15
+	- show Parsha in hint;
+	- spell mistake is fixed;
+	- problem with Locations (Hebrew version only) is fixed;
+1.0.4.12
+	- translated to Hebrew;
+1.0.4.11
+	- Beit-Shemesh is added;
+	- problem with coordinates is fixed;
+1.0.4.10
+	- location by coordinates is added;
+	- "Tu b Shvat" is translated to Hebrew;
+1.0.4.09
+	- font size is added;
+	- all strings are removed from dialog "Options" to .dtd file;
+1.0.4.08
+	- few locations are added;
+1.0.4.07
+        - few locations are added;
+	- color picker is added in dialog "Options";
+	- .dtd file is created (for menu only);
+1.0.4.06
+        - few locations are added;
+        - few GUI changes are made in "Options" dialog;
+1.0.4.05
+	- refactoring (dialog "Options", optimization of menu filling);
+1.0.4.04
+        - correct support of Thunderbird 1.5 (popup menu, hint, open links);
+	- translate "evening" to Hebrew;
+1.0.4.03
+	- add new feature "switch day by sunset";
+1.0.4.02
+        - change menu caption from "Copy to Clipboard" to "Copy Hebrew Date to Clipboard";
+1.0.4.01
+        - locations Prague, Tokio, Minsk are added;
+        - menu command "Copy to clipboard" is added;
+1.0.4.00
+	- location by North America ZIP code;
+	- location "Rio de Janeiro" is added;
+1.0.3.20
+	- add Chicago, Paris;
+1.0.3.19
+        - show "Shabbat Candle Lighting Time";
+        NOTE: PLEASE, PAY ATTENTION, Shabbat time of the hcalendar CANNOT be absolutely exact.
+1.0.3.18
+        - Berlin is added;
+1.0.3.17
+	- add language Heblish (English + Hebrew numbers);
+        - Toronto, New York, London are added;
+1.0.3.16
+	- select colors by color table;
+	- add few Israeli towns;
+	- show sunrise and sunset in hint message;
+1.0.3.15
+	- show "sun rise" time in hint message;
+	- add "Text Color" (default: black);
+        - change default of "holiday color" from red to blue;
+	- dialog "About" improvement;
+1.0.3.14
+        - dialog "Options"
+          - "holiday color" selection is added;
+
+1.0.3.12
+        - fix spelling mistakes;
+	- fix gershaim problems;
+	- fix location default problem;
+	- correct showing update by "options" dialog changes (from browser menu);
+
+1.0.3.10
+        - create dialog "Options"
+          - "Language" combobox;
+          - "Location" combobox;
+	- "Hanukkah" is translated to Hebrew;
+
+1.0.2.94
+	- show Hebrew day
+	- 3 languages support (English, Hebrew, Heblish)
+
+1.0.2.36
+        - support Netscape
+
+1.0.2.29
+        - small design changes
+
+1.0.2.26
+        - support Mozilla Suite
+        - support Mozilla Thunderbird
+
+1.0.2.8
+	- improvement showing of date on Hebrew
+
+1.0.2.2
+	- traslate on Hebrew
+		- Shabbat
+		- year (as hebrew letters)
+	- red color for Hebrew holidays (include Shabbat)
+	- tooltip (show number days before Shabbat)
+
+1.0.1.32
+	- select language (English/Hebrew)
+	- translate monthes on Hebrew
+
+1.0.1.2 
+	- show "Shabbat" and Hebrew holidays
