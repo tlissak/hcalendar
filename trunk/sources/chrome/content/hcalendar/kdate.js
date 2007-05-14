@@ -148,16 +148,16 @@ var hebDayOnHebrew = new makeArray(
 	'\u05DC\u0027\u0027\u05D6', 	// 'Lamed-Zayin',// 37
 	'\u05DC\u0027\u0027\u05D7', 	// 'Lamed-Chet',	// 38
 	'\u05DC\u0027\u0027\u05D8', 	// 'Lamed-Tet',	// 39
-	'\u05DD\u0027',			// 'Mem'     	// 40
-	'\u05DD\u0027\u0027\u05D0', 	// 'Mem-Alef',	// 41
-	'\u05DD\u0027\u0027\u05D1', 	// 'Mem-Bet',	// 42
-	'\u05DD\u0027\u0027\u05D2', 	// 'Mem-Gimel',// 43
-	'\u05DD\u0027\u0027\u05D3', 	// 'Mem-Dalet',// 44
-	'\u05DD\u0027\u0027\u05D4', 	// 'Mem-He',	// 45
-	'\u05DD\u0027\u0027\u05D5', 	// 'Mem-Vav',	// 46
-	'\u05DD\u0027\u0027\u05D6', 	// 'Mem-Zayin',// 47
-	'\u05DD\u0027\u0027\u05D7', 	// 'Mem-Chet',	// 48
-	'\u05DD\u0027\u0027\u05D8' 	// 'Mem-Tet',	// 49
+	'\u05DE\u0027',			// 'Mem'     	// 40
+	'\u05DE\u0027\u0027\u05D0', 	// 'Mem-Alef',	// 41
+	'\u05DE\u0027\u0027\u05D1', 	// 'Mem-Bet',	// 42
+	'\u05DE\u0027\u0027\u05D2', 	// 'Mem-Gimel',// 43
+	'\u05DE\u0027\u0027\u05D3', 	// 'Mem-Dalet',// 44
+	'\u05DE\u0027\u0027\u05D4', 	// 'Mem-He',	// 45
+	'\u05DE\u0027\u0027\u05D5', 	// 'Mem-Vav',	// 46
+	'\u05DE\u0027\u0027\u05D6', 	// 'Mem-Zayin',// 47
+	'\u05DE\u0027\u0027\u05D7', 	// 'Mem-Chet',	// 48
+	'\u05DE\u0027\u0027\u05D8' 	// 'Mem-Tet',	// 49
 );
 
 /*
