@@ -90,8 +90,9 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 </window>
 
-<statusbar id="status-bar">
 
+<statusbar id="status-bar">
+		
 <statusbarpanel id="statusbar-hcalendar-display"
  
 	insertafter=""
@@ -99,12 +100,12 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 	context="hcalendar-contextmenu"
 	tooltip="hcalendar-tooltip" 
 	onclick="HCalendar.clickHandler(event)"
- 
-	ondblclick="HCalendar.DblclickHandler(event)"
-
-	style="min-width: 16px; white-space: nowrap; padding: 0px;" />
+ style="min-width: 16px; white-space: nowrap; padding: 0px;" />
 	
 </statusbar>
+
+
+
 
 
 </overlay>

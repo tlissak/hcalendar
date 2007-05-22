@@ -35,6 +35,7 @@
 		<RDF:li resource="chrome://navigator/content/navigator.xul"/>
 	    	<RDF:li resource="chrome://messenger/content/mailWindowOverlay.xul"/>
 	    	<RDF:li resource="chrome://messenger/content/messengercompose/messengercompose.xul"/>
+		<RDF:li resource="chrome://calendar/content/calendar.xul"/>
 	</RDF:Seq>
 
  
@@ -71,7 +72,7 @@
 
 
   	<!-- Sunbird -->
-  	<RDF:Seq about=""chrome://browser/content/sunbird.xul">
+  	<RDF:Seq about="chrome://calendar/content/calendar.xul">
     		<RDF:li>chrome://hcalendar/content/sunbirdOverlay.xul</RDF:li>
   	</RDF:Seq>
 

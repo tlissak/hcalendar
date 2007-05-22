@@ -1,3 +1,5 @@
+1.0.4.49
+	- Enhancement 3 "Compatibility with Sunbird" (http://code.google.com/p/hcalendar/issues/detail?id=3&can=2&q=)
 1.0.4.48 
 	- BUG004 "Instead of Mem-Sofit should be regular Mem in Sfirat HaOmer showing;
 1.0.4.47
