@@ -1,3 +1,5 @@
+1.0.4.50
+	- Enhancement 8 "Compatibility with Sunbird v0.5.*" (http://code.google.com/p/hcalendar/issues/detail?id=8&can=2&q=)
 1.0.4.49
 	- Enhancement 3 "Compatibility with Sunbird" (http://code.google.com/p/hcalendar/issues/detail?id=3&can=2&q=)
 1.0.4.48 
