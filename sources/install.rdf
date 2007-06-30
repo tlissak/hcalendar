@@ -61,7 +61,7 @@
         
 			<em:minVersion>0.3</em:minVersion>
         
-			<em:maxVersion>0.5.*</em:maxVersion>
+			<em:maxVersion>0.6a1</em:maxVersion>
 
 		</Description>
    
