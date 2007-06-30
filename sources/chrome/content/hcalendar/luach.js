@@ -132,31 +132,53 @@ function selectHolidays(form) {
 	doCal(m, y);
 }
 
-function doCal(month, year) {
+function doCal(month, year) 
+{
 	var ret = calendar(month, year);
-	var doc = parent.frames.result.document;
+	
+	//var doc = parent.frames.result.document;
+	var doc = parent.frames[1].document;
 	doc.close();
+	
 	doc.open("text/html");
+	
 	var result = BuildLuachHTML(ret);
+	
 	doc.write(result);
+	
 	doc.close();
+
 }
 
-function calendar(selM, selY) {
+
+function calendar(selM, selY) 
+{
 	var m = selM + 1;
+	
 	var y = selY;
 	var d = civMonthLength(m, y);
+	
 	var firstOfMonth = new Date (y, selM, 1);
+	
 	var startPos = firstOfMonth.getDay() + 1;
+	
 	var retVal = new Object();
+	
 	retVal[1] = startPos;
+	
 	retVal[2] = d;
+	
 	retVal[3] = m;
+	
 	retVal[4] = y;
+	
 	return (retVal);
+
 }
 
-function BuildLuachHTML(parms)  {
+
+function BuildLuachHTML(parms)  
+{
 	var hdrSize = "+2";				// size of tables header font
 	var border = 2;					// 3D height of table's border
 	var cellspacing = 4;			// width of table's border
