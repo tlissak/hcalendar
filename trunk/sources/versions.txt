@@ -1,3 +1,5 @@
+1.0.4.51 
+	- "Beit Arye" instead of "Beit Arie"
 1.0.4.50
 	- Issue 1 menu "Open Hebrew Calendar" doesn't open correct "Hebrew Calendar" page
 	- Issue 15 "add coordinates of Beit Arie"
