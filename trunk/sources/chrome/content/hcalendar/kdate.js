@@ -506,7 +506,7 @@ var moadimOnEnglish = new makeArray(
 	'Fast of Gedalia',	//  hlFast_of_Gedalia2 
 	'Yom Kippur',		//  hlYomKippur 
 	'Sukkot',		//  hlSukkot 
-	'Sukkot (d)',		//  hlSukkotD 
+	'Isru Chag',		//  hlSukkotD 
 	'Chanukkah',		//  hlChanukkah 
 	'Fast of Tevet',	//  hlFast_of_Tevet
 	'Tu b Shvat',		//  hlTu_b_Shvat
@@ -534,7 +534,7 @@ var moadimOnHebrew = new makeArray(
 	'\u05E6\u05D5\u05DD\u0020\u05D2\u05D3\u05DC\u05D9\u05D4',			//  hlFast_of_Gedalia2 
 	'\u05D9\u05D5\u05DD\u0020\u05DB\u05E4\u05D5\u05E8',				//  hlYomKippur 
 	'\u05E1\u05D5\u05DB\u05D5\u05EA',						//  hlSukkot 
-	'\u05E1\u05D5\u05DB\u05D5\u05EA (d)',						//  hlSukkotD 
+	'\u05D0\u05E1\u05E8\u05D5\u0020\u05D7\u05D2',						//  hlSukkotD 
 	'\u05D7\u05E0\u05D5\u05DB\u05D4',	//  hlChanukkah 05D7 05E0 05D5 05DB 05D4
 	'\u05E6\u05D5\u05DD \u05E2\u05E9\u05E8\u05D4 \u05D1\u05D8\u05D1\u05EA',		//  hlFast_of_Tevet (Tsom Asara BeTevet)
 	'\u05E8\u05D0\u05E9\u0020\u05D4\u05E9\u05E0\u05D4\u0020\u05DC\u05D0\u05D9\u05DC\u05E0\u05D5\u05EA', //  hlTu_b_Shvat
