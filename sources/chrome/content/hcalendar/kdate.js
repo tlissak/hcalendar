@@ -379,7 +379,7 @@ function moadim(cday, cmonth, cyear, hday, hmonth, dow) {
 		else if(hday >= 15 && hday <= 22)
 			return "Sukkot"
 		else if(hday == 23)
-			return "Sukkot (d)"
+			return "Isru Chag"
 	}
 	else if(hmonth == 8) {
 		if(hday >= 25)
@@ -432,7 +432,7 @@ function moadim(cday, cmonth, cyear, hday, hmonth, dow) {
 		else if(hday >= 15 && hday <= 21)
 			return "Pesach"
 		else if(hday == 22)
-			return "Pesach (d)"
+			return "Isru Chag" 
 	}
 	else if(hmonth == 1) {
 		if(hday == 3 && dow == 5)
@@ -452,7 +452,7 @@ function moadim(cday, cmonth, cyear, hday, hmonth, dow) {
 		if(hday == 6)
 			return "Shavuot"
 		else if(hday == 7)
-			return "Shavuot (d)"
+			return "Isru Chag"
 	}
 	else if(hmonth == 3) {
 		if(hday == 17 && dow != 7)
@@ -515,13 +515,13 @@ var moadimOnEnglish = new makeArray(
 	'Shushan Purim',	//  hlShushanPurim
 	'Taanit Bechorot',	//  hlTaanitBechorot
 	'Pesach',		//  hlPesach
-	'Pesach (d)',		//  hlPesachD
+	'Isru Chag',		//  hlPesachD
 	'Yom Ha Atzmaut',	//  hlYomHaAtzmaut
 	'Pesah sheni',		//  hlPesahSheni
 	'Lag B Omer',		//  hlLag_B_Omer
 	'Yom Yerushalayim',	//  hlYomYerushalayim
 	'Shavuot',		//  hlShavuot
-	'Shavuot (d)',		//  hlShavuotD
+	'Isru Chag',		//  hlShavuotD
 	'Fast of Tammuz',	//  hlFast_of_Tammuz
 	'Tisha B Av',		//  hlTisha_B_Av
 	'Tu B Av'		//  hlTu_B_Av
@@ -534,7 +534,7 @@ var moadimOnHebrew = new makeArray(
 	'\u05E6\u05D5\u05DD\u0020\u05D2\u05D3\u05DC\u05D9\u05D4',			//  hlFast_of_Gedalia2 
 	'\u05D9\u05D5\u05DD\u0020\u05DB\u05E4\u05D5\u05E8',				//  hlYomKippur 
 	'\u05E1\u05D5\u05DB\u05D5\u05EA',						//  hlSukkot 
-	'\u05D0\u05E1\u05E8\u05D5\u0020\u05D7\u05D2',						//  hlSukkotD 
+	'\u05D0\u05E1\u05E8\u05D5\u0020\u05D7\u05D2',					//  hlSukkotD 
 	'\u05D7\u05E0\u05D5\u05DB\u05D4',	//  hlChanukkah 05D7 05E0 05D5 05DB 05D4
 	'\u05E6\u05D5\u05DD \u05E2\u05E9\u05E8\u05D4 \u05D1\u05D8\u05D1\u05EA',		//  hlFast_of_Tevet (Tsom Asara BeTevet)
 	'\u05E8\u05D0\u05E9\u0020\u05D4\u05E9\u05E0\u05D4\u0020\u05DC\u05D0\u05D9\u05DC\u05E0\u05D5\u05EA', //  hlTu_b_Shvat
@@ -542,14 +542,14 @@ var moadimOnHebrew = new makeArray(
 	'\u05E4\u05BC\u05D5\u05BC\u05E8\u05B4\u05D9\u05DD', //  hlPurim
 	'\u05E9\u05C1\u05D5\u05BC\u05E9\u05C1\u05B8\u05DF\u0020\u05E4\u05BC\u05D5\u05BC\u05E8\u05B4\u05D9\u05DD', //  hlShushanPurim
 	'\u05EA\u05E2\u05E0\u05D9\u05EA\u0020\u05D1\u05DB\u05D5\u05E8\u05D5\u05EA',	//  hlTaanitBechorot
-	'\u05E4\u05E1\u05D7',			//  hlPesach
-	'\u05E4\u05E1\u05D7 (d)',		//  hlPesachD
+	'\u05E4\u05E1\u05D7',								//  hlPesach
+	'\u05D0\u05E1\u05E8\u05D5\u0020\u05D7\u05D2',					//  hlPesachD
 	'\u05D9\u05D5\u05DD\u0020\u05D4\u05E2\u05E6\u05DE\u05D0\u05D5\u05EA',		//  hlYomHaAtzmaut
-	'\u05E4\u05E1\u05D7 \u05E9\u05E0\u05D9', //  hlPesahSheni
+	'\u05E4\u05E1\u05D7 \u05E9\u05E0\u05D9', 					//  hlPesahSheni
 	'\u05Dc\u05F4\u05D2\u0020\u05D1\u05E2\u05D5\u05DE\u05E8',			//  hlLag_B_Omer
 	'\u05D9\u05D5\u05DD\u0020\u05D9\u05E8\u05D5\u05E9\u05Dc\u05D9\u05DD',		//  hlYomYerushalayim
-	'\u05E9\u05D1\u05D5\u05E2\u05D5\u05EA',	//  hlShavuot
-	'\u05E9\u05D1\u05D5\u05E2\u05D5\u05EA (d)',					//  hlShavuotD
+	'\u05E9\u05D1\u05D5\u05E2\u05D5\u05EA',						//  hlShavuot
+	'\u05D0\u05E1\u05E8\u05D5\u0020\u05D7\u05D2',					//  hlShavuotD
 	'\u05E6\u05D5\u05DD\u0020\u05EA\u05DE\u05D5\u05D6',				//  hlFast_of_Tammuz
 	'\u05EA\u05E9\u05E2\u05D4\u0020\u05D1\u05D0\u05D1',				//  hlTisha_B_Av
 	'\u05D8\u0022\u05D5\u0020\u05D1\u05D0\u05D1'					//  hlTu_B_Av
