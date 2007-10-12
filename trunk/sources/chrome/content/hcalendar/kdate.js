@@ -498,33 +498,35 @@ var
 	hlFast_of_Tammuz = 22;
 	hlTisha_B_Av = 23;
 	hlTu_B_Av = 24;
+	hlShminiAzeretSimhatTora = 25;
 
 var moadimOnEnglish = new makeArray(
-	'',			//  hlNo
-	'Rosh Hashana',		//  hlRoshHashana 
-	'Fast of Gedalia',	//  hlFast_of_Gedalia1 
-	'Fast of Gedalia',	//  hlFast_of_Gedalia2 
-	'Yom Kippur',		//  hlYomKippur 
-	'Sukkot',		//  hlSukkot 
-	'Isru Chag',		//  hlSukkotD 
-	'Chanukkah',		//  hlChanukkah 
-	'Fast of Tevet',	//  hlFast_of_Tevet
-	'Tu b Shvat',		//  hlTu_b_Shvat
-	'Taanit Esther',	//  hlTaanitEsther
-	'Purim',		//  hlPurim
-	'Shushan Purim',	//  hlShushanPurim
-	'Taanit Bechorot',	//  hlTaanitBechorot
-	'Pesach',		//  hlPesach
-	'Isru Chag',		//  hlPesachD
-	'Yom Ha Atzmaut',	//  hlYomHaAtzmaut
-	'Pesah sheni',		//  hlPesahSheni
-	'Lag B Omer',		//  hlLag_B_Omer
-	'Yom Yerushalayim',	//  hlYomYerushalayim
-	'Shavuot',		//  hlShavuot
-	'Isru Chag',		//  hlShavuotD
-	'Fast of Tammuz',	//  hlFast_of_Tammuz
-	'Tisha B Av',		//  hlTisha_B_Av
-	'Tu B Av'		//  hlTu_B_Av
+	'',				//  hlNo
+	'Rosh Hashana',			//  hlRoshHashana 
+	'Fast of Gedalia',		//  hlFast_of_Gedalia1 
+	'Fast of Gedalia',		//  hlFast_of_Gedalia2 
+	'Yom Kippur',			//  hlYomKippur 
+	'Sukkot',			//  hlSukkot 
+	'Isru Chag',			//  hlSukkotD 
+	'Chanukkah',			//  hlChanukkah 
+	'Fast of Tevet',		//  hlFast_of_Tevet
+	'Tu b Shvat',			//  hlTu_b_Shvat
+	'Taanit Esther',		//  hlTaanitEsther
+	'Purim',			//  hlPurim
+	'Shushan Purim',		//  hlShushanPurim
+	'Taanit Bechorot',		//  hlTaanitBechorot
+	'Pesach',			//  hlPesach
+	'Isru Chag',			//  hlPesachD
+	'Yom Ha Atzmaut',		//  hlYomHaAtzmaut
+	'Pesah sheni',			//  hlPesahSheni
+	'Lag B Omer',			//  hlLag_B_Omer
+	'Yom Yerushalayim',		//  hlYomYerushalayim
+	'Shavuot',			//  hlShavuot
+	'Isru Chag',			//  hlShavuotD
+	'Fast of Tammuz',		//  hlFast_of_Tammuz
+	'Tisha B Av',			//  hlTisha_B_Av
+	'Tu B Av',			//  hlTu_B_Av
+	'Shmini Atzeret, Simchat Torah'	//  hlShminiAzeretSimhatTora
 );
 
 var moadimOnHebrew = new makeArray(
@@ -552,7 +554,8 @@ var moadimOnHebrew = new makeArray(
 	'\u05D0\u05E1\u05E8\u05D5\u0020\u05D7\u05D2',					//  hlShavuotD
 	'\u05E6\u05D5\u05DD\u0020\u05EA\u05DE\u05D5\u05D6',				//  hlFast_of_Tammuz
 	'\u05EA\u05E9\u05E2\u05D4\u0020\u05D1\u05D0\u05D1',				//  hlTisha_B_Av
-	'\u05D8\u0022\u05D5\u0020\u05D1\u05D0\u05D1'					//  hlTu_B_Av
+	'\u05D8\u0022\u05D5\u0020\u05D1\u05D0\u05D1',					//  hlTu_B_Av
+	'\u05E9\u05DE\u05D9\u05E0\u05D9\u0020\u05E2\u05E6\u05E8\u05EA, \u05E9\u05DE\u05D7\u05EA\u0020\u05EA\u05D5\u05E8\u05D4'	//  hlShminiAzeretSimhatTora
 );
 
 
@@ -566,8 +569,10 @@ function moadimInt(cday, cmonth, cyear, hday, hmonth, dow) {
 			return hlFast_of_Gedalia2;
 		else if(hday == 10)
 			return hlYomKippur
-		else if(hday >= 15 && hday <= 22)
+		else if(hday >= 15 && hday <= 21)
 			return hlSukkot
+		else if(hday == 22)
+			return hlShminiAzeretSimhatTora
 		else if(hday == 23)
 			return hlSukkotD
 	}

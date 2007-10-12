@@ -1,3 +1,6 @@
+1.0.4.53
+	- Issue 19: Add "Shmini Atzeret, Simchat Torah"
+	  (http://code.google.com/p/hcalendar/issues/detail?id=19)
 1.0.4.52
 	- Issue 5: all holidays (in Israel) with "(d)" are fixed
 	  (http://code.google.com/p/hcalendar/issues/detail?id=5)
