@@ -1,3 +1,6 @@
+1.0.4.54
+	- Issue 14:add an option to be able to set the time to show in AM-PM format as well
+	  (http://code.google.com/p/hcalendar/issues/detail?id=14&can=1)
 1.0.4.53
 	- Issue 19: Add "Shmini Atzeret, Simchat Torah"
 	  (http://code.google.com/p/hcalendar/issues/detail?id=19)

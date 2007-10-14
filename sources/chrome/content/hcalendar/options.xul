@@ -56,6 +56,7 @@
 			var hTextColorPicker = getElement("textColorPicker");
 			var hHolidayColorPicker = getElement("holidayColorPicker");
 			var hDstControl = document.getElementById("dstOption");
+			var h24HourFormat = document.getElementById("chk24HourFormat");
 			var hSwitchBySunSet = document.getElementById("daySwitchBySunSet");
 			var hZip_ZipCodesMenu = document.getElementById("zipCode");
 			var hZip_TimeZonesList = document.getElementById("timeZoneList");
@@ -98,6 +99,7 @@
 			getElement("timeCoordsZoneList").value = getPref("hcalendar.COORD_TimeZone");
 		
   			hDstControl.checked = getPref("hcalendar.dst");
+			h24HourFormat.checked = !getPref("hcalendar.24HourFormat");
 			hSwitchBySunSet.checked = getPref("hcalendar.daySwitchBySunSet");
 
 			getElement("chkShowParashaInIsrael").checked = getPref("hcalendar.hint.showParashaInIsrael");
@@ -118,12 +120,14 @@
 			var textColor = getElement("textColorPicker").color;
 			var holidayColor = getElement("holidayColorPicker").color;
 			var dst = getElement("dstOption").checked;
+			var chk24HourFormat = !getElement("chk24HourFormat").checked;
 			setPref("hcalendar.language", language);
 			setPref("hcalendar.location", location);
 			setPref("hcalendar.textColor", textColor);
 			setPref("hcalendar.holidayColor", holidayColor);
 			setPref("hcalendar.fontSize", document.getElementById("fontSizeList").value);
 			setPref("hcalendar.dst", dst);
+			setPref("hcalendar.24HourFormat", chk24HourFormat);
 			setPref("hcalendar.daySwitchBySunSet", document.getElementById("daySwitchBySunSet").checked);
 			setPref("hcalendar.hint.showParashaInIsrael", getElement("chkShowParashaInIsrael").checked);
 
@@ -380,6 +384,7 @@
 		<caption label="&hc.options.time.options;"/>
 		<hbox align="center">
 			<checkbox id="dstOption" label="&hc.options.time.dst;"/>
+			<checkbox id="chk24HourFormat" label="12 Hour Format (English only)"/>
 		</hbox>
 		<hbox align="center">
 			<checkbox id="daySwitchBySunSet" label="&hc.options.time.switch;"/>
