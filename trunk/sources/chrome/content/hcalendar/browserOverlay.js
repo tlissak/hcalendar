@@ -156,6 +156,7 @@ var HCalendar =
 		this.hintShowSunRise = false;
 		this.hintShowSunSet = false;
 		this.hintShowParasha = true;
+		this.format24Hour = true;
 
 		this.ShabbatStartsTime = "";
 		this.sunSetTime = 0;
@@ -332,9 +333,7 @@ var hBundle = document.getElementById("hcalendar-bundle");
 		
 			if ((this.Time.mins < 1) && (this.Time.hours < 1)) 
 			{
-				
 				this.updateDate(uDate);
-			
 			}
 		
 		} else 
@@ -528,7 +527,8 @@ var hBundle = document.getElementById("hcalendar-bundle");
 					dayPart = "\u05D0\u05D5\u05E8\u0020\u05DC\u05D9\u05D5\u05DD\u0020" + this.nextDay_Hebrew(hDay) +"',";
 				else
 					dayPart = "Or le Yom " + this.nextDay_Eniglish(hDay) + ",";
-			}
+			}
+
 		}
 		if (isNight)
 		{
@@ -619,6 +619,7 @@ var hBundle = document.getElementById("hcalendar-bundle");
 		this.hintShowSunRise = this.getPref("hcalendar.hint.show.SunRise");
 		this.hintShowSunSet = this.getPref("hcalendar.hint.show.SunSet");
 		this.hintShowParasha = this.getPref("hcalendar.hint.show.Parasha");
+		this.format24Hour = this.getPref("hcalendar.24HourFormat");
 
 		this.locationType = this.getPref("hcalendar.locationType");
 		this.bIsrael = this.getPref("hcalendar.hint.showParashaInIsrael");
@@ -657,7 +658,8 @@ var hBundle = document.getElementById("hcalendar-bundle");
 			if (this.loadedByZIP)
 			{
 				var zipCode = this.getPref("hcalendar.ZIP_ZipCode");
-				var timeZoneByZIP = this.getPref("hcalendar.ZIP_TimeZone");
+				var timeZoneByZIP = this.getPref("hcalendar.ZIP_TimeZone");
+
 				var latDegreesValueByZIP = this.getPref("hcalendar.ZIP_latDegrees");
 				var latRadiansValueByZIP = this.getPref("hcalendar.ZIP_latRadian");
 				var lonDegreesValueByZIP = this.getPref("hcalendar.ZIP_lonDegrees");
@@ -1073,7 +1075,8 @@ this.Entities.MONTH_NAME_ABBR,
 	{
 		copy_clip(this.hHCalendar.label);
 		return ;
-	},
+	},
+
 
 	popupOpenKaluach: function()
 	{
@@ -1142,7 +1145,8 @@ this.Entities.MONTH_NAME_ABBR,
 	},
 	getHebMonthOnHebrew: function(hMonth)
 	{
-		var monthName = hebMonthOnHebrew[hMonth+1];
+		var monthName = hebMonthOnHebrew[hMonth+1];
+
 		return monthName;
 	},
 	calculateSunRaise: function()
@@ -1163,13 +1167,14 @@ this.Entities.MONTH_NAME_ABBR,
 
 		//adj = - adj;
 		adj += this.dst;	// var dst = 0;	// winter time
-		var ampm = 0; 		// 24 hours
+		//var ampm = 0; 		// 24 hours
+		var ampm = this.format24Hour ? 0 : 1;
 
 		var time = suntime(d, m, y, 90, 50, lngd, lngm, ewi, latd, latm, nsi, adj);
 
-		var sunrise;
-		var sunset;
+		var sunrise;
 
+		var sunset;
 
 		var sunriseString;
 		var sunsetString;
@@ -1193,7 +1198,8 @@ this.Entities.MONTH_NAME_ABBR,
 			sunData[2] = "";
 			if (now.getDay() == 5)
 			{
-				sunData[2] = timeadj(time[3] - beforeShabbatLight/60.0, ampm)
+				var ampmShabbat = this.language == 1 || this.language == 2 ? 0 : ampm;
+				sunData[2] = timeadj(time[3] - beforeShabbatLight/60.0, ampmShabbat)
 			}
 			sunData[3] = shemaString;
 			sunData[4] = minhaGdolaString;
