@@ -300,10 +300,8 @@ var hBundle = document.getElementById("hcalendar-bundle");
 		return date + "/" + month + "/" + year;
 	},
 	getPref: function(strName) 
-	{
-		
+	{		
 		return this.Prefs.getPref(strName);
-	
 	},
 	
 	setPref: function(strID, varValue) 
@@ -312,7 +310,6 @@ var hBundle = document.getElementById("hcalendar-bundle");
 	},
 	smartViewUpdate: function() 
 	{
-		
 		var uDate = new Date();		
 		
 		var secs = uDate.getSeconds();
@@ -929,7 +926,11 @@ this.Entities.MONTH_NAME_ABBR,
 		var hmonth = eval(hm.substring(0, hm.indexOf(' ')));
 
 		//var hebrewHolidayName = moadim(cday, cmonth, cyear, hday, hmonth, dow);
-		var hebrewHolidayInt = moadimInt(cday, cmonth, cyear, hday, hmonth, dow);
+		var hebrewHolidayInt;
+		if (this.bIsrael)
+			hebrewHolidayInt = moadimInt(cday, cmonth, cyear, hday, hmonth, dow);
+		else
+			hebrewHolidayInt = moadimIntInDiaspora(cday, cmonth, cyear, hday, hmonth, dow);
 		return hebrewHolidayInt;
 	},
 	getHolidayName: function(hebrewHolidayInt)

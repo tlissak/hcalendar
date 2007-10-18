@@ -499,6 +499,8 @@ var
 	hlTisha_B_Av = 23;
 	hlTu_B_Av = 24;
 	hlShminiAzeretSimhatTora = 25;
+	hlShminiAzeret = 26;
+	hlSimhatTora = 27;
 
 var moadimOnEnglish = new makeArray(
 	'',				//  hlNo
@@ -526,7 +528,9 @@ var moadimOnEnglish = new makeArray(
 	'Fast of Tammuz',		//  hlFast_of_Tammuz
 	'Tisha B Av',			//  hlTisha_B_Av
 	'Tu B Av',			//  hlTu_B_Av
-	'Shmini Atzeret, Simchat Torah'	//  hlShminiAzeretSimhatTora
+	'Shmini Atzeret, Simchat Torah',//  hlShminiAzeretSimhatTora
+	'Shmini Atzeret',		//  hlShminiAzeret
+	'Simchat Torah'			//  hlSimhatTora
 );
 
 var moadimOnHebrew = new makeArray(
@@ -555,11 +559,15 @@ var moadimOnHebrew = new makeArray(
 	'\u05E6\u05D5\u05DD\u0020\u05EA\u05DE\u05D5\u05D6',				//  hlFast_of_Tammuz
 	'\u05EA\u05E9\u05E2\u05D4\u0020\u05D1\u05D0\u05D1',				//  hlTisha_B_Av
 	'\u05D8\u0022\u05D5\u0020\u05D1\u05D0\u05D1',					//  hlTu_B_Av
-	'\u05E9\u05DE\u05D9\u05E0\u05D9\u0020\u05E2\u05E6\u05E8\u05EA, \u05E9\u05DE\u05D7\u05EA\u0020\u05EA\u05D5\u05E8\u05D4'	//  hlShminiAzeretSimhatTora
+	'\u05E9\u05DE\u05D9\u05E0\u05D9\u0020\u05E2\u05E6\u05E8\u05EA, \u05E9\u05DE\u05D7\u05EA\u0020\u05EA\u05D5\u05E8\u05D4',	//  hlShminiAzeretSimhatTora
+	'\u05E9\u05DE\u05D9\u05E0\u05D9\u0020\u05E2\u05E6\u05E8\u05EA',			//  hlShminiAzeret
+	'\u05E9\u05DE\u05D7\u05EA\u0020\u05EA\u05D5\u05E8\u05D4'			//  hlSimhatTora
+
 );
 
 
-function moadimInt(cday, cmonth, cyear, hday, hmonth, dow) {
+function moadimInt(cday, cmonth, cyear, hday, hmonth, dow)
+{
 	if(hmonth == 6) {
 		if(hday == 1 || hday == 2)
 			return hlRoshHashana
@@ -650,6 +658,116 @@ function moadimInt(cday, cmonth, cyear, hday, hmonth, dow) {
 			return hlShavuot
 		else if(hday == 7)
 			return hlShavuotD
+	}
+	else if(hmonth == 3) {
+		if(hday == 17 && dow != 7)
+			return hlFast_of_Tammuz
+		if(hday == 18 && dow == 1)
+			return hlFast_of_Tammuz
+	}
+	else if(hmonth == 4) {
+		if(hday == 9 && dow != 7)
+			return hlTisha_B_Av
+		if(hday == 10 && dow == 1)
+			return hlTisha_B_Av
+		if(hday == 15)
+			return hlTu_B_Av
+	}
+
+	return hlNo
+}
+
+function moadimIntInDiaspora(cday, cmonth, cyear, hday, hmonth, dow) {
+	if(hmonth == 6) {
+		if(hday == 1 || hday == 2)
+			return hlRoshHashana
+		else if(hday == 3 && dow != 7)
+			return hlFast_of_Gedalia1;
+		else if(hday == 4 && dow == 1)
+			return hlFast_of_Gedalia2;
+		else if(hday == 10)
+			return hlYomKippur
+		else if(hday >= 15 && hday <= 21)
+			return hlSukkot
+		else if(hday == 22)
+			return hlShminiAzeret
+		else if(hday == 23)
+			return hlSimhatTora
+	}
+	else if(hmonth == 8) {
+		if(hday >= 25)
+			return hlChanukkah
+	}
+	else if(hmonth == 9) {
+		if(hday <= 2) {
+			return hlChanukkah
+		}
+		else if(hday == 3) {
+			// Kislev can be malei or chaser
+			if(cday == 1) {
+				cday = 29;
+				cmonth = 11;
+			}
+			else if(cday == 2) {
+				cday = 30;
+				cmonth = 11;
+			}
+			else
+				cday -= 3;
+			var hdate = civ2heb(cday, cmonth, cyear);
+			hd = eval(hdate.substring(0, hdate.indexOf(' ')));
+			if(hd == 29)
+				return hlChanukkah
+		}
+		else if(hday == 10)
+			return hlFast_of_Tevet
+	}
+	else if(hmonth == 10) {
+		if(hday==15)
+			return hlTu_b_Shvat
+	}
+	else if(hmonth == 11 || hmonth == 13) {
+		if(hday == 11 && dow == 5)
+			return hlTaanitEsther
+		else if(hday == 13 && dow != 7)
+			return hlTaanitEsther
+		else if(hday == 14)
+			return hlPurim
+		else if(hday == 15)
+			return hlShushanPurim
+	}
+	else if(hmonth == 0) {
+
+		if(hday == 12 && dow == 5)
+			return hlTaanitBechorot
+		else if(hday == 14 && dow != 7)
+			return hlTaanitBechorot
+		else if(hday >= 15 && hday <= 22)
+			return hlPesach
+//		else if(hday == 22)
+//			return hlPesachD
+	}
+	else if(hmonth == 1) {
+		if(hday == 3 && dow == 5)
+			return hlYomHaAtzmaut
+		else if(hday == 4 && dow == 5)
+			return hlYomHaAtzmaut
+		else if(hday == 5 && dow != 6 && dow != 7 && dow !=2)
+			return hlYomHaAtzmaut
+		else if(hday == 6 && dow == 3)
+			return hlYomHaAtzmaut
+		if(hday == 14)
+			return hlPesahSheni
+		else if(hday == 18)
+			return hlLag_B_Omer
+		if(hday == 28)
+			return hlYomYerushalayim
+	}
+	else if(hmonth == 2) {
+		if(hday == 6)
+			return hlShavuot
+		else if(hday == 7)
+			return hlShavuot		// hlShavuotD
 	}
 	else if(hmonth == 3) {
 		if(hday == 17 && dow != 7)

@@ -1,3 +1,6 @@
+1.0.4.55
+	- Issue 7:"Show parasha in Israel" (show correct Diaspora holidays)
+	  (http://code.google.com/p/hcalendar/issues/detail?id=7)
 1.0.4.54
 	- Issue 14:add an option to be able to set the time to show in AM-PM format as well
 	  (http://code.google.com/p/hcalendar/issues/detail?id=14&can=1)
