@@ -273,7 +273,12 @@ function BuildLuachHTML(parms)
 
 				var moed = "";
 				if(jewishHolidays)
+				{
+					var Prefs = new HCalendar_PrefManager();
+					var bIsrael = Prefs.getPref("hcalendar.hint.showParashaInIsrael");
+
 					moed = moadim(cDay, cMonth, cYear, hebDay, hMonth, col);
+				}
 				var holiday = "";
 				if(civilHolidays)
 					holiday = holidays(cDay, cMonth, cYear);
