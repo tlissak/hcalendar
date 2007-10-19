@@ -173,9 +173,19 @@ function calendar(selM, selY)
 	retVal[4] = y;
 	
 	return (retVal);
-
 }
-
+function getHolidayName(language, hebrewHolidayInt)
+{
+	var hebrewHolidayName = "";
+	if (language == 1 || language == 2)
+	{
+		hebrewHolidayName = moadimOnHebrew[hebrewHolidayInt + 1];
+	} else
+	{
+		hebrewHolidayName = moadimOnEnglish[hebrewHolidayInt + 1];
+	}
+	return hebrewHolidayName;
+}
 
 function BuildLuachHTML(parms)  
 {
@@ -205,6 +215,10 @@ function BuildLuachHTML(parms)
 	var hMonth;
 	var hYear;
 
+	var Prefs = new HCalendar_PrefManager();
+	var bIsrael = Prefs.getPref("hcalendar.hint.showParashaInIsrael");
+	var language = Prefs.getPref("hcalendar.language");	
+	
 	// get starting Heb month in civil month
 	hebDate = civ2heb(1, cMonth, cYear);
 	hmS = hebDate.substring(hebDate.indexOf(' ')+1, hebDate.length);
@@ -272,12 +286,15 @@ function BuildLuachHTML(parms)
 	        else {
 
 				var moed = "";
-				if(jewishHolidays)
+				if (jewishHolidays)
 				{
-					var Prefs = new HCalendar_PrefManager();
-					var bIsrael = Prefs.getPref("hcalendar.hint.showParashaInIsrael");
-
-					moed = moadim(cDay, cMonth, cYear, hebDay, hMonth, col);
+					//moed = moadim(cDay, cMonth, cYear, hebDay, hMonth, col);
+					var modeInt;
+					if (bIsrael)
+						moedInt = moadimInt(cDay, cMonth, cYear, hebDay, hMonth, col);
+					else
+						moedInt = moadimIntInDiaspora(cDay, cMonth, cYear, hebDay, hMonth, col);
+					moed = getHolidayName(language, moedInt); 
 				}
 				var holiday = "";
 				if(civilHolidays)
