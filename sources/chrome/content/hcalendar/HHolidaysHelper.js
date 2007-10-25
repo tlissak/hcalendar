@@ -88,7 +88,8 @@ function showHebrewHolidays(fromDate, toDate, resultRequest) {
 }
 function FindShabbat(uDate)
 {
-	var sDate = new Date();
+	//var sDate = new Date();
+	var sDate = uDate;
 
 	if (uDate.getDay() != 6)
 	{
@@ -146,7 +147,7 @@ function showParashaForDay_Local(forDate, resultRequest) {
 		parashaCode = 0;
 	resultRequestHandler(parashaCode, parashaName);
 }
-function showParashaForDay_calj(forDate, resultRequest, bIsrael) 
+function showParashaForDay_calj(forDate, resultRequest, bIsrael, bHebrewLanguage)
 {
 	var parashaName = "";
 	var parashaCode = -1;
@@ -163,8 +164,8 @@ function showParashaForDay_calj(forDate, resultRequest, bIsrael)
 		//var defaultCity = new City("Paris, France", "", "", '48n52', '2e20', 1, "-1,1,0,3|-1,1,0,10" );
 		//var oZmanim = computeZmanim(new GDate(), defaultCity);
 		//var bIsrael = true;
-		var bHebrew = false;
-		parashaName = gdate.getParashaName(bIsrael, bHebrew);
+		//var bHebrew = false;
+		parashaName = gdate.getParashaName(bIsrael, bHebrewLanguage);
 	}
 	catch(e)
 	{
@@ -177,10 +178,12 @@ function showParashaForDay_calj(forDate, resultRequest, bIsrael)
 
 	resultRequestHandler(parashaCode, parashaName);
 }
-function showParashaForDay_factory(forDate, resultRequest, bIsrael)
+function showParashaForDay_factory(forDate, resultRequest, bIsrael, bHebrewLanguage)
 {
+	//alert("forDate: " + forDate + ", bIsrael: " + bIsrael);
+
 	resultRequestHandler = resultRequest;
 	//showParashaForDay(forDate, resultRequest);
 	//showParashaForDay_Local(forDate, resultRequest);
-	showParashaForDay_calj(forDate, resultRequest, bIsrael);
+	showParashaForDay_calj(forDate, resultRequest, bIsrael, bHebrewLanguage);
 }

@@ -35,9 +35,14 @@
 
 	<script type="application/x-javascript" src="chrome://hcalendar/content/heb2civ.js" />
 
+	<script type="application/x-javascript" src="chrome://hcalendar/content/HHolidaysHelper.js" />
+	<script type="application/x-javascript" src="chrome://hcalendar/content/calj/jdates.js" />
+	<script type="application/x-javascript" src="chrome://hcalendar/content/calj/parasha.js" />
+	<script type="application/x-javascript" src="chrome://hcalendar/content/calj/parasha_loc.js" />
 	
 	<script type="application/x-javascript"><![CDATA[
 		var Prefs = new HCalendar_PrefManager();
+		var strParashaName = "";
 		function getPref(strID) { return Prefs.getPref(strID); }
 		function setPref(strID, varValue) { Prefs.setPref(strID, varValue); }
 		function getElement(strID) { return document.getElementById(strID); }
@@ -88,7 +93,6 @@
 			var strListMonths = hBundle.getString(monthStringId);
 			arrMonths = arrMonths.concat(strListMonths.split(","));
 
-
 			for (i = 1; i <= monthesCountInYear; i++)
 			{
 				var newitem = document.createElement("menuitem");
@@ -122,6 +126,7 @@
 			var cmonth = hmonthList.selectedIndex + 1;
 			var cdate = hdayList.selectedIndex + 1;
 
+			var civilDate = new Date(cyear, cmonth - 1, cdate);
 			var hebDate = civ2heb(cdate, cmonth, cyear);
 
 			var hmS = hebDate.substring(hebDate.indexOf(' ')+1, hebDate.length);
@@ -131,6 +136,10 @@
 
 			var hDayStr = FormatDay(hDay);
 			hhebrewDate.value = hDayStr + " of " + hebMonth[hMonth+1] + ", " + hYear;
+		
+			showParashaForDayImpl(civilDate);
+			var hParsha = document.getElementById("parshaShabbat_Hebrew");
+			hParsha.value = strParashaName;
 		}
 		function Convert_Hebrew2Civil()
 		{
@@ -145,13 +154,17 @@
 			var strListMonths = hBundle.getString("listMonths");
 			arrMonths = arrMonths.concat(strListMonths.split(","));
 
-
 			var hebYear = eval(hHebYearEditBox.value);
 			var hebMonth = hHebMonthList.selectedIndex + 1;
 			var hebDay = hHebDayList.selectedIndex + 1;
 			var civilDate = hebrew_to_jd(hebYear, hebMonth, hebDay);
 			var civilDateArr = jd_to_gregorian(civilDate);
 			hCivilDate.value = FormatDay(civilDateArr[2]) + " of " + arrMonths[civilDateArr[1]] + ", " + civilDateArr[0] + " CE";
+
+			var dateCivilDate = new Date(civilDateArr[0], civilDateArr[1] - 1, civilDateArr[2]);
+			showParashaForDayImpl(dateCivilDate);
+			var hParsha = document.getElementById("parshaShabbat_Civil");
+			hParsha.value = strParashaName;			
 		}
 		function InitDates()
 		{
@@ -164,6 +177,7 @@
 			var cmonth = hmonthList.selectedIndex + 1;
 			var cdate = hdayList.selectedIndex + 1;
 
+			var civilDate = new Date(cyear, cmonth - 1, cdate);
 			var hebDate = civ2heb(cdate, cmonth, cyear);
 
 			var hmS = hebDate.substring(hebDate.indexOf(' ')+1, hebDate.length);
@@ -174,6 +188,10 @@
 			var hDayStr = FormatDay(hDay);
 			hhebrewDate.value = hDayStr + " of " + hebMonth[hMonth+1] + ", " + hYear;
 
+			showParashaForDayImpl(civilDate);
+			var hParsha = document.getElementById("parshaShabbat_Hebrew");
+			hParsha.value = strParashaName;
+
 			var hHebYearEditBox = document.getElementById("hebYearEditBox");
 			var hHebMonthList = document.getElementById("hebMonthList");
 			var hHebDayList = document.getElementById("hebDayList");
@@ -183,6 +201,39 @@
 
 			Convert_Hebrew2Civil();
 		}
+		function showParashaForDayImpl(uDate)
+		{
+			//alert("showParashaForDayImpl: " + uDate);
+			var bIsrael = Prefs.getPref("hcalendar.hint.showParashaInIsrael");
+			var bHebrewLanguage = false;
+			//var uDate = new Date();
+			showParashaForDay_factory(uDate, upDateParashaAnswer, bIsrael, bHebrewLanguage);
+		}
+
+		function upDateParashaAnswer(status, parashaName)
+		{
+			//var hParsha = document.getElementById("parshaShabbat_Hebrew");
+			if (status == 0)
+			{
+				strParashaName = parashaName;
+				
+//hParsha.value = parashaName;
+				//		HCalendar.currentParashaName = parashaName;
+				//		var uDate = new Date();
+				//		var uShabbatDate = FindShabbat(uDate);
+				//		var parashaDateKey = HCalendar.dateToStr(uShabbatDate);
+				//		HCalendar.setPref("hcalendar.parashaDate", parashaDateKey);
+				//		HCalendar.setPref("hcalendar.parashaName", HCalendar.currentParashaName);
+
+				//		HCalendar.showParasha();
+				//		HCalendar.forceRefresh();
+			} else
+			{
+				strParashaName = "status: " + staus;
+				//hParsha.value = "Connection failed. Status = " + status;
+			}
+		}
+
 	]]></script>
 	
 	<groupbox flex="1">
@@ -210,7 +261,8 @@
 		<caption label="&hc.converter.hebrewDate;"/>
 		<hbox align="center">
 			<label value="&hc.converter.hebrewDate;" control="convertedHebDate" width="40"/>
-			<textbox id="convertedHebDate" width="260" readonly="true" />
+			<textbox id="convertedHebDate" width="170" readonly="true" />
+			<textbox id="parshaShabbat_Hebrew" width="140" readonly="true" />
 		</hbox>
 	</groupbox>
 	<groupbox flex="1">
@@ -238,7 +290,8 @@
 		<caption label="&hc.converter.civilDate;"/>
 		<hbox align="center">
 			<label value="&hc.converter.civilDate;" control="convertedCivilDate" width="40"/>
-			<textbox id="convertedCivilDate" width="260" readonly="true" />
+			<textbox id="convertedCivilDate" width="170" readonly="true" />
+			<textbox id="parshaShabbat_Civil" width="140" readonly="true" />
 		</hbox>
 	</groupbox>
 </dialog>

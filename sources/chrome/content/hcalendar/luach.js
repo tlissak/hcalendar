@@ -22,6 +22,7 @@
 var otherHolidays = 0;
 var jewishHolidays = 1;
 var civilHolidays = 0;
+var calculatedParashaName = "";
 
 function selectLoad() {
 	var now = new Date();
@@ -217,7 +218,8 @@ function BuildLuachHTML(parms)
 
 	var Prefs = new HCalendar_PrefManager();
 	var bIsrael = Prefs.getPref("hcalendar.hint.showParashaInIsrael");
-	var language = Prefs.getPref("hcalendar.language");	
+	var language = Prefs.getPref("hcalendar.language");
+	var bHebrewLanguage = (language == 1 || language == 2);
 	
 	// get starting Heb month in civil month
 	hebDate = civ2heb(1, cMonth, cYear);
@@ -288,20 +290,36 @@ function BuildLuachHTML(parms)
 				var moed = "";
 				if (jewishHolidays)
 				{
+					calculatedParashaName = "";
+					if (col == 7)
+					{
+						var civilDate = new Date(cYear, cMonth - 1, cDay);
+						showParashaForDayImpl(civilDate, bIsrael, bHebrewLanguage);
+						// result in calculatedParashaName;
+					}
+
 					//moed = moadim(cDay, cMonth, cYear, hebDay, hMonth, col);
 					var modeInt;
 					if (bIsrael)
 						moedInt = moadimInt(cDay, cMonth, cYear, hebDay, hMonth, col);
 					else
 						moedInt = moadimIntInDiaspora(cDay, cMonth, cYear, hebDay, hMonth, col);
-					moed = getHolidayName(language, moedInt); 
+					
+					moed = getHolidayName(language, moedInt);
+					if (calculatedParashaName != "")
+					{
+						if (moed=="")
+							moed = calculatedParashaName;
+						else
+							moed = calculatedParashaName + ", " + moed;
+					}
 				}
 				var holiday = "";
 				if(civilHolidays)
 					holiday = holidays(cDay, cMonth, cYear);
 
 				var bg;
-		        if((cDay == tday) && (parms[3] == (tmonth+1)) && (parms[4] == tyear))
+		        	if((cDay == tday) && (parms[3] == (tmonth+1)) && (parms[4] == tyear))
 					// highight the current day
 					bg = 'bgColor=#c0d0c0'
 				else if (moed != "")
@@ -362,3 +380,24 @@ function BuildLuachHTML(parms)
     result += '</center></body></html>'
     return result;
 }
+
+
+function showParashaForDayImpl(uDate, bIsrael, bHebrewLanguage)
+{
+	//alert("showParashaForDayImpl: " + uDate);
+	//var bIsrael = Prefs.getPref("hcalendar.hint.showParashaInIsrael");
+	//var uDate = new Date();
+	showParashaForDay_factory(uDate, upDateParashaAnswer, bIsrael, bHebrewLanguage);
+}
+
+function upDateParashaAnswer(status, parashaName)
+{
+	if (status == 0)
+	{
+		calculatedParashaName = parashaName;
+	} else
+	{
+		calculatedParashaName = "";
+	}
+}
+
