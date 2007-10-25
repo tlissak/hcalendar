@@ -141,7 +141,6 @@ var HCalendar =
 	
 	init: function() 
 	{
-
 		this.language = 0;
 		this.location = 0;
 		this.textColor = 0;
@@ -260,7 +259,9 @@ var hBundle = document.getElementById("hcalendar-bundle");
 	showParashaForDayImpl: function()
 	{
 		var uDate = new Date();
-		showParashaForDay_factory(uDate, this.upDateParashaAnswer, this.bIsrael);
+		//var bHebrewLanguage = (this.language == 1 || this.language == 2);
+		var bHebrewLanguage = false;
+		showParashaForDay_factory(uDate, this.upDateParashaAnswer, this.bIsrael, bHebrewLanguage);
 	},
 	upDateParashaAnswer: function(status, parashaName)
 	{

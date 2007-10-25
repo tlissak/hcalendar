@@ -1,3 +1,8 @@
+1.0.4.56
+	- Issue 20: In dialog "Converter" to show relevant Parasha.
+	  (http://code.google.com/p/hcalendar/issues/detail?id=20)
+	- Issue 22: Show Parasha in "Hebrew Calendar" page.
+	  (http://code.google.com/p/hcalendar/issues/detail?id=22)
 1.0.4.55
 	- Issue 7:"Show parasha in Israel" (show correct Diaspora holidays)
 	  (http://code.google.com/p/hcalendar/issues/detail?id=7)
