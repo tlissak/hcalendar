@@ -346,15 +346,10 @@ var hBundle = document.getElementById("hcalendar-bundle");
 	
 	updateDate: function(uDate) 
 	{
-		
 		this.Time.day = uDate.getDay() + 1;
-
 		this.Time.date = uDate.getDate();
-
 		this.Time.month = uDate.getMonth() + 1;
-
 		this.Time.year = uDate.getFullYear();
-	
 
 		var civilDate = "";
 		//if (this.hintShowCivilianDate) 
@@ -363,6 +358,20 @@ var hBundle = document.getElementById("hcalendar-bundle");
 		var beforeShabbatMessage = "Shabbat";
 		var daysBefore = 7 - this.Time.day;
 		//if (daysBefore != 0 && this.hintShowNumberDaysBeforeShabbat)
+		
+		if (this.daySwitchBySunSet && this.isLocation && this.sunSetTime>0)
+		{
+			var u_now_time = uDate.getHours() + uDate.getMinutes()/60;
+			if (u_now_time >= this.sunSetTime)
+			{
+				if (daysBefore > 0)
+					daysBefore--;
+				else
+					daysBefore = 6;
+			}
+		}		
+		
+		
 		if (daysBefore != 0)
 		{
 			if (daysBefore == 1)
