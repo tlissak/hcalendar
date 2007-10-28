@@ -1,3 +1,6 @@
+1.0.4.57
+	- Issue 25: Show "X days before Shabbat" with option "Day switch by sunset".
+	  (http://code.google.com/p/hcalendar/issues/detail?id=25)
 1.0.4.56
 	- Issue 20: In dialog "Converter" to show relevant Parasha.
 	  (http://code.google.com/p/hcalendar/issues/detail?id=20)
