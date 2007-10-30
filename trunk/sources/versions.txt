@@ -1,3 +1,8 @@
+1.0.4.58
+	- Issue 27: Support Netscape Navigator 9.0
+	  (http://code.google.com/p/hcalendar/issues/list?updated=27&ts=1193781766)
+	- Issue 28: Support Flock 0.9
+	  (http://code.google.com/p/hcalendar/issues/detail?id=28)
 1.0.4.57
 	- Issue 25: Show "X days before Shabbat" with option "Day switch by sunset".
 	  (http://code.google.com/p/hcalendar/issues/detail?id=25)
