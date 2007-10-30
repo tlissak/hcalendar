@@ -5,7 +5,7 @@
 
 <Description about="urn:mozilla:install-manifest">
 	<em:id>{C4A22BA1-6D61-45F1-82A9-140FD33F1110}</em:id>
-	<em:version>1.0.4.57</em:version>
+	<em:version>1.0.4.58</em:version>
 
 	<!-- Mozilla Firefox -->	
 	<em:targetApplication>
@@ -77,7 +77,7 @@
         
 			<em:minVersion>8.0</em:minVersion>
         
-			<em:maxVersion>8.0.4</em:maxVersion>
+			<em:maxVersion>9.0.0.1</em:maxVersion>
       
 		</Description>
     
@@ -89,8 +89,8 @@
 	<em:targetApplication>
   		<Description>
     			<em:id>{a463f10c-3994-11da-9945-000d60ca027b}</em:id>
-    			<em:maxVersion>1.0+</em:maxVersion>
-    			<em:minVersion>1.0+</em:minVersion>
+    			<em:minVersion>0.8</em:minVersion>
+    			<em:maxVersion>1.*</em:maxVersion>
   		</Description>
 	</em:targetApplication>
 	
