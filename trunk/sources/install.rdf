@@ -44,7 +44,7 @@
         
 			<em:minVersion>1.7</em:minVersion>
         
-			<em:maxVersion>1.7</em:maxVersion>
+			<em:maxVersion>1.8+</em:maxVersion>
       
 		</Description>
    
@@ -61,38 +61,24 @@
         
 			<em:minVersion>0.3</em:minVersion>
         
-			<em:maxVersion>0.6a1</em:maxVersion>
+			<em:maxVersion>0.7</em:maxVersion>
 
 		</Description>
    
 	</em:targetApplication>
 
 
-	<!-- Netscape -->
-	<em:targetApplication> 
-      
-		<Description>
-        
-			<em:id>{3db10fab-e461-4c80-8b97-957ad5f8ea47}</em:id>
-        
-			<em:minVersion>8.0</em:minVersion>
-        
-			<em:maxVersion>9.0.0.1</em:maxVersion>
-      
-		</Description>
-    
-	</em:targetApplication>
-    
-    
-
 	<!-- Flock -->
 	<em:targetApplication>
   		<Description>
     			<em:id>{a463f10c-3994-11da-9945-000d60ca027b}</em:id>
     			<em:minVersion>0.8</em:minVersion>
-    			<em:maxVersion>1.*</em:maxVersion>
+    			<em:maxVersion>1.0+</em:maxVersion>
   		</Description>
 	</em:targetApplication>
+
+	<!-- Netscape Navigator -->
+	<!-- {3db10fab-e461-4c80-8b97-957ad5f8ea47} -->
 	
 	<em:name>Hebrew Calendar</em:name>
 	<em:description>Show the Hebrew date in your browser's status bar.</em:description>
