@@ -1,5 +1,5 @@
 1.0.4.59
-	- Issue 30: Translate to Franch (Benjamin Etienne)
+	- Issue 30: Translate to French (Benjamin Etienne)
 	  (http://code.google.com/p/hcalendar/issues/detail?id=30)
 1.0.4.58
 	- Issue 27: Support Netscape Navigator 9.0
