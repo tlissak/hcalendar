@@ -1,20 +1,14 @@
-<?xml version="1.0"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 
 <?xml-stylesheet href="chrome://hcalendar/content/hcalendar.css" type="text/css"?> 
-
 
 <!DOCTYPE overlay SYSTEM "chrome://hcalendar/locale/hcalendar.dtd">
 <overlay id="hcalendar-overlay"
 xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-
 <stringbundleset id="stringbundleset">
-		
 	<stringbundle id="hcalendar-bundle" src="chrome://hcalendar/locale/hcalendar.properties"/>
-
 	<stringbundle id="hcalendar-locations" src="chrome://hcalendar/locale/hcalendar.locations"/>
-	
 </stringbundleset>
 
 <script type="application/x-javascript" src="chrome://hcalendar/content/prefManager.js" />
