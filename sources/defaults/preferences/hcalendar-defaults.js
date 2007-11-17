@@ -25,3 +25,5 @@ pref("hcalendar.hint.show.SunSet", false);
 pref("hcalendar.hint.show.Parasha", true);
 pref("hcalendar.hint.showParashaInIsrael", true);
 pref("hcalendar.24HourFormat", true);
+pref("hcalendar.openInANewTab", true);
+pref("hcalendar.selectAfterOpening", true);

@@ -5,7 +5,7 @@
 
 <Description about="urn:mozilla:install-manifest">
 	<em:id>{C4A22BA1-6D61-45F1-82A9-140FD33F1110}</em:id>
-	<em:version>1.0.4.59</em:version>
+	<em:version>1.0.4.60</em:version>
 
 	<!-- Mozilla Firefox -->	
 	<em:targetApplication>
