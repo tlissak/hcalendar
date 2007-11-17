@@ -110,6 +110,9 @@
 			//getElement("hintShowSunSet").checked = getPref("hcalendar.hint.show.SunSet");
 			//getElement("hintShowParasha").checked = getPref("hcalendar.hint.show.Parasha");
 
+			getElement("chkOpenInANewTab").checked = getPref("hcalendar.openInANewTab");
+			getElement("chkFocusAfterOpening").checked = getPref("hcalendar.selectAfterOpening");
+
 			var charMin = "\u00BA";
 			getElement("sepLt").label = charMin;
 			getElement("sepLn").label = charMin;
@@ -158,6 +161,9 @@
 			setPref("hcalendar.COORD_lonRadians", getElement("coordLnM").value);
 			setPref("hcalendar.COORD_WE", getElement("coordLnWE").value);
 			setPref("hcalendar.COORD_TimeZone", getElement("timeCoordsZoneList").value);
+
+			setPref("hcalendar.openInANewTab", getElement("chkOpenInANewTab").checked);
+			setPref("hcalendar.selectAfterOpening", getElement("chkFocusAfterOpening").checked);
 
 			try
 			{
@@ -390,26 +396,18 @@
 			<checkbox id="daySwitchBySunSet" label="&hc.options.time.switch;"/>
 		</hbox>
 	</groupbox>
+	<hbox>
 	<groupbox flex="1">
 		<caption label="&hc.options.font.caption;"/>
 		<hbox align="center">
 			<label value="&hc.options.font.color.text;" control="textColorPicker" width="50"/>
-			<colorpicker 
-				type="button" 
-				id="textColorPicker" 	
-				palettename="standard"
-                       
-			/>
+			<colorpicker type="button" id="textColorPicker" palettename="standard"
+ />
  
 		</hbox>
 		<hbox align="center">
 			<label value="&hc.options.font.color.holiday;" control="holidayColorPicker" width="50"/>
-			<colorpicker 
-				type="button" 
-				id="holidayColorPicker" 	
-				palettename="standard"
-                       
-			/>
+			<colorpicker type="button" id="holidayColorPicker" palettename="standard" />
 
 		</hbox>
 		<hbox align="center">
@@ -420,4 +418,14 @@
 			</menulist>
 		</hbox>
 	</groupbox>
+	<groupbox flex="1">
+		<caption label="Opening settings"/>
+		<hbox align="center">
+			<checkbox id="chkOpenInANewTab" label="Open in a new tab"/>
+		</hbox>
+		<hbox align="center">
+			<checkbox id="chkFocusAfterOpening" label="Focus/select tab after opening"/>
+		</hbox>
+	</groupbox>
+	</hbox>
 </dialog>

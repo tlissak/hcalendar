@@ -10,114 +10,64 @@ function HCalendar_EntityConstants()
 {
 	
 	this.SECONDS = "s";
-	
 	this.MINUTES = "m";
-	
 	this.HOURS_12 = "h";
-	
 	this.HOURS_12_ZEROED = "hh";
-	
 	this.HOURS_24 = "H";
-	
 	this.HOURS_24_ZEROED = "HH";
-	
 	this.AMPM_LOWER = "am";
-	
 	this.AMPM_LOWER_ABBR = "a.m.";
-	
 	this.AMPM_UPPER = "AM";
-	
 	this.AMPM_UPPER_ABBR = "A.M.";
-	
 	this.GMT_OFFSET = "offset";
-	
 	this.YEAR = "yyyy";
-	
 	this.YEAR_ABBR = "yy";
-	
 	this.MONTH = "m";
-	
 	this.MONTH_ZEROED = "mm";
-	
 	this.DAY = "d";
-	
 	this.DAY_ZEROED = "dd";
-	
 	this.DAY_ORDINAL = "ddd";
-	
 	this.MONTH_NAME = "month";
-	
 	this.MONTH_NAME_ABBR = "mth";
-	
 	this.WEEKDAY = "weekday";
-	
 	this.WEEKDAY_ABBR = "wkd";
-	
 	return this;
-
 }
 
 
 function HCalendar_TimeFunctions() 
 {
-	
-	arrFunctions = new Array();
-	
+	arrFunctions = new Array();	
 	arrFunctions[HCalendar.Entities.SECONDS] = new Function("return HCalendar.zeroed(HCalendar.Time.secs)");
-	
 	arrFunctions[HCalendar.Entities.MINUTES] = new Function("return HCalendar.zeroed(HCalendar.Time.mins)");
-	
 	arrFunctions[HCalendar.Entities.HOURS_12] = new Function("return HCalendar.twelveHour(HCalendar.Time.hours)");
-	
 	arrFunctions[HCalendar.Entities.HOURS_12_ZEROED] = new Function("return HCalendar.zeroed(HCalendar.twelveHour(HCalendar.Time.hours))");
-	
 	arrFunctions[HCalendar.Entities.HOURS_24] = new Function("return HCalendar.Time.hours");
-	
 	arrFunctions[HCalendar.Entities.HOURS_24_ZEROED] = new Function("return HCalendar.zeroed(HCalendar.Time.hours)");
-	
 	arrFunctions[HCalendar.Entities.AMPM_LOWER] = new Function("return (HCalendar.Time.hours < 12) ? \"am\" : \"pm\"");
-	
 	arrFunctions[HCalendar.Entities.AMPM_LOWER_ABBR] = new Function("return (HCalendar.Time.hours < 12) ? \"a.m.\" : \"p.m.\"");
-	
 	arrFunctions[HCalendar.Entities.AMPM_UPPER] = new Function("return (HCalendar.Time.hours < 12) ? \"AM\" : \"PM\"");
-	
 	arrFunctions[HCalendar.Entities.AMPM_UPPER_ABBR] = new Function("return (HCalendar.Time.hours < 12) ? \"A.M.\" : \"P.M.\"");
-	
 	arrFunctions[HCalendar.Entities.GMT_OFFSET] = new Function("if (HCalendar.GMToffset == \"\") { HCalendar.GMToffset = HCalendar.getGMTOffset(); } return HCalendar.GMToffset");
-
 	return arrFunctions;
 
 }
 
 function HCalendar_DateFunctions() 
 {
-	
-	arrFunctions = new Array();
-	
+	arrFunctions = new Array();	
 	arrFunctions[HCalendar.Entities.YEAR] = new Function("return HCalendar.Time.year");
-	
 	arrFunctions[HCalendar.Entities.YEAR_ABBR] = new Function("return HCalendar.Time.year.toString().substr(2, 2)");
-	
 	arrFunctions[HCalendar.Entities.MONTH] = new Function("return HCalendar.Time.month");
-	
 	arrFunctions[HCalendar.Entities.MONTH_ZEROED] = new Function("return HCalendar.zeroed(HCalendar.Time.month)");
-	
 	arrFunctions[HCalendar.Entities.DAY] = new Function("return HCalendar.Time.date");
-	
 	arrFunctions[HCalendar.Entities.DAY_ZEROED] = new Function("return HCalendar.zeroed(HCalendar.Time.date)");
-	
 	arrFunctions[HCalendar.Entities.DAY_ORDINAL] = new Function("return HCalendar.arrOrdinals[HCalendar.Time.date]");
-	
 	arrFunctions[HCalendar.Entities.MONTH_NAME] = new Function("return HCalendar.arrMonths[HCalendar.Time.month]");
-
 	arrFunctions[HCalendar.Entities.MONTH_NAME_ABBR] = new Function("return HCalendar.arrMonthsAbbr[HCalendar.Time.month]");
-	
 	arrFunctions[HCalendar.Entities.WEEKDAY] = new Function("return HCalendar.arrDays[HCalendar.Time.day]");
-	
 	arrFunctions[HCalendar.Entities.WEEKDAY_ABBR] = new Function("return HCalendar.arrDaysAbbr[HCalendar.Time.day]");
-	
 	return arrFunctions;
-
 }
 
 
@@ -163,8 +113,7 @@ var HCalendar =
 		this.currentParashaName = "";
 		this.Entities = new HCalendar_EntityConstants();
 
-		
-var hBundle = document.getElementById("hcalendar-bundle");
+		var hBundle = document.getElementById("hcalendar-bundle");
 
 		this.arrDays = this.arrDays.concat(hBundle.getString("listWeekdays").split(","));
 
@@ -184,6 +133,9 @@ var hBundle = document.getElementById("hcalendar-bundle");
 		this.hToolTipZmanim = document.getElementById("hcalendar-zmanim-value");
 		this.Prefs = new HCalendar_PrefManager();
 
+		this.bOpenInANewTab = true;
+		this.bSelectAfterOpening = true;
+		
 		this.locationType = 0;
 		this.bIsrael = true;
 		this.loadedByZIP = false;
@@ -630,6 +582,9 @@ var hBundle = document.getElementById("hcalendar-bundle");
 
 		this.locationType = this.getPref("hcalendar.locationType");
 		this.bIsrael = this.getPref("hcalendar.hint.showParashaInIsrael");
+
+		this.bOpenInANewTab = this.getPref("hcalendar.openInANewTab");
+		this.bSelectAfterOpening = this.getPref("hcalendar.selectAfterOpening");
 
 		if (this.locationType == 0 && this.location > 0)
 		{
@@ -1092,13 +1047,38 @@ this.Entities.MONTH_NAME_ABBR,
 	popupOpenKaluach: function()
 	{
 		//open("chrome://hcalendar/content/KaluachJS.htm");
-		this.openUrl("chrome://hcalendar/content/KaluachJS.htm");
+		//this.openUrl("chrome://hcalendar/content/KaluachJS.htm");
+		this.smartOpenUrl("chrome://hcalendar/content/KaluachJS.htm");
 		return ;
 	},
 	popupOpenBlog: function()
 	{
 		//open("http://hcalendar.blogspot.com");
-		this.openUrl("http://hcalendar.blogspot.com");
+		//this.openUrl("http://hcalendar.blogspot.com");
+		
+		//if (this.bOpenInANewTab)
+		//{
+		//	if (this.bSelectAfterOpening)
+		//		gBrowser.selectedTab = gBrowser.addTab("http://hcalendar.blogspot.com");
+		//	else
+		//		gBrowser.addTab("http://hcalendar.blogspot.com");
+		//}	
+		//else
+		//	gBrowser.loadURI("http://hcalendar.blogspot.com");
+		this.smartOpenUrl("http://hcalendar.blogspot.com");
+		return ;
+	},
+	smartOpenUrl: function(url)
+	{
+		if (this.bOpenInANewTab)
+		{
+			if (this.bSelectAfterOpening)
+				gBrowser.selectedTab = gBrowser.addTab(url);
+			else
+				gBrowser.addTab(url);
+		}	
+		else
+			gBrowser.loadURI(url);
 		return ;
 	},
 	openUrl: function(url)
