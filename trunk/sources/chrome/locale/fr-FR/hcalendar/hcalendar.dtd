@@ -38,6 +38,9 @@
 <!ENTITY hc.converter.day "Jour">
 <!ENTITY hc.converter.convert "Convertir">
 <!ENTITY hc.converter.hebrewDate "Date en hébreu">
+<!ENTITY hc.options.opening.settings "Opening settings">
+<!ENTITY hc.options.open.in.a.new.tab "Open in a new tab">
+<!ENTITY hc.options.focus.tab "Focus/select tab after opening">
 <!ENTITY hc.gematria.caption "Géométrie">
 <!ENTITY hc.gematria.hebrewPrhase "Expression en hébreu">
 <!ENTITY hc.gematria.prhase "Phrase">

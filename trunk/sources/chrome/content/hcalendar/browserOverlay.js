@@ -1070,6 +1070,10 @@ this.Entities.MONTH_NAME_ABBR,
 	},
 	smartOpenUrl: function(url)
 	{
+		var processedIfNotBrowser = this.processIfNotBrowser(url);
+		if (processedIfNotBrowser)
+			return ;
+		
 		if (this.bOpenInANewTab)
 		{
 			if (this.bSelectAfterOpening)
@@ -1082,6 +1086,29 @@ this.Entities.MONTH_NAME_ABBR,
 		return ;
 	},
 	openUrl: function(url)
+	{
+		var opened = this.processIfNotBrowser(url);
+	
+//		// AFM - another hack. Try messenger interface first in case we're in Thunderbird
+//		//
+//		if (typeof Components.interfaces.nsIMessenger != "undefined")
+//		{
+//			try
+//			{
+//				var messenger = Components.classes["@mozilla.org/messenger;1"].getService(Components.interfaces.nsIMessenger);
+//				if (messenger)
+//				{
+//					messenger.launchExternalURL(url);
+//					opened = true;
+//				}
+//			}
+//			catch(ex) { alert("openUrl(): exception <" + ex + ">\n"); }
+//		}
+	
+		if (!opened)
+			open(url);
+	},
+	processIfNotBrowser: function(url)
 	{
 		var opened = false;
 	
@@ -1100,9 +1127,7 @@ this.Entities.MONTH_NAME_ABBR,
 			}
 			catch(ex) { alert("openUrl(): exception <" + ex + ">\n"); }
 		}
-	
-		if (!opened)
-			open(url);
+		return opened;
 	},
 	getHebMonth: function(hMonth)
 	{

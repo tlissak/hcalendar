@@ -1,4 +1,4 @@
-<!ENTITY hc.converter.caption "HCalendar ממיר של">
+﻿<!ENTITY hc.converter.caption "HCalendar ממיר של">
 <!ENTITY hc.converter.civilDate "תאריך לועזי">
 <!ENTITY hc.converter.convert "המר">
 <!ENTITY hc.converter.day "יום">
@@ -41,3 +41,10 @@
 <!ENTITY hc.options.time.dst "שעון קיץ">
 <!ENTITY hc.options.time.options "אפשרויות זמן">
 <!ENTITY hc.options.time.switch "מעבר יום בשקיעה">
+<!ENTITY hc.options.opening.settings "Opening settings">
+<!ENTITY hc.options.open.in.a.new.tab "Open in a new tab">
+<!ENTITY hc.options.focus.tab "Focus/select tab after opening">
+<!ENTITY hc.gematria.caption "Gematria">
+<!ENTITY hc.gematria.hebrewPrhase "Hebrew phrase">
+<!ENTITY hc.gematria.prhase "Phrase">
+<!ENTITY hc.gematria.calculate "Calculate">
