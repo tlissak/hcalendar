@@ -419,12 +419,12 @@
 		</hbox>
 	</groupbox>
 	<groupbox flex="1">
-		<caption label="Opening settings"/>
+		<caption label="&hc.options.opening.settings;"/>
 		<hbox align="center">
-			<checkbox id="chkOpenInANewTab" label="Open in a new tab"/>
+			<checkbox id="chkOpenInANewTab" label="&hc.options.open.in.a.new.tab;"/>
 		</hbox>
 		<hbox align="center">
-			<checkbox id="chkFocusAfterOpening" label="Focus/select tab after opening"/>
+			<checkbox id="chkFocusAfterOpening" label="&hc.options.focus.tab;"/>
 		</hbox>
 	</groupbox>
 	</hbox>

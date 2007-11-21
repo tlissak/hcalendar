@@ -30,6 +30,9 @@
 <!ENTITY hc.options.font.color.text "Text">
 <!ENTITY hc.options.font.color.holiday "Holiday">
 <!ENTITY hc.options.font.size "Font Size">
+<!ENTITY hc.options.opening.settings "Opening settings">
+<!ENTITY hc.options.open.in.a.new.tab "Open in a new tab">
+<!ENTITY hc.options.focus.tab "Focus/select tab after opening">
 <!ENTITY hc.converter.caption "HCalendar Converter">
 <!ENTITY hc.converter.civilDate "Civil Date">
 <!ENTITY hc.converter.year "Year">
