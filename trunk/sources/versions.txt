@@ -1,3 +1,5 @@
+1.0.4.61
+	- Support Mozilla Firefox v3.0
 1.0.4.60
 	- Issue 32: Open Hebrew calendar and blog pages in a new tab (not new FF)
 	  (http://code.google.com/p/hcalendar/issues/detail?id=32)
