@@ -99,6 +99,7 @@ var HCalendar =
 		this.enabledHint = true;
 		this.dst = 0;
 		this.daySwitchBySunSet = true;
+		this.lastDaysBefore = -1;
 
 		this.hintShowCivilianDate = false;
 		this.hintShowNumberDaysBeforeShabbat = true;
@@ -188,11 +189,11 @@ var HCalendar =
 
 	upDateParasha: function()
 	{
-		var uDate = new Date();
+		var uDate = this.getCorrectDay();
 		var uShabbatDate = FindShabbat(uDate);
 		var parashaDateKey = this.dateToStr(uShabbatDate);
 		var savedParashaKey = this.getPref("hcalendar.parashaDate");
-
+				
 		if (parashaDateKey == savedParashaKey)
 		{
 			this.currentParashaName = this.getPref("hcalendar.parashaName");
@@ -210,7 +211,7 @@ var HCalendar =
 	},
 	showParashaForDayImpl: function()
 	{
-		var uDate = new Date();
+		var uDate = this.getCorrectDay();
 		//var bHebrewLanguage = (this.language == 1 || this.language == 2);
 		var bHebrewLanguage = false;
 		showParashaForDay_factory(uDate, this.upDateParashaAnswer, this.bIsrael, bHebrewLanguage);
@@ -221,7 +222,7 @@ var HCalendar =
 		{
 			HCalendar.currentParashaName = parashaName;
 
-			var uDate = new Date();
+			var uDate = HCalendar.getCorrectDay();
 			var uShabbatDate = FindShabbat(uDate);
 			var parashaDateKey = HCalendar.dateToStr(uShabbatDate);
 
@@ -232,6 +233,16 @@ var HCalendar =
 			HCalendar.forceRefresh();
 		}
 		
+	},
+	getCorrectDay: function()
+	{
+		var uDate = new Date();
+		var isEvening = this.isEveningIdentify(uDate);
+		if (isEvening)
+		{
+			uDate = new Date(uDate.getFullYear(), uDate.getMonth(), uDate.getDate() + 1, 0, 1);
+		}
+		return uDate;
 	},
 	showParasha: function()
 	{
@@ -310,19 +321,26 @@ var HCalendar =
 		var beforeShabbatMessage = "Shabbat";
 		var daysBefore = 7 - this.Time.day;
 		//if (daysBefore != 0 && this.hintShowNumberDaysBeforeShabbat)
-		
-		if (this.daySwitchBySunSet && this.isLocation && this.sunSetTime>0)
+	
+		if (this.isEveningIdentify(uDate))
 		{
-			var u_now_time = uDate.getHours() + uDate.getMinutes()/60;
-			if (u_now_time >= this.sunSetTime)
-			{
-				if (daysBefore > 0)
-					daysBefore--;
-				else
-					daysBefore = 6;
-			}
-		}		
+			if (daysBefore > 0)
+				daysBefore--;
+			else
+				daysBefore = 6;
+		}
 		
+//		if (this.daySwitchBySunSet && this.isLocation && this.sunSetTime>0)
+//		{
+//			var u_now_time = uDate.getHours() + uDate.getMinutes()/60;
+//			if (u_now_time >= this.sunSetTime)
+//			{
+//				if (daysBefore > 0)
+//					daysBefore--;
+//				else
+//					daysBefore = 6;
+//			}
+//		}
 		
 		if (daysBefore != 0)
 		{
@@ -365,18 +383,33 @@ var HCalendar =
 
 			if (this.enabledHint)
 			{
+				if (this.lastDaysBefore != daysBefore)
+				{
+					this.lastDaysBefore = daysBefore;
+					this.upDateParasha();
+				}
 				if (this.currentParashaName != "")
 					toolTipMessage += ", Parsha: " + this.currentParashaName;
 				this.hToolTipCCalendar.setAttribute("value", civilDate);
-
 				this.hToolTipZmanim.setAttribute("value", toolTipZmanimMessage);
-
 				this.hToolTip.setAttribute("value", toolTipMessage);
-
 			}
 		}
 	},
-	
+	isEveningIdentify: function(uDate)
+	{
+	    var nextDay = false;
+		
+		if (this.daySwitchBySunSet && this.isLocation && this.sunSetTime>0)
+		{
+			var u_now_time = uDate.getHours() + uDate.getMinutes()/60;
+			if (u_now_time >= this.sunSetTime)
+			{
+				nextDay = true;
+			}
+		}
+		return nextDay;
+	},
 	updateView: function() 
 	{
 	
