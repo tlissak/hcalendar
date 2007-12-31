@@ -644,8 +644,7 @@ var HCalendar =
 				this.location,
 				parseInt(locationDataStr[1]), parseInt(locationDataStr[2]), nsi,
 				parseInt(locationDataStr[4]), parseInt(locationDataStr[5]), ewi,
-				parseInt(locationDataStr[7]), parseInt(locationDataStr[8]));
-
+				parseFloat(locationDataStr[7]), parseInt(locationDataStr[8]));
 		}
 		if (this.locationType == 1)
 		{
@@ -662,7 +661,7 @@ var HCalendar =
 				this.locationData = new Array (zipCode, 
 					parseInt(latDegreesValueByZIP), parseInt(latRadiansValueByZIP), 0,
 					parseInt(lonDegreesValueByZIP), parseInt(lonRadiansValueByZIP), 0,
-					parseInt(timeZoneByZIP), 18);
+					parseFloat(timeZoneByZIP), 18);
 			}
 		}
 		if (this.locationType == 2)
@@ -681,7 +680,7 @@ var HCalendar =
 			this.locationData = new Array (2, 
 				parseInt(latDegreesValueByCOORD), parseInt(latRadiansValueByCOORD), NSbyCoordInt,
 				parseInt(lonDegreesValueByCOORD), parseInt(lonRadiansValueByCOORD), WEbyCoordInt,
-				parseInt(timeZoneByCOORD), 18);
+				parseFloat(timeZoneByCOORD), 18);
 		}
 		
 		//alert(	this.locationData[0] + ": " +

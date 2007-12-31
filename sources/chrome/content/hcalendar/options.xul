@@ -253,7 +253,13 @@
 	
 		function FillTimesZones(hMenuPopup)
 		{
-			for (i = -12; i <= 13; i++)
+			FillTimesZonesInterval(hMenuPopup, -12, 9);
+			FillTimeZone(hMenuPopup, 9.30, 9, "30");
+			FillTimesZonesInterval(hMenuPopup, 10, 13);
+		}
+		function FillTimesZonesInterval(hMenuPopup, startIndex, finishIndex)
+		{
+			for (i = startIndex; i <= finishIndex; i++)
 			{
 				var newitem = document.createElement("menuitem");
 				var itemValue = i;
@@ -265,6 +271,18 @@
       				newitem.setAttribute("label", itemLabel);
       				hMenuPopup.appendChild(newitem);
 			}
+		}
+		function FillTimeZone(hMenuPopup, zoneValue, zoneHrLabel, zoneMnLabel)
+		{
+			var newitem = document.createElement("menuitem");
+			var itemValue = zoneValue;
+			var itemLabel = "GMT";
+			if (zoneHrLabel!=0 && zoneMnLabel!=0)
+				itemLabel += Sign(zoneHrLabel)+zeroed(Math.abs(zoneHrLabel)) + ":" + zoneMnLabel;
+				
+      			newitem.setAttribute("value", itemValue);
+      			newitem.setAttribute("label", itemLabel);
+      			hMenuPopup.appendChild(newitem);
 		}
 		function FillFontSize(hMenuPopup)
 		{
