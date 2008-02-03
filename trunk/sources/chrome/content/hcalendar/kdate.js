@@ -486,7 +486,7 @@ var
 	hlTaanitEsther = 10;
 	hlPurim = 11;
 	hlShushanPurim = 12;
-        hlTaanitBechorot = 13;
+    hlTaanitBechorot = 13;
 	hlPesach = 14;
 	hlPesachD = 15;
 	hlYomHaAtzmaut = 16;
@@ -501,6 +501,8 @@ var
 	hlShminiAzeretSimhatTora = 25;
 	hlShminiAzeret = 26;
 	hlSimhatTora = 27;
+	hlPurimKatan = 28;
+	hlShushanPurimKatan = 29;
 
 var moadimOnEnglish = new makeArray(
 	'',				//  hlNo
@@ -530,7 +532,9 @@ var moadimOnEnglish = new makeArray(
 	'Tu B Av',			//  hlTu_B_Av
 	'Shmini Atzeret, Simchat Torah',//  hlShminiAzeretSimhatTora
 	'Shmini Atzeret',		//  hlShminiAzeret
-	'Simchat Torah'			//  hlSimhatTora
+	'Simchat Torah',			//  hlSimhatTora
+	'Purim Katan',				// hlPurimKatan
+	'Shushan Purim Katan'		// hlShushanPurimKatan
 );
 
 var moadimOnHebrew = new makeArray(
@@ -561,8 +565,9 @@ var moadimOnHebrew = new makeArray(
 	'\u05D8\u0022\u05D5\u0020\u05D1\u05D0\u05D1',					//  hlTu_B_Av
 	'\u05E9\u05DE\u05D9\u05E0\u05D9\u0020\u05E2\u05E6\u05E8\u05EA, \u05E9\u05DE\u05D7\u05EA\u0020\u05EA\u05D5\u05E8\u05D4',	//  hlShminiAzeretSimhatTora
 	'\u05E9\u05DE\u05D9\u05E0\u05D9\u0020\u05E2\u05E6\u05E8\u05EA',			//  hlShminiAzeret
-	'\u05E9\u05DE\u05D7\u05EA\u0020\u05EA\u05D5\u05E8\u05D4'			//  hlSimhatTora
-
+	'\u05E9\u05DE\u05D7\u05EA\u0020\u05EA\u05D5\u05E8\u05D4',			//  hlSimhatTora
+	'\u05E4\u05D5\u05E8\u05D9\u05DD\u0020\u05E7\u05D8\u05DF',				// hlPurimKatan
+	'\u05E9\u05D5\u05E9\u05DF\u0020\u05E4\u05D5\u05E8\u05D9\u05DD\u0020\u05E7\u05D8\u05DF'		// hlShushanPurimKatan
 );
 
 
@@ -625,6 +630,12 @@ function moadimInt(cday, cmonth, cyear, hday, hmonth, dow)
 			return hlPurim
 		else if(hday == 15)
 			return hlShushanPurim
+	}
+	else if(hmonth == 12) {
+		if(hday == 14)
+			return hlPurimKatan
+		else if (hday == 15)
+			return hlShushanPurimKatan
 	}
 	else if(hmonth == 0) {
 
