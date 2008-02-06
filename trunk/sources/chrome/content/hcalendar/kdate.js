@@ -55,8 +55,8 @@ var hebMonthOnHebrew = new makeArray(
 	'\u05D8\u05D1\u05EA', 		// Tevet
 	'\u05E9\u05D1\u05D8',		// Shevat
 	'\u05D0\u05D3\u05E8', 		// Adar
-	'\u05D0\u05D3\u05E8 I', 	// Adar I
-	'\u05D0\u05D3\u05E8 II');	// Adar II
+	'\u05D0\u05D3\u05E8\u0020\u05D0\u0027', 	// Adar I
+	'\u05D0\u05D3\u05E8\u0020\u05D1\u0027');	// Adar II
 
 var hebDayOnEnglish = new makeArray(
 	'Alef',		//  1

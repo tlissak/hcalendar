@@ -1,3 +1,6 @@
+1.0.6.65
+	- Issue 39: Adar 1 display problem in Hebrew
+	  (http://code.google.com/p/hcalendar/issues/detail?id=39)
 1.0.4.64
 	- Issue 37: Show Purim Koton and Shushan Purim Koton (by mdmarkow)
 	  (http://code.google.com/p/hcalendar/issues/detail?id=37)
