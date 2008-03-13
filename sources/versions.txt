@@ -1,3 +1,6 @@
+1.0.6.67
+	- Issue 41: Firefox 3.0b4 Support
+	  (http://code.google.com/p/hcalendar/issues/detail?id=41)
 1.0.6.66
 	- Issue 40: Firefox 3.0b3 Support
 	  (http://code.google.com/p/hcalendar/issues/detail?id=40)
