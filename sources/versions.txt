@@ -1,3 +1,6 @@
+1.0.6.69
+	- Issue 45: Firefox 3.0 Pre Release Support
+	  (http://code.google.com/p/hcalendar/issues/detail?id=45)
 1.0.6.68
 	- Issue 44: Firefox 3.0b5 Support
 	  (http://code.google.com/p/hcalendar/issues/detail?id=44)
