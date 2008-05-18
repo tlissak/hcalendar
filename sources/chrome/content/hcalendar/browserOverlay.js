@@ -114,6 +114,9 @@ var HCalendar =
 		this.currentParashaName = "";
 		this.Entities = new HCalendar_EntityConstants();
 
+		this.hHCalendar = document.getElementById("statusbar-hcalendar-display");
+		this.hToolTip = document.getElementById("hcalendar-tooltip-value");
+		
 		var hBundle = document.getElementById("hcalendar-bundle");
 
 		this.arrDays = this.arrDays.concat(hBundle.getString("listWeekdays").split(","));
@@ -126,10 +129,6 @@ var HCalendar =
 
 		this.arrOrdinals = this.arrOrdinals.concat(hBundle.getString("listOrdinals").split(","));
 	
-		this.hHCalendar = document.getElementById("statusbar-hcalendar-display");
-
-		this.hToolTip = document.getElementById("hcalendar-tooltip-value");
-
 		this.hToolTipCCalendar = document.getElementById("hcalendar-ccalendar-value");
 		this.hToolTipZmanim = document.getElementById("hcalendar-zmanim-value");
 		this.Prefs = new HCalendar_PrefManager();
