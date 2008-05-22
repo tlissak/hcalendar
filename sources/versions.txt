@@ -1,3 +1,8 @@
+1.0.6.71
+	- Issue 52: yom hashoah missing
+	  (http://code.google.com/p/hcalendar/issues/detail?id=52)
+	- Issue 55: add "Yom Hazikaron"
+	  (http://code.google.com/p/hcalendar/issues/detail?id=55)
 1.0.6.70
 	- Issue 53: Support Mozilla Firefox 3.0
 	  (http://code.google.com/p/hcalendar/issues/detail?id=53)

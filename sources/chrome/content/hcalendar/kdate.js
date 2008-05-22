@@ -503,6 +503,8 @@ var
 	hlSimhatTora = 27;
 	hlPurimKatan = 28;
 	hlShushanPurimKatan = 29;
+	hlYomHashoah = 30;
+	hlYomHazikaron = 31;
 
 var moadimOnEnglish = new makeArray(
 	'',				//  hlNo
@@ -534,7 +536,9 @@ var moadimOnEnglish = new makeArray(
 	'Shmini Atzeret',		//  hlShminiAzeret
 	'Simchat Torah',			//  hlSimhatTora
 	'Purim Katan',				// hlPurimKatan
-	'Shushan Purim Katan'		// hlShushanPurimKatan
+	'Shushan Purim Katan',		// hlShushanPurimKatan
+	'Yom Hashoah',				// hlYomHashoah
+	'Yom Hazikaron'				// hlYomHazikaron
 );
 
 var moadimOnHebrew = new makeArray(
@@ -567,7 +571,9 @@ var moadimOnHebrew = new makeArray(
 	'\u05E9\u05DE\u05D9\u05E0\u05D9\u0020\u05E2\u05E6\u05E8\u05EA',			//  hlShminiAzeret
 	'\u05E9\u05DE\u05D7\u05EA\u0020\u05EA\u05D5\u05E8\u05D4',			//  hlSimhatTora
 	'\u05E4\u05D5\u05E8\u05D9\u05DD\u0020\u05E7\u05D8\u05DF',				// hlPurimKatan
-	'\u05E9\u05D5\u05E9\u05DF\u0020\u05E4\u05D5\u05E8\u05D9\u05DD\u0020\u05E7\u05D8\u05DF'		// hlShushanPurimKatan
+	'\u05E9\u05D5\u05E9\u05DF\u0020\u05E4\u05D5\u05E8\u05D9\u05DD\u0020\u05E7\u05D8\u05DF',		// hlShushanPurimKatan
+	'\u05D9\u05D5\u05DD\u0020\u05D4\u05D6\u05DB\u05E8\u05D5\u05DF\u0020\u05DC\u05E9\u05D5\u05D0\u05D4\u0020\u05D5\u05DC\u05D2\u05D1\u05D5\u05E8\u05D4',	// hlYomHashoah
+	'\u05D9\u05D5\u05DD\u0020\u05D4\u05D6\u05DB\u05E8\u05D5\u05DF\u0020\u05DC\u05D7\u05DC\u05DC\u05D9\u0020\u05DE\u05E2\u05E8\u05DB\u05D5\u05EA\u0020\u05D9\u05E9\u05E8\u05D0\u05DC' //hlYomHazikaron
 );
 
 
@@ -638,8 +644,7 @@ function moadimInt(cday, cmonth, cyear, hday, hmonth, dow)
 			return hlShushanPurimKatan
 	}
 	else if(hmonth == 0) {
-
-		if(hday == 12 && dow == 5)
+		if (hday == 12 && dow == 5)
 			return hlTaanitBechorot
 		else if(hday == 14 && dow != 7)
 			return hlTaanitBechorot
@@ -647,6 +652,12 @@ function moadimInt(cday, cmonth, cyear, hday, hmonth, dow)
 			return hlPesach
 		else if(hday == 22)
 			return hlPesachD
+		if (hday == 27 && dow != 6 && dow !=1)
+			return hlYomHashoah
+		else if(hday == 26 && dow == 5)
+			return hlYomHashoah
+		else if(hday == 28 && dow == 1)
+			return hlYomHashoah
 	}
 	else if(hmonth == 1) {
 		if(hday == 3 && dow == 5)
@@ -657,10 +668,21 @@ function moadimInt(cday, cmonth, cyear, hday, hmonth, dow)
 			return hlYomHaAtzmaut
 		else if(hday == 6 && dow == 3)
 			return hlYomHaAtzmaut
+
+		if(hday == 2 && dow == 4)
+			return hlYomHazikaron
+		else if(hday == 3 && dow == 4)
+			return hlYomHazikaron
+		else if(hday == 4 && dow != 5 && dow != 6 && dow != 7 && dow !=1)
+			return hlYomHazikaron
+		else if(hday == 5 && dow == 2)
+			return hlYomHazikaron
+
+			
 		if(hday == 14)
 			return hlPesahSheni
 		else if(hday == 18)
-			return hlLag_B_Omer
+			return hlLag_B_Omer			
 		if(hday == 28)
 			return hlYomYerushalayim
 	}
