@@ -1,3 +1,6 @@
+1.0.6.72
+    	- Issue 56: Add "Hebrew Virtual Keyboard" into "Gematria" dialog.
+          (http://code.google.com/p/hcalendar/issues/detail?id=56)
 1.0.6.71
 	- Issue 52: yom hashoah missing
 	  (http://code.google.com/p/hcalendar/issues/detail?id=52)
