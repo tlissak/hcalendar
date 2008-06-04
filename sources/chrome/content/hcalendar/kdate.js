@@ -100,6 +100,7 @@ var hebDayOnEnglish = new makeArray(
 	'Lamed-Tet',	// 39
 	'Mem',     	// 40
 	'Mem-Alef',	// 41
+	'Mem-Bet',	// 42
 	'Mem-Gimel',	// 43
 	'Mem-Dalet',	// 44
 	'Mem-He',	// 45
