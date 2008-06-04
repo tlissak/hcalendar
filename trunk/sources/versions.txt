@@ -1,3 +1,6 @@
+1.0.6.73
+	- Issue 57: sefirat haomer error: "44th(Mem-He)"
+          (http://code.google.com/p/hcalendar/issues/detail?id=57)
 1.0.6.72
     	- Issue 56: Add "Hebrew Virtual Keyboard" into "Gematria" dialog.
           (http://code.google.com/p/hcalendar/issues/detail?id=56)
