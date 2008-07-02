@@ -1,3 +1,6 @@
+1.0.6.74
+	- Issue 58: add timezone GMT-4:30
+          (http://code.google.com/p/hcalendar/issues/detail?id=58)
 1.0.6.73
 	- Issue 57: sefirat haomer error: "44th(Mem-He)"
           (http://code.google.com/p/hcalendar/issues/detail?id=57)
