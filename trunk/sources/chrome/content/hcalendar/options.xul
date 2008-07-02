@@ -253,7 +253,9 @@
 	
 		function FillTimesZones(hMenuPopup)
 		{
-			FillTimesZonesInterval(hMenuPopup, -12, 9);
+			FillTimesZonesInterval(hMenuPopup, -12, -5);
+			FillTimeZone(hMenuPopup, -4.30, -4, "30");
+			FillTimesZonesInterval(hMenuPopup, -4, 9);
 			FillTimeZone(hMenuPopup, 9.30, 9, "30");
 			FillTimesZonesInterval(hMenuPopup, 10, 13);
 		}
