@@ -6,6 +6,8 @@
 <!ENTITY hc.menu.gematria.key "g">
 <!ENTITY hc.menu.clipboard.label "Copy Hebrew Date to Clipboard">
 <!ENTITY hc.menu.clipboard.key "C">
+<!ENTITY hc.menu.calendarManager.label "Create Shabbat Reminder in Google Calendar">
+<!ENTITY hc.menu.calendarManager.key "R">
 <!ENTITY hc.menu.open.label "Open Hebrew Calendar">
 <!ENTITY hc.menu.open.key "H">
 <!ENTITY hc.menu.blog.label "Open hcalendar blog">

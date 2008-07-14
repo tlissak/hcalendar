@@ -17,6 +17,8 @@
 <!ENTITY hc.menu.converter.label "המרה...">
 <!ENTITY hc.menu.gematria.key "ג">
 <!ENTITY hc.menu.gematria.label "גימטרייה...">
+<!ENTITY hc.menu.calendarManager.label "Create Shabbat Reminder in Google Calendar">
+<!ENTITY hc.menu.calendarManager.key "R">
 <!ENTITY hc.menu.open.key "ש">
 <!ENTITY hc.menu.open.label "פתח לוח שנה עברי">
 <!ENTITY hc.menu.options.key "א">

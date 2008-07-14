@@ -44,6 +44,8 @@ function suntime(
 	timezone)
 {
 	var invalid = 0;	// start out as OK
+	var ss;
+	var sr;
 
 	longitude = (londeg + lonmin/60.0) * ((ew == 0) ? -1 : 1);
 	latitude  = (latdeg + latmin/60.0) * ((ns == 0) ? 1 : -1);
