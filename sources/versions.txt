@@ -1,39 +1,39 @@
-1.0.6.76
+1.0.4.76
 	- Issue 35: hcalendar and ColorfulTabs extensions conflict.
       	  (http://code.google.com/p/hcalendar/issues/detail?id=59)
-1.0.6.75
+1.0.4.75
 	- Issue 59: Create Shabbat Reminder in Google calendar
       	  (http://code.google.com/p/hcalendar/issues/detail?id=59)
-1.0.6.74
+1.0.4.74
 	- Issue 58: add timezone GMT-4:30
       	  (http://code.google.com/p/hcalendar/issues/detail?id=58)
-1.0.6.73
+1.0.4.73
 	- Issue 57: sefirat haomer error: "44th(Mem-He)"
       	  (http://code.google.com/p/hcalendar/issues/detail?id=57)
-1.0.6.72
+1.0.4.72
     	- Issue 56: Add "Hebrew Virtual Keyboard" into "Gematria" dialog.
       	  (http://code.google.com/p/hcalendar/issues/detail?id=56)
-1.0.6.71
+1.0.4.71
 	- Issue 52: yom hashoah missing
 	  (http://code.google.com/p/hcalendar/issues/detail?id=52)
 	- Issue 55: add "Yom Hazikaron"
 	  (http://code.google.com/p/hcalendar/issues/detail?id=55)
-1.0.6.70
+1.0.4.70
 	- Issue 53: Support Mozilla Firefox 3.0
 	  (http://code.google.com/p/hcalendar/issues/detail?id=53)
-1.0.6.69
+1.0.4.69
 	- Issue 45: Firefox 3.0 Pre Release Support
 	  (http://code.google.com/p/hcalendar/issues/detail?id=45)
-1.0.6.68
+1.0.4.68
 	- Issue 44: Firefox 3.0b5 Support
 	  (http://code.google.com/p/hcalendar/issues/detail?id=44)
-1.0.6.67
+1.0.4.67
 	- Issue 41: Firefox 3.0b4 Support
 	  (http://code.google.com/p/hcalendar/issues/detail?id=41)
-1.0.6.66
+1.0.4.66
 	- Issue 40: Firefox 3.0b3 Support
 	  (http://code.google.com/p/hcalendar/issues/detail?id=40)
-1.0.6.65
+1.0.4.65
 	- Issue 39: Adar 1 display problem in Hebrew
 	  (http://code.google.com/p/hcalendar/issues/detail?id=39)
 1.0.4.64
