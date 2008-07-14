@@ -61,23 +61,19 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
  label="&hc.menu.clipboard.label;" accesskey="&hc.menu.clipboard.key;"/>
 
 		<menuseparator/>
+		<menuitem id="hc-menu-openCalendarManager" oncommand="HCalendar.calendarManager();"
+ label="&hc.menu.calendarManager.label;" accesskey="&hc.menu.calendarManager.key;"/>
+		<menuseparator/>
 		<menuitem id="hc-menu-openKaluach" oncommand="HCalendar.popupOpenKaluach();"
  label="&hc.menu.open.label;" accesskey="&hc.menu.open.key;"/>
-
 		<menuitem id="hc-menu-openBlog" oncommand="HCalendar.popupOpenBlog();"
  label="&hc.menu.blog.label;" accesskey="&hc.menu.blog.key;"/>
-
 	</popup>
 
-
 	<tooltip id="hcalendar-tooltip" orient="vertical">
-
 		<description id="hcalendar-ccalendar-value" value="" style="margin:0px;"/>
-
 		<description id="hcalendar-zmanim-value" value="" style="margin:0px;"/>
-
 		<description id="hcalendar-tooltip-value" value="" style="margin:0px;"/>
-
 	</tooltip>
 
 </popupset>

@@ -262,6 +262,32 @@ var HCalendar =
 		var year = uDate.getFullYear();
 		return date + "/" + month + "/" + year;
 	},
+	dateToStandard: function (uDate)
+	{
+		var date = HCalendar.zeroed(uDate.getDate());
+		var month = HCalendar.zeroed(uDate.getMonth() + 1);
+		var year = uDate.getFullYear();
+		return year + month + date;
+	},
+	getTimeZone: function() 
+	{
+		var rightNow = new Date();
+		var date1 = new Date(rightNow.getFullYear(), 0, 1, 0, 0, 0, 0);
+		var date2 = new Date(rightNow.getFullYear(), 6, 1, 0, 0, 0, 0);
+		var temp = date1.toGMTString();
+		var date3 = new Date(temp.substring(0, temp.lastIndexOf(" ")-1));
+		var temp = date2.toGMTString();
+		var date4 = new Date(temp.substring(0, temp.lastIndexOf(" ")-1));
+		var hoursDiffStdTime = (date1 - date3) / (1000 * 60 * 60);
+		var hoursDiffDaylightTime = (date2 - date4) / (1000 * 60 * 60);
+		if (hoursDiffDaylightTime == hoursDiffStdTime) {
+			//alert("Time zone is GMT " + hoursDiffStdTime + ".\nDaylight Saving Time is NOT observed here.");
+			return hoursDiffStdTime;
+		} else {
+			//alert("Time zone is GMT " + hoursDiffStdTime + ".\nDaylight Saving Time is observed here.");
+			return hoursDiffStdTime + 1;
+		}
+	},	
 	getPref: function(strName) 
 	{		
 		return this.Prefs.getPref(strName);
@@ -362,7 +388,8 @@ var HCalendar =
 			this.ShabbatStartsTime = "";
 			if (this.isLocation())
 			{
-				var sunData = this.calculateSunRaise();
+				var now = new Date();
+				var sunData = this.calculateSunRaise(now);
 				if (sunData != null)
 				{
 					var sunRise = sunData[0];
@@ -1074,7 +1101,38 @@ this.Entities.MONTH_NAME_ABBR,
 		return ;
 	},
 
+	calendarManager: function()
+	{
+		//http://www.google.com/googlecalendar/event_publisher_guide.html
+		// http://www.google.com/googlecalendar/event_publisher_guide_detail.html
+		var uDate = this.getCorrectDay();	
+		var uShabbatDate = FindShabbat(uDate);
+		var uFridayDate = new Date(uShabbatDate.getFullYear(), uShabbatDate.getMonth(), uShabbatDate.getDate() - 1, 0, 1);
+		var eventDate = this.dateToStandard(uFridayDate);
+		var eventStartTime = "1200";
+		var eventFinishTime = "1201";
+		//var timeZone = this.getTimeZone();
+		//var eventZone = this.zeroed( timeZone) + "Z";
+		var eventZone = "00";
 
+		var ShabbatBeginsAt = "";
+		var sunData = this.calculateSunRaise(uFridayDate);
+		if (sunData != null)
+		{
+			ShabbatBeginsAt = sunData[2];
+		}				
+		
+		var eventName = "Reminder: Shabbat begins at " + ShabbatBeginsAt + ", Parsha%20" + this.currentParashaName;
+		var eventDetails = "";//this.hHCalendar.label;
+		var url = "http://www.google.com/calendar/event?action=TEMPLATE&text=" + eventName +
+				"&dates=" + eventDate + 
+				"T" + eventStartTime + eventZone + "/" + eventDate + 
+				"T" + eventFinishTime + eventZone + "&details=" + eventDetails +
+				"&location=&trp=false&sprop=&sprop=name:";
+		this.smartOpenUrl(url);
+		return ;
+	},
+		
 	popupOpenKaluach: function()
 	{
 		//open("chrome://hcalendar/content/KaluachJS.htm");
@@ -1196,7 +1254,7 @@ this.Entities.MONTH_NAME_ABBR,
 
 		return monthName;
 	},
-	calculateSunRaise: function()
+	calculateSunRaise: function(date)
 	{
 		var latd = this.locationData[1];
 		var latm = this.locationData[2];
@@ -1207,10 +1265,10 @@ this.Entities.MONTH_NAME_ABBR,
 		var adj = this.locationData[7];
 		var beforeShabbatLight = this.locationData[8];
 
-		var now = new Date();
-		var d = now.getDate();
-   		var m = now.getMonth() + 1;
-		var y = now.getYear();
+		
+		var d = date.getDate();
+   		var m = date.getMonth() + 1;
+		var y = date.getYear();
 
 		//adj = - adj;
 		adj += this.dst;	// var dst = 0;	// winter time
@@ -1243,7 +1301,7 @@ this.Entities.MONTH_NAME_ABBR,
 			sunData[0] = sunriseString;
 			sunData[1] = sunsetString;
 			sunData[2] = "";
-			if (now.getDay() == 5)
+			if (date.getDay() == 5)
 			{
 				var ampmShabbat = this.language == 1 || this.language == 2 ? 0 : ampm;
 				sunData[2] = timeadj(time[3] - beforeShabbatLight/60.0, ampmShabbat)
