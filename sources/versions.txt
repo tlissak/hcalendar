@@ -1,3 +1,6 @@
+1.0.4.77
+	- Issue 61: Create Shabbat Reminder in Yahoo calendar
+      	  (http://code.google.com/p/hcalendar/issues/detail?id=61)
 1.0.4.76
 	- Issue 35: hcalendar and ColorfulTabs extensions conflict.
       	  (http://code.google.com/p/hcalendar/issues/detail?id=59)

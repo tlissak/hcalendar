@@ -6,8 +6,10 @@
 <!ENTITY hc.menu.gematria.key "g">
 <!ENTITY hc.menu.clipboard.label "Copier dans le Presse-papiers la date en hébreu">
 <!ENTITY hc.menu.clipboard.key "C">
-<!ENTITY hc.menu.calendarManager.label "Create Shabbat Reminder in Google Calendar">
-<!ENTITY hc.menu.calendarManager.key "R">
+<!ENTITY hc.menu.calendarManagerCreateEventInGoogle.label "Create Shabbat Reminder in Google Calendar">
+<!ENTITY hc.menu.calendarManagerCreateEventInYahoo.label "Create Shabbat Reminder in Yahoo Calendar">
+<!ENTITY hc.menu.calendarManagerCreateEventInGoogle.key "R">
+<!ENTITY hc.menu.calendarManagerCreateEventInYahoo.key "Y">
 <!ENTITY hc.menu.open.label "Ouvrir le calendrier hébreu">
 <!ENTITY hc.menu.open.key "H">
 <!ENTITY hc.menu.blog.label "Ouvrir le blog officiel du calendrier hébreu">

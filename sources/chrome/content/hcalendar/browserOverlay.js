@@ -1101,7 +1101,7 @@ this.Entities.MONTH_NAME_ABBR,
 		return ;
 	},
 
-	calendarManager: function()
+	calendarManagerCreateGoogleEvent: function()
 	{
 		//http://www.google.com/googlecalendar/event_publisher_guide.html
 		// http://www.google.com/googlecalendar/event_publisher_guide_detail.html
@@ -1114,6 +1114,66 @@ this.Entities.MONTH_NAME_ABBR,
 		//var timeZone = this.getTimeZone();
 		//var eventZone = this.zeroed( timeZone) + "Z";
 		var eventZone = "00";
+		var blogUrl = "http://hcalendar.blogspot.com";
+
+		var location = "";		
+		if (this.locationType == 0 && this.location != 0)
+		{
+			var hLocations = document.getElementById("hcalendar-locations");
+			var locationDataString = hLocations.getString("location_" + this.location.toString());
+			var locationDataStr = new Array();
+			locationDataStr = locationDataString.split(",");
+		
+			location = locationDataStr[0];
+		}
+		
+		var ShabbatBeginsAt = "";
+		var sunData = this.calculateSunRaise(uFridayDate);
+		if (sunData != null)
+		{
+			ShabbatBeginsAt = sunData[2];
+		}				
+		
+		var eventName = "Reminder: Shabbat begins at " + ShabbatBeginsAt + ", Parsha%20" + this.currentParashaName;
+		var eventDetails = blogUrl; //"";//this.hHCalendar.label;
+		var url = "http://www.google.com/calendar/event?action=TEMPLATE&text=" + eventName +
+				"&dates=" + eventDate + 
+				"T" + eventStartTime + eventZone + "/" + eventDate + 
+				"T" + eventFinishTime + eventZone + 
+				"&details=" + eventDetails +
+				"&location=" + location +
+				"&trp=false" + 
+				"&sprop=" +
+				"&sprop=name:";
+		this.smartOpenUrl(url);
+		return ;
+	},
+	
+	calendarManagerCreateYahooEvent: function()
+	{
+		// http://richmarr.wordpress.com/2008/01/07/adding-events-to-users-calendars-part-2-web-calendars/
+		
+		var uDate = this.getCorrectDay();	
+		var uShabbatDate = FindShabbat(uDate);
+		var uFridayDate = new Date(uShabbatDate.getFullYear(), uShabbatDate.getMonth(), uShabbatDate.getDate() - 1, 0, 1);
+		var eventDate = this.dateToStandard(uFridayDate);
+		var eventStartTime = "120000";
+		var eventFinishTime = "1201";
+		//var timeZone = this.getTimeZone();
+		//var eventZone = this.zeroed( timeZone) + "Z";
+		var eventZone = "00";
+		var blogUrl = "http://hcalendar.blogspot.com";
+		
+		var location = "";		
+		if (this.locationType == 0 && this.location != 0)
+		{
+			var hLocations = document.getElementById("hcalendar-locations");
+			var locationDataString = hLocations.getString("location_" + this.location.toString());
+			var locationDataStr = new Array();
+			locationDataStr = locationDataString.split(",");
+		
+			location = locationDataStr[0];
+		}
 
 		var ShabbatBeginsAt = "";
 		var sunData = this.calculateSunRaise(uFridayDate);
@@ -1124,11 +1184,14 @@ this.Entities.MONTH_NAME_ABBR,
 		
 		var eventName = "Reminder: Shabbat begins at " + ShabbatBeginsAt + ", Parsha%20" + this.currentParashaName;
 		var eventDetails = "";//this.hHCalendar.label;
-		var url = "http://www.google.com/calendar/event?action=TEMPLATE&text=" + eventName +
-				"&dates=" + eventDate + 
-				"T" + eventStartTime + eventZone + "/" + eventDate + 
-				"T" + eventFinishTime + eventZone + "&details=" + eventDetails +
-				"&location=&trp=false&sprop=&sprop=name:";
+		var url = "http://calendar.yahoo.com/?v=60" +
+				"&view=d" +
+				"&type=20" + 
+				"&title=" + eventName + 
+				"&st=" + eventDate + "T" + eventStartTime +
+				"&desc=" + blogUrl + 
+				"&in_loc=" + location +
+				"&url=" + blogUrl;
 		this.smartOpenUrl(url);
 		return ;
 	},
@@ -1163,15 +1226,28 @@ this.Entities.MONTH_NAME_ABBR,
 		if (processedIfNotBrowser)
 			return ;
 		
+		var cBrowser = null;
+		try
+		{
+			if ((gBrowser != undefined) && (gBrowser != null))
+				cBrowser = gBrowser
+			else	
+				cBrowser = this.getBrowser();
+		}
+		catch (ex)
+		{
+			cBrowser = this.getBrowser();
+		}
+		
 		if (this.bOpenInANewTab)
 		{
 			if (this.bSelectAfterOpening)
-				gBrowser.selectedTab = gBrowser.addTab(url);
+				cBrowser.selectedTab = cBrowser.addTab(url);
 			else
-				gBrowser.addTab(url);
+				cBrowser.addTab(url);
 		}	
 		else
-			gBrowser.loadURI(url);
+			cBrowser.loadURI(url);
 		return ;
 	},
 	openUrl: function(url)
@@ -1218,6 +1294,12 @@ this.Entities.MONTH_NAME_ABBR,
 		}
 		return opened;
 	},
+	getBrowser: function () 
+	{ 
+        var browser = document.getElementById('browser'); 
+        return browser; 
+	},
+
 	getHebMonth: function(hMonth)
 	{
 		if (this.language == 1)
