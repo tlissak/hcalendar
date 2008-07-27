@@ -17,8 +17,10 @@
 <!ENTITY hc.menu.converter.label "המרה...">
 <!ENTITY hc.menu.gematria.key "ג">
 <!ENTITY hc.menu.gematria.label "גימטרייה...">
-<!ENTITY hc.menu.calendarManager.label "Create Shabbat Reminder in Google Calendar">
-<!ENTITY hc.menu.calendarManager.key "R">
+<!ENTITY hc.menu.calendarManagerCreateEventInGoogle.label "Create Shabbat Reminder in Google Calendar">
+<!ENTITY hc.menu.calendarManagerCreateEventInYahoo.label "Create Shabbat Reminder in Yahoo Calendar">
+<!ENTITY hc.menu.calendarManagerCreateEventInGoogle.key "R">
+<!ENTITY hc.menu.calendarManagerCreateEventInYahoo.key "Y">
 <!ENTITY hc.menu.open.key "ש">
 <!ENTITY hc.menu.open.label "פתח לוח שנה עברי">
 <!ENTITY hc.menu.options.key "א">
