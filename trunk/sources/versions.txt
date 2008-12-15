@@ -1,3 +1,6 @@
+1.0.4.78
+	- Issue 63: Firefox 3.1b2 Support
+	  (http://code.google.com/p/hcalendar/issues/detail?id=63)
 1.0.4.77
 	- Issue 61: Create Shabbat Reminder in Yahoo calendar
       	  (http://code.google.com/p/hcalendar/issues/detail?id=61)
