@@ -1,3 +1,10 @@
+1.0.4.79
+	- Issue 46 (in progress): Sunbird 0.8 (0.9) - installation failed
+	  (http://code.google.com/p/hcalendar/issues/detail?id=46)
+	- Issue 59:  	 Create Shabbat Reminder in Google calendar
+	  (http://code.google.com/p/hcalendar/issues/detail?id=59)
+	- 61:  	 Create Shabbat Reminder in Yahoocalendar   	
+	  (http://code.google.com/p/hcalendar/issues/detail?id=61)
 1.0.4.78
 	- Issue 63: Firefox 3.1b2 Support
 	  (http://code.google.com/p/hcalendar/issues/detail?id=63)

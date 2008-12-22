@@ -118,16 +118,14 @@ var HCalendar =
 		this.hToolTip = document.getElementById("hcalendar-tooltip-value");
 		
 		var hBundle = document.getElementById("hcalendar-bundle");
-
-		this.arrDays = this.arrDays.concat(hBundle.getString("listWeekdays").split(","));
-
-		this.arrDaysAbbr = this.arrDaysAbbr.concat(hBundle.getString("listWeekdaysAbbr").split(","));
-
-		this.arrMonths = this.arrMonths.concat(hBundle.getString("listMonths").split(","));
-
-		this.arrMonthsAbbr = this.arrMonthsAbbr.concat(hBundle.getString("listMonthsAbbr").split(","));
-
-		this.arrOrdinals = this.arrOrdinals.concat(hBundle.getString("listOrdinals").split(","));
+		if (hBundle!=null)
+		{
+			this.arrDays = this.arrDays.concat(hBundle.getString("listWeekdays").split(","));
+			this.arrDaysAbbr = this.arrDaysAbbr.concat(hBundle.getString("listWeekdaysAbbr").split(","));
+			this.arrMonths = this.arrMonths.concat(hBundle.getString("listMonths").split(","));
+			this.arrMonthsAbbr = this.arrMonthsAbbr.concat(hBundle.getString("listMonthsAbbr").split(","));
+			this.arrOrdinals = this.arrOrdinals.concat(hBundle.getString("listOrdinals").split(","));
+		}
 	
 		this.hToolTipCCalendar = document.getElementById("hcalendar-ccalendar-value");
 		this.hToolTipZmanim = document.getElementById("hcalendar-zmanim-value");
@@ -267,7 +265,7 @@ var HCalendar =
 		var date = HCalendar.zeroed(uDate.getDate());
 		var month = HCalendar.zeroed(uDate.getMonth() + 1);
 		var year = uDate.getFullYear();
-		return year + month + date;
+		return year.toString() + month.toString() + date.toString();
 	},
 	getTimeZone: function() 
 	{
@@ -1133,7 +1131,7 @@ this.Entities.MONTH_NAME_ABBR,
 		{
 			ShabbatBeginsAt = sunData[2];
 		}				
-		
+				
 		var eventName = "Reminder: Shabbat begins at " + ShabbatBeginsAt + ", Parsha%20" + this.currentParashaName;
 		var eventDetails = blogUrl; //"";//this.hHCalendar.label;
 		var url = "http://www.google.com/calendar/event?action=TEMPLATE&text=" + eventName +
@@ -1405,7 +1403,6 @@ this.Entities.MONTH_NAME_ABBR,
 		return sunData;
 	}
 }
-
 
 window.addEventListener("load", function() { HCalendar.init(); }, false);
 
