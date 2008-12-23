@@ -1,3 +1,6 @@
+1.0.4.80
+	- Issue 64: Vav-Tet or Tet-Vav? 
+	  (http://code.google.com/p/hcalendar/issues/detail?id=64)
 1.0.4.79
 	- Issue 46 (in progress): Sunbird 0.8 (0.9) - installation failed
 	  (http://code.google.com/p/hcalendar/issues/detail?id=46)
