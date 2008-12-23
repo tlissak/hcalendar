@@ -73,7 +73,7 @@ var hebDayOnEnglish = new makeArray(
 	'Yod-Bet',	// 12
 	'Yod-Gimel',	// 13
 	'Yod-Dalet',	// 14
-	'Vav-Tet',	// 15
+	'Tet-Vav',	// 15
 	'Tet-Zayin',	// 16
 	'Yod-Zayin',	// 17
 	'Yod-Chet',	// 18
