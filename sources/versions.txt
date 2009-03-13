@@ -1,3 +1,6 @@
+1.0.4.81
+	- Issue 65: Firefox 3.1b3 Support
+	  (http://code.google.com/p/hcalendar/issues/detail?id=65)
 1.0.4.80
 	- Issue 64: Vav-Tet or Tet-Vav? 
 	  (http://code.google.com/p/hcalendar/issues/detail?id=64)
