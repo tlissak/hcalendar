@@ -75,6 +75,14 @@
   	<RDF:Seq about="chrome://calendar/content/calendar.xul">
     		<RDF:li>chrome://hcalendar/content/sunbirdOverlay.xul</RDF:li>
   	</RDF:Seq>
+	
+	<!-- Spicebird -->
+  	<RDF:Seq about="chrome://collab/content/collab.xul">
+    		<RDF:li>chrome://hcalendar/content/spicebird.xul</RDF:li>
+  	</RDF:Seq>
+  	<RDF:Seq about="chrome://calendar/content/csCalendarOverlay.xul">
+    		<RDF:li>chrome://hcalendar/content/spicebird.xul</RDF:li>
+  	</RDF:Seq>	 
 
 </RDF:RDF>
 

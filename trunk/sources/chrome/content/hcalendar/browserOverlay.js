@@ -98,10 +98,12 @@ var HCalendar =
 		this.fontSize = 11;
 		this.enabledHint = true;
 		this.dst = 0;
+		this.showOmerCounting = true;
+		this.showCivilHolidays = true;
 		this.daySwitchBySunSet = true;
 		this.lastDaysBefore = -1;
 
-		this.hintShowCivilianDate = false;
+		//this.hintShowCivilianDate = true;
 		this.hintShowNumberDaysBeforeShabbat = true;
 		this.hintShowSunRise = false;
 		this.hintShowSunSet = false;
@@ -463,7 +465,9 @@ var HCalendar =
 		var weekDay = this.getWeekDay(hnow);
 		var holidayId = this.getHolidayId(hnow);
 		var holidayName = this.getHolidayName(holidayId);
-		var dayOmerId = this.getOmerDay(hnow);
+		var dayOmerId = 0;
+		if (this.showOmerCounting) 
+			dayOmerId = this.getOmerDay(hnow);
 
 		var showCalendarText = hebrewDate;
 		if (weekDay != "")
@@ -627,10 +631,12 @@ var HCalendar =
 
 		this.fontSize = this.getPref("hcalendar.fontSize");
 		this.dst = this.getPref("hcalendar.dst");
+		this.showOmerCounting = this.getPref("hcalendar.ShowOmerCounting");
+		this.showCivilHolidays = this.getPref("hcalendar.ShowCivilHolidays");
 
 		this.daySwitchBySunSet = this.getPref("hcalendar.daySwitchBySunSet");
 
-		this.hintShowCivilianDate = this.getPref("hcalendar.hint.show.CivilianDate");
+		//this.hintShowCivilianDate = this.getPref("hcalendar.hint.show.CivilianDate");
 		this.hintShowNumberDaysBeforeShabbat = this.getPref("hcalendar.hint.show.NumberDaysBeforeShabbat");
 		this.hintShowSunRise = this.getPref("hcalendar.hint.show.SunRise");
 		this.hintShowSunSet = this.getPref("hcalendar.hint.show.SunSet");
@@ -952,6 +958,12 @@ this.Entities.MONTH_NAME_ABBR,
 			hebrewHolidayInt = moadimInt(cday, cmonth, cyear, hday, hmonth, dow);
 		else
 			hebrewHolidayInt = moadimIntInDiaspora(cday, cmonth, cyear, hday, hmonth, dow);
+			
+		if (this.showCivilHolidays && (hebrewHolidayInt == hlNo))
+		{
+			hebrewHolidayInt = GetCivilHolidayId(cday, cmonth, cyear, hday, hmonth, dow);
+		}		
+			
 		return hebrewHolidayInt;
 	},
 	getHolidayName: function(hebrewHolidayInt)
