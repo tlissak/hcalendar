@@ -56,6 +56,8 @@
 			var hTextColorPicker = getElement("textColorPicker");
 			var hHolidayColorPicker = getElement("holidayColorPicker");
 			var hDstControl = document.getElementById("dstOption");
+			var hShowOmerCountingControl = document.getElementById("voShowOmerCounting");
+			var hShowCivilHolidaysControl = document.getElementById("voShowCivilHolidays");
 			var h24HourFormat = document.getElementById("chk24HourFormat");
 			var hSwitchBySunSet = document.getElementById("daySwitchBySunSet");
 			var hZip_ZipCodesMenu = document.getElementById("zipCode");
@@ -99,6 +101,9 @@
 			getElement("timeCoordsZoneList").value = getPref("hcalendar.COORD_TimeZone");
 		
   			hDstControl.checked = getPref("hcalendar.dst");
+			hShowOmerCountingControl.checked = getPref("hcalendar.ShowOmerCounting");
+			hShowCivilHolidaysControl.checked = getPref("hcalendar.ShowCivilHolidays");
+			
 			h24HourFormat.checked = !getPref("hcalendar.24HourFormat");
 			hSwitchBySunSet.checked = getPref("hcalendar.daySwitchBySunSet");
 
@@ -123,6 +128,8 @@
 			var textColor = getElement("textColorPicker").color;
 			var holidayColor = getElement("holidayColorPicker").color;
 			var dst = getElement("dstOption").checked;
+			var showOmerCounting = getElement("voShowOmerCounting").checked;
+			var showCivilHolidays = getElement("voShowCivilHolidays").checked;
 			var chk24HourFormat = !getElement("chk24HourFormat").checked;
 			setPref("hcalendar.language", language);
 			setPref("hcalendar.location", location);
@@ -130,6 +137,8 @@
 			setPref("hcalendar.holidayColor", holidayColor);
 			setPref("hcalendar.fontSize", document.getElementById("fontSizeList").value);
 			setPref("hcalendar.dst", dst);
+			setPref("hcalendar.ShowOmerCounting", showOmerCounting);
+			setPref("hcalendar.ShowCivilHolidays", showCivilHolidays);
 			setPref("hcalendar.24HourFormat", chk24HourFormat);
 			setPref("hcalendar.daySwitchBySunSet", document.getElementById("daySwitchBySunSet").checked);
 			setPref("hcalendar.hint.showParashaInIsrael", getElement("chkShowParashaInIsrael").checked);
@@ -416,6 +425,15 @@
 			<checkbox id="daySwitchBySunSet" label="&hc.options.time.switch;"/>
 		</hbox>
 	</groupbox>
+	<groupbox flex="1">
+		<caption label="View Options"/>
+		<hbox align="center">
+			<checkbox id="voShowOmerCounting" label="Show Omer Counting"/>
+		</hbox>	
+		<hbox align="center">
+			<checkbox id="voShowCivilHolidays" label="Show Civil Holidays"/>
+		</hbox>
+	</groupbox>	
 	<hbox>
 	<groupbox flex="1">
 		<caption label="&hc.options.font.caption;"/>

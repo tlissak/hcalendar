@@ -653,6 +653,66 @@ function moadimInt(cday, cmonth, cyear, hday, hmonth, dow)
 			return hlPesach
 		else if(hday == 22)
 			return hlPesachD
+//		if (hday == 27 && dow != 6 && dow !=1)
+//			return hlYomHashoah
+//		else if(hday == 26 && dow == 5)
+//			return hlYomHashoah
+//		else if(hday == 28 && dow == 1)
+//			return hlYomHashoah
+	}
+	else if(hmonth == 1) {
+//		if(hday == 3 && dow == 5)
+//			return hlYomHaAtzmaut
+//		else if(hday == 4 && dow == 5)
+//			return hlYomHaAtzmaut
+//		else if(hday == 5 && dow != 6 && dow != 7 && dow !=2)
+//			return hlYomHaAtzmaut
+//		else if(hday == 6 && dow == 3)
+//			return hlYomHaAtzmaut
+
+//		if(hday == 2 && dow == 4)
+//			return hlYomHazikaron
+//		else if(hday == 3 && dow == 4)
+//			return hlYomHazikaron
+//		else if(hday == 4 && dow != 5 && dow != 6 && dow != 7 && dow !=1)
+//			return hlYomHazikaron
+//		else if(hday == 5 && dow == 2)
+//			return hlYomHazikaron
+			
+		if(hday == 14)
+			return hlPesahSheni
+		else if(hday == 18)
+			return hlLag_B_Omer			
+//		if(hday == 28)
+//			return hlYomYerushalayim
+	}
+	else if(hmonth == 2) {
+		if(hday == 6)
+			return hlShavuot
+		else if(hday == 7)
+			return hlShavuotD
+	}
+	else if(hmonth == 3) {
+		if(hday == 17 && dow != 7)
+			return hlFast_of_Tammuz
+		if(hday == 18 && dow == 1)
+			return hlFast_of_Tammuz
+	}
+	else if(hmonth == 4) {
+		if(hday == 9 && dow != 7)
+			return hlTisha_B_Av
+		if(hday == 10 && dow == 1)
+			return hlTisha_B_Av
+		if(hday == 15)
+			return hlTu_B_Av
+	}
+
+	return hlNo
+}
+
+function GetCivilHolidayId(cday, cmonth, cyear, hday, hmonth, dow)
+{
+	if(hmonth == 0) {
 		if (hday == 27 && dow != 6 && dow !=1)
 			return hlYomHashoah
 		else if(hday == 26 && dow == 5)
@@ -678,34 +738,9 @@ function moadimInt(cday, cmonth, cyear, hday, hmonth, dow)
 			return hlYomHazikaron
 		else if(hday == 5 && dow == 2)
 			return hlYomHazikaron
-
 			
-		if(hday == 14)
-			return hlPesahSheni
-		else if(hday == 18)
-			return hlLag_B_Omer			
 		if(hday == 28)
 			return hlYomYerushalayim
-	}
-	else if(hmonth == 2) {
-		if(hday == 6)
-			return hlShavuot
-		else if(hday == 7)
-			return hlShavuotD
-	}
-	else if(hmonth == 3) {
-		if(hday == 17 && dow != 7)
-			return hlFast_of_Tammuz
-		if(hday == 18 && dow == 1)
-			return hlFast_of_Tammuz
-	}
-	else if(hmonth == 4) {
-		if(hday == 9 && dow != 7)
-			return hlTisha_B_Av
-		if(hday == 10 && dow == 1)
-			return hlTisha_B_Av
-		if(hday == 15)
-			return hlTu_B_Av
 	}
 
 	return hlNo
@@ -782,14 +817,14 @@ function moadimIntInDiaspora(cday, cmonth, cyear, hday, hmonth, dow) {
 //			return hlPesachD
 	}
 	else if(hmonth == 1) {
-		if(hday == 3 && dow == 5)
-			return hlYomHaAtzmaut
-		else if(hday == 4 && dow == 5)
-			return hlYomHaAtzmaut
-		else if(hday == 5 && dow != 6 && dow != 7 && dow !=2)
-			return hlYomHaAtzmaut
-		else if(hday == 6 && dow == 3)
-			return hlYomHaAtzmaut
+//		if(hday == 3 && dow == 5)
+//			return hlYomHaAtzmaut
+//		else if(hday == 4 && dow == 5)
+//			return hlYomHaAtzmaut
+//		else if(hday == 5 && dow != 6 && dow != 7 && dow !=2)
+//			return hlYomHaAtzmaut
+//		else if(hday == 6 && dow == 3)
+//			return hlYomHaAtzmaut
 		if(hday == 14)
 			return hlPesahSheni
 		else if(hday == 18)
