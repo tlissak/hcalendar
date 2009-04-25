@@ -1,3 +1,8 @@
+1.0.4.83
+	- Issue 68: Israeli Holidays - Charedi Option.
+	  (http://code.google.com/p/hcalendar/issues/detail?id=68)
+	- Issue 09:"HCalendar converter": add checkbox "after sunset" for more correct civil -> hebrew convert
+	  (http://code.google.com/p/hcalendar/issues/detail?id=9)
 1.0.4.81
 	- Issue 65: Firefox 3.1b3 Support
 	  (http://code.google.com/p/hcalendar/issues/detail?id=65)

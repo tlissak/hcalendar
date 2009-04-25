@@ -428,10 +428,10 @@
 	<groupbox flex="1">
 		<caption label="View Options"/>
 		<hbox align="center">
-			<checkbox id="voShowOmerCounting" label="Show Omer Counting"/>
+			<checkbox id="voShowOmerCounting" label="Show 'Counting of the Omer'"/>
 		</hbox>	
 		<hbox align="center">
-			<checkbox id="voShowCivilHolidays" label="Show Civil Holidays"/>
+			<checkbox id="voShowCivilHolidays" label="Show 'Civil Holidays'"/>
 		</hbox>
 	</groupbox>	
 	<hbox>
@@ -439,9 +439,7 @@
 		<caption label="&hc.options.font.caption;"/>
 		<hbox align="center">
 			<label value="&hc.options.font.color.text;" control="textColorPicker" width="50"/>
-			<colorpicker type="button" id="textColorPicker" palettename="standard"
- />
- 
+			<colorpicker type="button" id="textColorPicker" palettename="standard"/>
 		</hbox>
 		<hbox align="center">
 			<label value="&hc.options.font.color.holiday;" control="holidayColorPicker" width="50"/>
