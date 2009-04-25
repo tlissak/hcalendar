@@ -121,10 +121,19 @@
 			var hmonthList = document.getElementById("monthList");
 			var hdayList = document.getElementById("dayList");
 			var hhebrewDate = document.getElementById("convertedHebDate");
+			var isEvening = document.getElementById("chkCivilDateEvening").checked;
 
 			var cyear = eval(hyearEditBox.value);
 			var cmonth = hmonthList.selectedIndex + 1;
 			var cdate = hdayList.selectedIndex + 1;
+			if (isEvening)
+			{
+				var uDate = new Date(cyear, cmonth, cdate + 1, 0, 1);
+				
+				ceyar = uDate.getFullYear();
+				cmonth = uDate.getMonth();
+				cdate = uDate.getDate();			
+			}
 
 			var civilDate = new Date(cyear, cmonth - 1, cdate);
 			var hebDate = civ2heb(cdate, cmonth, cyear);
@@ -255,6 +264,9 @@
 				id="btnConvertCivil2Hebrew"
 				label="&hc.converter.convert;" 
 				value="Convert"/>
+		</hbox>
+		<hbox aligh="center">
+		<checkbox id="chkCivilDateEvening" label="Evening"/>
 		</hbox>
 	</groupbox>
 	<groupbox flex="1">
