@@ -99,6 +99,7 @@ var HCalendar =
 		this.enabledHint = true;
 		this.dst = 0;
 		this.showOmerCounting = true;
+		this.showOmerDetails = true;
 		this.showCivilHolidays = true;
 		this.daySwitchBySunSet = true;
 		this.lastDaysBefore = -1;
@@ -482,47 +483,60 @@ var HCalendar =
 		}
 		if (dayOmerId != 0)
 		{
-			var hebDayOmerId = FormatDay(dayOmerId) + "(" + this.getHebDayOnEnglish(dayOmerId) + ")";
+			var englishDescription = "";
+			var hebrewDescription = "";
+			
+			if (this.showOmerDetails)
+			{
+				var omerWeek = (dayOmerId / 7) | 0;				
+				var omerDayInWeek = dayOmerId % 7;
+				englishDescription = omerOnEnglish[omerDayInWeek] +" Shebe" + omerOnEnglish[omerWeek];
+				hebrewDescription = omerOnHebrew[omerDayInWeek] +" \u05E9\u05D1" + omerOnHebrew[omerWeek];
+				
+				englishDescription = " (" + englishDescription +")";
+				hebrewDescription = " (" + hebrewDescription +")";
+			}
+			
 			if (isEvening || isNight)
 			{
 				if (this.language == 1) // Hebrew
 				{
-					showCalendarText = showCalendarText + ", " + this.getHebDayOnHebrew(dayOmerId) + " \u05D9\u05DE\u05D9\u05DD\u0020\u05DC\u05E2\u05D5\u05DE\u05E8";
+					showCalendarText = showCalendarText + ", " + this.getHebDayOnHebrew(dayOmerId) + hebrewDescription + " \u05D9\u05DE\u05D9\u05DD\u0020\u05DC\u05E2\u05D5\u05DE\u05E8";
 				}
 				else
 				if (this.language == 2) // Hebrew + numbers
 				{
-					showCalendarText = showCalendarText + ", " + this.getHebDayOnHebrew(dayOmerId) + " " + dayOmerId + " \u05D9\u05DE\u05D9\u05DD\u0020\u05DC\u05E2\u05D5\u05DE\u05E8";
+					showCalendarText = showCalendarText + ", " + this.getHebDayOnHebrew(dayOmerId) + " " + dayOmerId + hebrewDescription + " \u05D9\u05DE\u05D9\u05DD\u0020\u05DC\u05E2\u05D5\u05DE\u05E8";
 				}
 				else
 				if (this.language == 3) // Heblish
 				{
-					showCalendarText = showCalendarText + ", " + FormatDay(dayOmerId) + "(" + this.getHebDayOnEnglish(dayOmerId) + ")" + " Omer Day";
+					showCalendarText = showCalendarText + ", " + FormatDay(dayOmerId) + "(" + this.getHebDayOnEnglish(dayOmerId) + ")" + englishDescription + " Omer Day";
 				}
 				else // English
 				{
-					showCalendarText = showCalendarText + ", " + FormatDay(dayOmerId) + " Omer Tonight";
+					showCalendarText = showCalendarText + ", " + FormatDay(dayOmerId) + englishDescription + " Omer Tonight";
 				}
 			}
 			else
 			{
 				if (this.language == 1) // Hebrew
 				{
-					showCalendarText = showCalendarText + ", " + this.getHebDayOnHebrew(dayOmerId) + " \u05D9\u05DE\u05D9\u05DD\u0020\u05DC\u05E2\u05D5\u05DE\u05E8";
+					showCalendarText = showCalendarText + ", " + this.getHebDayOnHebrew(dayOmerId) + hebrewDescription + " \u05D9\u05DE\u05D9\u05DD\u0020\u05DC\u05E2\u05D5\u05DE\u05E8";
 				}
 				else
 				if (this.language == 2) // Hebrew + numbers
 				{
-					showCalendarText = showCalendarText + ", " + this.getHebDayOnHebrew(dayOmerId) + " " + dayOmerId + " \u05D9\u05DE\u05D9\u05DD\u0020\u05DC\u05E2\u05D5\u05DE\u05E8";
+					showCalendarText = showCalendarText + ", " + this.getHebDayOnHebrew(dayOmerId) + " " + dayOmerId + hebrewDescription + " \u05D9\u05DE\u05D9\u05DD\u0020\u05DC\u05E2\u05D5\u05DE\u05E8";
 				}
 				else
 				if (this.language == 3) // Heblish
 				{
-					showCalendarText = showCalendarText + ", " + FormatDay(dayOmerId) + "(" + this.getHebDayOnEnglish(dayOmerId) + ")" + " Omer Day";
+					showCalendarText = showCalendarText + ", " + FormatDay(dayOmerId) + "(" + this.getHebDayOnEnglish(dayOmerId) + ")" + englishDescription + " Omer Day";
 				}
 				else // English
 				{
-					showCalendarText = showCalendarText + ", " + FormatDay(dayOmerId) + " Omer Day";
+					showCalendarText = showCalendarText + ", " + FormatDay(dayOmerId) + englishDescription + " Omer Day";
 				}
 			}
 		}
@@ -632,6 +646,7 @@ var HCalendar =
 		this.fontSize = this.getPref("hcalendar.fontSize");
 		this.dst = this.getPref("hcalendar.dst");
 		this.showOmerCounting = this.getPref("hcalendar.ShowOmerCounting");
+		this.showOmerDetails = this.getPref("hcalendar.ShowOmerDetails");
 		this.showCivilHolidays = this.getPref("hcalendar.ShowCivilHolidays");
 
 		this.daySwitchBySunSet = this.getPref("hcalendar.daySwitchBySunSet");

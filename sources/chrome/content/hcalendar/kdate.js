@@ -506,7 +506,7 @@ var
 	hlShushanPurimKatan = 29;
 	hlYomHashoah = 30;
 	hlYomHazikaron = 31;
-
+	
 var moadimOnEnglish = new makeArray(
 	'',				//  hlNo
 	'Rosh Hashana',			//  hlRoshHashana 
@@ -871,3 +871,22 @@ function OmerDayInt(cday, cmonth, cyear, hday, hmonth, dow)
 	}
 	return 0;
 }
+
+var omerOnEnglish = new makeArray(
+	'Chesed',					// 1st
+	'Gevurah',
+	'Tiferes',
+	'Netzach',
+	'Hod',
+	'Yesod',
+	'Malchus'
+);	
+var omerOnHebrew = new makeArray(
+	'\u05D7\u05E1\u05D3',					// Chesed 
+	'\u05D2\u05D1\u05D5\u05E8\u05D4',       // Gvura &#1490;&#1489;&#1493;&#1512;&#1492;
+	'\u05EA\u05E4\u05D0\u05E8\u05EA',		// Tiferet &#1514;&#1508;&#1488;&#1512;&#1514;
+	'\u05E0\u05E6\u05D7',					// Nezah &#1504;&#1510;&#1495;
+	'\u05D4\u05D5\u05D3',					// Hod &#1492;&#1493;&#1491;
+	'\u05D9\u05E1\u05D5\u05D3',				// Yesod &#1497;&#1505;&#1493;&#1491;
+	'\u05DE\u05DC\u05DB\u05D5\u05EA'		// Malhut &#1502;&#1500;&#1499;&#1493;&#1514;
+);	
