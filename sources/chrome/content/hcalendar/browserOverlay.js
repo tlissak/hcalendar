@@ -490,6 +490,9 @@ var HCalendar =
 			{
 				var omerWeek = (dayOmerId / 7) | 0;				
 				var omerDayInWeek = dayOmerId % 7;
+				if (omerDayInWeek == 0)
+					omerDayInWeek = 7;
+								
 				englishDescription = omerOnEnglish[omerDayInWeek] +" Shebe" + omerOnEnglish[omerWeek];
 				hebrewDescription = omerOnHebrew[omerDayInWeek] +" \u05E9\u05D1" + omerOnHebrew[omerWeek];
 				
