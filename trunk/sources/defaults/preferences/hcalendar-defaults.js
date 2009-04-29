@@ -3,6 +3,7 @@ pref("hcalendar.location", 0);
 pref("hcalendar.textColor", "black");
 pref("hcalendar.holidayColor", "blue");
 pref("hcalendar.dst", 0);
+pref("hcalendar.ShowOmerDetails", true);
 pref("hcalendar.ShowOmerCounting", true);
 pref("hcalendar.ShowCivilHolidays", true);
 pref("hcalendar.locationType", 0);

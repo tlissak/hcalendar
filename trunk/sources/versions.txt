@@ -1,3 +1,8 @@
+1.0.4.84
+	- Show "omer day" details (http://www.chabad.org/holidays/sefirah/omer-calendar.htm).
+	  (http://code.google.com/p/hcalendar/issues/detail?id=70)
+	- Issue 69: Support Mozilla Firefox 3.5b4 
+	  (http://code.google.com/p/hcalendar/issues/detail?id=69)
 1.0.4.83
 	- Issue 68: Israeli Holidays - Charedi Option.
 	  (http://code.google.com/p/hcalendar/issues/detail?id=68)
