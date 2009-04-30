@@ -1,3 +1,6 @@
+1.0.4.86
+	- Update: Show "omer day" details (http://www.chabad.org/holidays/sefirah/omer-calendar.htm).
+	  (http://code.google.com/p/hcalendar/issues/detail?id=70)
 1.0.4.85
 	- Update: Show "omer day" details (http://www.chabad.org/holidays/sefirah/omer-calendar.htm).
 	  (http://code.google.com/p/hcalendar/issues/detail?id=70)

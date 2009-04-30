@@ -488,7 +488,7 @@ var HCalendar =
 			
 			if (this.showOmerDetails)
 			{
-				var omerWeek = (dayOmerId / 7) | 0;				
+				var omerWeek = (((dayOmerId - 1)/ 7) | 0) + 1;
 				var omerDayInWeek = dayOmerId % 7;
 				if (omerDayInWeek == 0)
 					omerDayInWeek = 7;
