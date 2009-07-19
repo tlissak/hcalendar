@@ -5,7 +5,7 @@
 
 <Description about="urn:mozilla:install-manifest">
 	<em:id>{C4A22BA1-6D61-45F1-82A9-140FD33F1110}</em:id>
-	<em:version>1.0.4.86</em:version>
+	<em:version>1.0.4.87</em:version>
 
 	<!-- Mozilla Firefox -->	
 	<em:targetApplication>
@@ -61,6 +61,15 @@
         <em:maxVersion>0.7.1</em:maxVersion>
       </Description>
     </em:targetApplication>	
+	
+	<!-- Postbox -->
+	<em:targetApplication>
+		<Description>
+			<em:id>postbox@postbox-inc.com</em:id>
+			<em:minVersion>1.0b13</em:minVersion>
+			<em:maxVersion>1.0.*</em:maxVersion>
+		</Description>
+	</em:targetApplication>	
 	
 	<!-- Netscape Navigator -->
 	<!-- {3db10fab-e461-4c80-8b97-957ad5f8ea47} -->
