@@ -1,3 +1,6 @@
+1.0.4.88
+	- Support Mozilla Firefox 3.6
+	- Support Thunderbird 3.0
 1.0.4.87
 	- Issue 71: Support Postbox
 	  (http://code.google.com/p/hcalendar/issues/detail?id=71)

@@ -158,20 +158,32 @@ var HCalendar =
 	},
 	
 	destruct: function() 
+	{		
+		try { window.clearInterval(this.Timer); } catch(ex) {}		
+	},
+
+	getNow: function()
 	{
+		var uDate = new Date();
+		//return uDate;
 		
-		try { window.clearInterval(this.Timer); } catch(ex) {}
-		
+		if (this.getPref("hcalendar.debug.simulation"))
+		{
+			var simulatedYear = this.getPref("hcalendar.debug.yearSimulated");
+			var simulatedMonth = this.getPref("hcalendar.debug.monthSimulated");
+			var simulatedDay = this.getPref("hcalendar.debug.daySimulated");
+			uDate = new Date(simulatedYear, simulatedMonth, simulatedDay, 0, 0, 0, 0);
+		}
+		return uDate;
 	},
 	
 	forceRefresh: function() 
-	{
-		
+	{		
 		window.clearInterval(this.Timer);
 		
 		this.GMToffset = "";
 		
-		var uDate = new Date();
+		var uDate = this.getNow();
 
 		this.Time.secs = uDate.getSeconds();
 		
@@ -236,7 +248,7 @@ var HCalendar =
 	},
 	getCorrectDay: function()
 	{
-		var uDate = new Date();
+		var uDate = this.getNow();
 		var isEvening = this.isEveningIdentify(uDate);
 		if (isEvening)
 		{
@@ -272,7 +284,7 @@ var HCalendar =
 	},
 	getTimeZone: function() 
 	{
-		var rightNow = new Date();
+		var rightNow = this.getNow();
 		var date1 = new Date(rightNow.getFullYear(), 0, 1, 0, 0, 0, 0);
 		var date2 = new Date(rightNow.getFullYear(), 6, 1, 0, 0, 0, 0);
 		var temp = date1.toGMTString();
@@ -300,7 +312,7 @@ var HCalendar =
 	},
 	smartViewUpdate: function() 
 	{
-		var uDate = new Date();		
+		var uDate = this.getNow();
 		
 		var secs = uDate.getSeconds();
 		
@@ -312,10 +324,8 @@ var HCalendar =
 		this.Time.secs = secs;
 		
 		if (secs < 1) 
-		{
-			
-			this.Time.mins = uDate.getMinutes();
-		
+		{			
+			this.Time.mins = uDate.getMinutes();		
 			this.Time.hours = uDate.getHours();
 		
 			if ((this.Time.mins < 1) && (this.Time.hours < 1)) 
@@ -324,13 +334,11 @@ var HCalendar =
 			}
 		
 		} else 
-		{
-			
+		{			
 			return; 
 		}
 		
-		this.updateView();
-	
+		this.updateView();	
 	},
 	
 	updateDate: function(uDate) 
@@ -389,7 +397,7 @@ var HCalendar =
 			this.ShabbatStartsTime = "";
 			if (this.isLocation())
 			{
-				var now = new Date();
+				var now = this.getNow();
 				var sunData = this.calculateSunRaise(now);
 				if (sunData != null)
 				{
@@ -438,10 +446,9 @@ var HCalendar =
 		return nextDay;
 	},
 	updateView: function() 
-	{
-	
+	{	
 		var isHoliday = 0;
-		var now = new Date;
+		var now = this.getNow();
 		var hnow = now;
 		var now_time = now.getHours() + now.getMinutes()/60;
 
@@ -782,17 +789,14 @@ this.Entities.MONTH_NAME_ABBR,
 	},
 	
 	getGMTOffset: function() 
-	{
-		
+	{		
 		var sTemp;
 		
 		var offset = new Date().getTimezoneOffset();
 		
 		if (offset == 0) 
-		{
-			
-			sTemp = "+0000";
-		
+		{			
+			sTemp = "+0000";		
 		} else 
 		{
 			var numHours, numMins;
@@ -829,8 +833,7 @@ this.Entities.MONTH_NAME_ABBR,
 		this.positioned = true;
 		return ;	
 		try 
-		{
-	
+		{	
 			var statusbar = document.getElementById("status-bar");
 
 			var arrNodes = statusbar.getElementsByAttribute("id", "livemark-button");
@@ -844,20 +847,17 @@ this.Entities.MONTH_NAME_ABBR,
 			}
 		} 
 		catch(ex) 
-		{ dump(ex + "\n"); }
-	
+		{ dump(ex + "\n"); }	
 	},
 
 	clickHandler: function(event) 
-	{
-		
+	{		
 		if (event.button == 0) 
 		{
 			
 			this.forceRefresh();
 		
-		}
-	
+		}	
 	},
 
 	DblclickHandler: function (event)
