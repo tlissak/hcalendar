@@ -1,3 +1,5 @@
+1.0.4.89
+	- Added Riga (http://www.timeanddate.com/worldclock/city.html?n=602); (Latitude: 56° 53' North, Longitude: 24° 05' East)
 1.0.4.88
 	- Support Mozilla Firefox 3.6
 	- Support Thunderbird 3.0
