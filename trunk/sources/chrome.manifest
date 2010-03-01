@@ -1,0 +1,9 @@
+content hcalendar jar:chrome/hcalendar.jar!/content/hcalendar/
+content locale jar:chrome/hcalendar.jar!/locale/
+
+overlay chrome://browser/content/browser.xul chrome://hcalendar/content/browserOverlay.xul
+
+locale	hcalendar	en-US jar:chrome/hcalendar.jar!/locale/en-US/hcalendar/
+locale	hcalendar	he-IL jar:chrome/hcalendar.jar!/locale/he-IL/hcalendar/
+locale	hcalendar	fr-FR jar:chrome/hcalendar.jar!/locale/fr-FR/hcalendar/
+
