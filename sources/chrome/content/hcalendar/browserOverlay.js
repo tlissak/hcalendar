@@ -883,8 +883,8 @@ this.Entities.MONTH_NAME_ABBR,
 		var hebDate = civ2heb(tday, tmonth, tyear);
 
 		var hmS = hebDate.substring(hebDate.indexOf(' ')+1, hebDate.length);
-		var hDay = eval(hebDate.substring(0, hebDate.indexOf(' ')));
-		var hMonth = eval(hmS.substring(0, hmS.indexOf(' ')));
+		var hDay = parseInt(hebDate.substring(0, hebDate.indexOf(' ')));
+		var hMonth = parseInt(hmS.substring(0, hmS.indexOf(' ')));
 		var hYear = hmS.substring(hmS.indexOf(' ')+1, hmS.length);
 		var hYearStr = hYear;
 
@@ -966,9 +966,9 @@ this.Entities.MONTH_NAME_ABBR,
 
 		// convert civil date to hebrew
 		var hdate = civ2heb(cday, cmonth, cyear);
-		var hday = eval(hdate.substring(0, hdate.indexOf(' ')));
+		var hday = parseInt(hdate.substring(0, hdate.indexOf(' ')));
 		var hm = hdate.substring(hdate.indexOf(' ')+1, hdate.length);
-		var hmonth = eval(hm.substring(0, hm.indexOf(' ')));
+		var hmonth = parseInt(hm.substring(0, hm.indexOf(' ')));
 
 		//var hebrewHolidayName = moadim(cday, cmonth, cyear, hday, hmonth, dow);
 		var hebrewHolidayInt;
@@ -1016,9 +1016,9 @@ this.Entities.MONTH_NAME_ABBR,
 
 		// convert civil date to hebrew
 		var hdate = civ2heb(cday, cmonth, cyear);
-		var hday = eval(hdate.substring(0, hdate.indexOf(' ')));
+		var hday = parseInt(hdate.substring(0, hdate.indexOf(' ')));
 		var hm = hdate.substring(hdate.indexOf(' ')+1, hdate.length);
-		var hmonth = eval(hm.substring(0, hm.indexOf(' ')));
+		var hmonth = parseInt(hm.substring(0, hm.indexOf(' ')));
 
 		var omerDay = OmerDayInt(cday, cmonth, cyear, hday, hmonth, dow);
 		return omerDay;

@@ -61,6 +61,7 @@ function change_year(num) {
 	date_vars_doit();
 }
 
+// usage not found
 function list_pos(w) {
 
 	var str, place, desc
@@ -85,11 +86,11 @@ function list_pos(w) {
 	str = str.substring(i+1, str.length);
 
 	i = str.indexOf(",");
-	latd = eval(str.substring(0, i));
+	latd = parseInt(str.substring(0, i));
 	str = str.substring(i+1, str.length);
 
 	i = str.indexOf(",");
-	latm = eval(str.substring(0, i));
+	latm = parseInt(str.substring(0, i));
 	str = str.substring(i+1, str.length);
 
 	i = str.indexOf(",");
@@ -97,13 +98,13 @@ function list_pos(w) {
 	str = str.substring(i+1, str.length);
 
 	i = str.indexOf(",");
-	lngd = eval(str.substring(0, i));
+	lngd = parseInt(str.substring(0, i));
 	str = str.substring(i+1, str.length);
 
 	i = str.indexOf(",");
-	lngm = eval(str.substring(0, i));
+	lngm = parseInt(str.substring(0, i));
 
-	var tz = eval(str.substring(i+1, str.length));
+	var tz = parseInt(str.substring(i+1, str.length));
 
 	if((latd != -1) && (lngd != -1)) {
 		document.data.tz.options[12+tz].selected = 1;
@@ -114,12 +115,12 @@ function list_pos(w) {
 
 function man_pos() {
 
-	latd = Math.abs(eval(document.data.latd.value));
-	latm = Math.abs(eval(document.data.latm.value));
+	latd = Math.abs(parseInt(document.data.latd.value));
+	latm = Math.abs(parseInt(document.data.latm.value));
 	ns = (document.data.lats[1].checked) ? 'S' : 'N';
 
-	lngd = Math.abs(eval(document.data.lngd.value));
-	lngm = Math.abs(eval(document.data.lngm.value));
+	lngd = Math.abs(parseInt(document.data.lngd.value));
+	lngm = Math.abs(parseInt(document.data.lngm.value));
 	ew = (document.data.lngs[1].checked) ? 'E' : 'W';
 
 	var tz = - (12 - document.data.tz.options.selectedIndex);

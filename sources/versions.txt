@@ -1,3 +1,5 @@
+1.0.4.93
+	-  Redesign: remove all "eval" usage.
 1.0.4.92
 	-  Issue 72: Hebrew Calendar extension doesn't work on Firefox 3.6.
            Solution: Added file chrome.manifest (FF 3.6)
@@ -153,8 +155,7 @@
 1.0.4.44
 	- improvement of Omer showing;
 1.0.4.43
-	- Support Thunderbird 2.0.0.0;
-1.0.4.42
+	- Support Thunderbird 2.0.0.0;1.0.4.42
 	- Show "Count Today's Omer";
 	- Buenos Aires, Argentina is added;
 1.0.4.41
