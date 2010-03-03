@@ -224,14 +224,14 @@ function BuildLuachHTML(parms)
 	// get starting Heb month in civil month
 	hebDate = civ2heb(1, cMonth, cYear);
 	hmS = hebDate.substring(hebDate.indexOf(' ')+1, hebDate.length);
-	hMonth = eval(hmS.substring(0, hmS.indexOf(' ')));
+	hMonth = parseInt(hmS.substring(0, hmS.indexOf(' ')));
 	hYear = hmS.substring(hmS.indexOf(' ')+1, hmS.length);
 	var start = hebMonth[hMonth+1] + ' ' + hYear;
 
 	// get ending Heb month in civil month
 	hebDate = civ2heb(lastDate, cMonth, cYear);
 	hmE = hebDate.substring(hebDate.indexOf(' ')+1, hebDate.length);
-	hMonth = eval(hmE.substring(0, hmE.indexOf(' ')));
+	hMonth = parseInt(hmE.substring(0, hmE.indexOf(' ')));
 	hYear = hmE.substring(hmE.indexOf(' ')+1, hmE.length);
 	var end = hebMonth[hMonth+1] + ' ' + hYear;
 
@@ -278,10 +278,10 @@ function BuildLuachHTML(parms)
 
 			// convert civil date to hebrew
 			hebDate = civ2heb(cDay, cMonth, cYear);
-			hebDay = eval(hebDate.substring(0, hebDate.indexOf(' ')));
+			hebDay = parseInt(hebDate.substring(0, hebDate.indexOf(' ')));
 
 			var hm = hebDate.substring(hebDate.indexOf(' ')+1, hebDate.length);
-			var hMonth = eval(hm.substring(0, hm.indexOf(' ')));
+			var hMonth = parseInt(hm.substring(0, hm.indexOf(' ')));
 
 	        if (cell < parms[1])
 				result += '<TD></TD>';

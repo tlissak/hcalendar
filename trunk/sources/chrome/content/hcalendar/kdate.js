@@ -403,7 +403,7 @@ function moadim(cday, cmonth, cyear, hday, hmonth, dow) {
 			else
 				cday -= 3;
 			var hdate = civ2heb(cday, cmonth, cyear);
-			hd = eval(hdate.substring(0, hdate.indexOf(' ')));
+			hd = parseInt(hdate.substring(0, hdate.indexOf(' ')));
 			if(hd == 29)
 				return "Chanukkah"
 		}
@@ -617,7 +617,7 @@ function moadimInt(cday, cmonth, cyear, hday, hmonth, dow)
 			else
 				cday -= 3;
 			var hdate = civ2heb(cday, cmonth, cyear);
-			hd = eval(hdate.substring(0, hdate.indexOf(' ')));
+			hd = parseInt(hdate.substring(0, hdate.indexOf(' ')));
 			if(hd == 29)
 				return hlChanukkah
 		}
@@ -784,7 +784,7 @@ function moadimIntInDiaspora(cday, cmonth, cyear, hday, hmonth, dow) {
 			else
 				cday -= 3;
 			var hdate = civ2heb(cday, cmonth, cyear);
-			hd = eval(hdate.substring(0, hdate.indexOf(' ')));
+			hd = parseInt(hdate.substring(0, hdate.indexOf(' ')));
 			if(hd == 29)
 				return hlChanukkah
 		}
