@@ -1,3 +1,6 @@
+1.0.4.94
+	-  Issue 73: Hebrew Calendar extension doesn't work on Thunderbird 3.0.3.
+	   (http://code.google.com/p/hcalendar/issues/detail?id=73)
 1.0.4.93
 	-  Redesign: remove all "eval" usage.
 1.0.4.92
