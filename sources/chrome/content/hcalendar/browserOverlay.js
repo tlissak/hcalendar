@@ -98,6 +98,7 @@ var HCalendar =
 		this.fontSize = 11;
 		this.enabledHint = true;
 		this.dst = 0;
+		this.autoDST = 0;
 		this.showOmerCounting = true;
 		this.showOmerDetails = true;
 		this.showCivilHolidays = true;
@@ -351,6 +352,9 @@ var HCalendar =
 		var civilDate = "";
 		//if (this.hintShowCivilianDate) 
 		civilDate = (this.arrDays[this.Time.day] + ", " + this.arrMonths[this.Time.month] + " " + this.Time.date + ", " + this.Time.year + " CE");
+		
+		var actualDST = this.getActualDST();		
+		civilDate += (actualDST==1)?"(Daylight)":"(Standard)";
 
 		var beforeShabbatMessage = "Shabbat";
 		var daysBefore = 7 - this.Time.day;
@@ -655,6 +659,7 @@ var HCalendar =
 
 		this.fontSize = this.getPref("hcalendar.fontSize");
 		this.dst = this.getPref("hcalendar.dst");
+		this.autoDST = this.getPref("hcalendar.autoDST");
 		this.showOmerCounting = this.getPref("hcalendar.ShowOmerCounting");
 		this.showOmerDetails = this.getPref("hcalendar.ShowOmerDetails");
 		this.showCivilHolidays = this.getPref("hcalendar.ShowCivilHolidays");
@@ -1364,6 +1369,26 @@ this.Entities.MONTH_NAME_ABBR,
 
 		return monthName;
 	},
+	calculateDST: function()
+	{
+		var today = new Date();
+		
+		var jan = new Date(today.getFullYear(), 0, 1);
+		var jul = new Date(today.getFullYear(), 6, 1);
+		var getTimezoneOffset = Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+		
+		return today.getTimezoneOffset() < getTimezoneOffset;
+	},
+	getActualDST: function()
+	{
+		var actualDST = this.dst;
+		if (this.autoDST !=0)
+		{
+			var calcDST = this.calculateDST();
+			actualDST = calcDST?1:0;
+		}
+		return actualDST;
+	},
 	calculateSunRaise: function(date)
 	{
 		var latd = this.locationData[1];
@@ -1381,7 +1406,7 @@ this.Entities.MONTH_NAME_ABBR,
 		var y = date.getYear();
 
 		//adj = - adj;
-		adj += this.dst;	// var dst = 0;	// winter time
+		adj += this.getActualDST();	// var dst = 0;	// winter time
 		//var ampm = 0; 		// 24 hours
 		var ampm = this.format24Hour ? 0 : 1;
 
