@@ -1,6 +1,7 @@
 1.0.4.95 
 	-  Issue 73: Using "Daylight Time" from Windows (or another OS)
 	   (http://code.google.com/p/hcalendar/issues/detail?id=48)
+	   http://javascript.about.com/library/bldst.htm
 1.0.4.94
 	-  Issue 73: Hebrew Calendar extension doesn't work on Thunderbird 3.0.3.
 	   (http://code.google.com/p/hcalendar/issues/detail?id=73)
