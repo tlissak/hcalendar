@@ -1,5 +1,5 @@
 1.0.4.95 
-	-  Issue 73: Using "Daylight Time" from Windows (or another OS)
+	-  Issue 48: Using "Daylight Time" from Windows (or another OS)
 	   (http://code.google.com/p/hcalendar/issues/detail?id=48)
 	   http://javascript.about.com/library/bldst.htm
 1.0.4.94
