@@ -58,6 +58,7 @@
 			var hShowCivilHolidaysControl = document.getElementById("voShowCivilHolidays");
 			var h24HourFormat = document.getElementById("chk24HourFormat");
 			var hSwitchBySunSet = document.getElementById("daySwitchBySunSet");
+			var hAutoDST = document.getElementById("autoDST");
 			var hZip_ZipCodesMenu = document.getElementById("zipCode");
 			var hZip_TimeZonesList = document.getElementById("timeZoneList");
 			var hFontSizeList = document.getElementById("fontSizeList");
@@ -105,6 +106,7 @@
 			
 			h24HourFormat.checked = !getPref("hcalendar.24HourFormat");
 			hSwitchBySunSet.checked = getPref("hcalendar.daySwitchBySunSet");
+			hAutoDST.checked = getPref("hcalendar.autoDST");
 
 			getElement("chkShowParashaInIsrael").checked = getPref("hcalendar.hint.showParashaInIsrael");
 
@@ -142,6 +144,7 @@
 			setPref("hcalendar.ShowCivilHolidays", showCivilHolidays);
 			setPref("hcalendar.24HourFormat", chk24HourFormat);
 			setPref("hcalendar.daySwitchBySunSet", document.getElementById("daySwitchBySunSet").checked);
+			setPref("hcalendar.autoDST", document.getElementById("autoDST").checked);
 			setPref("hcalendar.hint.showParashaInIsrael", getElement("chkShowParashaInIsrael").checked);
 
 			//setPref("hcalendar.hint.show.CivilianDate", document.getElementById("hintShowCivilianDate").checked);
@@ -423,7 +426,8 @@
 			<checkbox id="chk24HourFormat" label="12 Hour Format (English only)"/>
 		</hbox>
 		<hbox align="center">
-			<checkbox id="daySwitchBySunSet" label="&hc.options.time.switch;"/>
+			<checkbox id="autoDST" label="&hc.options.time.autoDST;"/>
+			<checkbox id="daySwitchBySunSet" label="&hc.options.time.switch;"/>			
 		</hbox>
 	</groupbox>
 	<groupbox flex="1">

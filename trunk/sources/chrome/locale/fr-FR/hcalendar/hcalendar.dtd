@@ -31,6 +31,7 @@
 <!ENTITY hc.options.time.options "Options d'heure">
 <!ENTITY hc.options.time.dst "Heure d'été (DST)">
 <!ENTITY hc.options.time.switch "Coucher du soleil">
+<!ENTITY hc.options.time.autoDST "Automatically adjust clock for DST">
 <!ENTITY hc.options.font.caption "Couleurs et Polices">
 <!ENTITY hc.options.font.color.text "Texte">
 <!ENTITY hc.options.font.color.holiday "Vacances">

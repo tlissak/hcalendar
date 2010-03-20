@@ -30,6 +30,7 @@
 <!ENTITY hc.options.time.options "Time Options">
 <!ENTITY hc.options.time.dst "Daylight Saving Time (DST)">
 <!ENTITY hc.options.time.switch "Day switch by sunset">
+<!ENTITY hc.options.time.autoDST "Automatically adjust clock for DST">
 <!ENTITY hc.options.font.caption "Colors and Fonts">
 <!ENTITY hc.options.font.color.text "Text">
 <!ENTITY hc.options.font.color.holiday "Holiday">
