@@ -238,7 +238,7 @@
 				//		HCalendar.forceRefresh();
 			} else
 			{
-				strParashaName = "status: " + staus;
+				strParashaName = "status: " + status;
 				//hParsha.value = "Connection failed. Status = " + status;
 			}
 		}

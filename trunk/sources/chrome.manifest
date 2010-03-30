@@ -4,6 +4,14 @@ content locale jar:chrome/hcalendar.jar!/locale/
 overlay chrome://browser/content/browser.xul chrome://hcalendar/content/browserOverlay.xul
 overlay	chrome://messenger/content/messenger.xul	chrome://hcalendar/content/browserOverlay-tb.xul
 
+# Sunbird
+overlay chrome://calendar/content/calendar.xul chrome://hcalendar/content/sunbirdOverlay.xul
+#overlay chrome://sunbird/content/calendar.xul chrome://hcalendar/content/sunbirdOverlay.xul
+#overlay chrome://calendar/content/calendar-event-dialog.xul chrome://hcalendar/content/sunbirdOverlay.xul
+
+#overlay chrome://sunbird/content/calendar.xul chrome://compact/content/calendarOverlay.xul application={718e30fb-e89b-41dd-9da7-e25a45638b28}
+#overlay chrome://calendar/content/calendar-event-dialog.xul chrome://compact/content/calendarEventDialogOverlay.xul application={718e30fb-e89b-41dd-9da7-e25a45638b28}
+
 locale	hcalendar	en-US jar:chrome/hcalendar.jar!/locale/en-US/hcalendar/
 locale	hcalendar	he-IL jar:chrome/hcalendar.jar!/locale/he-IL/hcalendar/
 locale	hcalendar	fr-FR jar:chrome/hcalendar.jar!/locale/fr-FR/hcalendar/

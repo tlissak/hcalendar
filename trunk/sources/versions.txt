@@ -1,3 +1,5 @@
+1.0.4.97
+	-  Partial support chrome.manifest file for Sunbird 0.9
 1.0.4.96
 	-  Redesign: remove additional "eval' usage.
 1.0.4.95 
