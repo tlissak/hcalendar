@@ -123,7 +123,7 @@
 			var hhebrewDate = document.getElementById("convertedHebDate");
 			var isEvening = document.getElementById("chkCivilDateEvening").checked;
 
-			var cyear = eval(hyearEditBox.value);
+			var cyear = parseInt(hyearEditBox.value);
 			var cmonth = hmonthList.selectedIndex + 1;
 			var cdate = hdayList.selectedIndex + 1;
 			if (isEvening)
@@ -139,8 +139,8 @@
 			var hebDate = civ2heb(cdate, cmonth, cyear);
 
 			var hmS = hebDate.substring(hebDate.indexOf(' ')+1, hebDate.length);
-			var hDay = eval(hebDate.substring(0, hebDate.indexOf(' ')));
-			var hMonth = eval(hmS.substring(0, hmS.indexOf(' ')));
+			var hDay = parseInt(hebDate.substring(0, hebDate.indexOf(' ')));
+			var hMonth = parseInt(hmS.substring(0, hmS.indexOf(' ')));
 			var hYear = hmS.substring(hmS.indexOf(' ')+1, hmS.length);
 
 			var hDayStr = FormatDay(hDay);
@@ -163,7 +163,7 @@
 			var strListMonths = hBundle.getString("listMonths");
 			arrMonths = arrMonths.concat(strListMonths.split(","));
 
-			var hebYear = eval(hHebYearEditBox.value);
+			var hebYear = parseInt(hHebYearEditBox.value);
 			var hebMonth = hHebMonthList.selectedIndex + 1;
 			var hebDay = hHebDayList.selectedIndex + 1;
 			var civilDate = hebrew_to_jd(hebYear, hebMonth, hebDay);
@@ -182,7 +182,7 @@
 			var hdayList = document.getElementById("dayList");
 			var hhebrewDate = document.getElementById("convertedHebDate");
 
-			var cyear = eval(hyearEditBox.value);
+			var cyear = parseInt(hyearEditBox.value);
 			var cmonth = hmonthList.selectedIndex + 1;
 			var cdate = hdayList.selectedIndex + 1;
 
@@ -190,8 +190,8 @@
 			var hebDate = civ2heb(cdate, cmonth, cyear);
 
 			var hmS = hebDate.substring(hebDate.indexOf(' ')+1, hebDate.length);
-			var hDay = eval(hebDate.substring(0, hebDate.indexOf(' ')));
-			var hMonth = eval(hmS.substring(0, hmS.indexOf(' ')));
+			var hDay = parseInt(hebDate.substring(0, hebDate.indexOf(' ')));
+			var hMonth = parseInt(hmS.substring(0, hmS.indexOf(' ')));
 			var hYear = hmS.substring(hmS.indexOf(' ')+1, hmS.length);
 
 			var hDayStr = FormatDay(hDay);
