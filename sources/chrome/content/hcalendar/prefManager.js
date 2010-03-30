@@ -31,25 +31,50 @@ HCalendar_PrefManager.prototype = {
 	},
 	getPref: function(strName) {
 		var strType = this.getPrefType(strName);
-		var strCode = 'this.getRootBranch().get' + strType + 'Pref("' + strName + '")';
-		try { return eval(strCode); } catch(ex) { dump(ex + "\n"); }
+
+		try
+		{		
+			switch (strType)
+			{
+				case "Char":
+					return this.getRootBranch().getCharPref(strName);
+					break;
+				case "Int":
+					return this.getRootBranch().getIntPref(strName);
+					break;
+				case "Bool":
+					return this.getRootBranch().getBoolPref(strName);
+					break;
+			}		
+		}
+		catch(ex)
+		{
+			dump(ex + "\n");
+		}
+		
 		return null;
 	},
 	setPref: function(strName, varValue) {
 		var strType = this.getPrefType(strName);
-		if (strType == "Char") { varValue = '"' + varValue + '"'; }
-		var strCode = 'this.getRootBranch().set' + strType + 'Pref("' + strName + '", ' + varValue + ')';
-		try { eval(strCode); } catch(ex) { dump(ex + "\n"); }
-	},
-	addPrefObserver: function(strObserver, strDomain) {
-		this.observer = strObserver;
-		this.obsDomain = (strDomain == "root") ? "" : this.domain;
-		try { this.getInterface().addObserver(this.obsDomain, this, false); } catch(ex) { dump(ex + "\n"); }
-	},
-	removePrefObserver: function() {
-		try { this.getInterface().removeObserver(this.obsDomain, this); } catch(ex) { dump(ex + "\n"); }
-	},
-	observe: function(subject, topic, prefName) {
-		try { eval(this.observer + "(subject, topic, prefName);"); } catch(ex) { dump(ex + "\n"); }
+				
+		try
+		{
+			switch (strType)
+			{
+				case "Char":
+					return this.getRootBranch().setCharPref(strName, varValue);
+					break;
+				case "Int":
+					return this.getRootBranch().setIntPref(strName, varValue);
+					break;
+				case "Bool":
+					return this.getRootBranch().setBoolPref(strName, varValue);
+					break;
+			}		
+		}
+		catch(ex)
+		{
+			dump(ex + "\n");
+		}
 	}
 }

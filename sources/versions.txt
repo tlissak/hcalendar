@@ -1,3 +1,5 @@
+1.0.4.96
+	-  Redesign: remove additional "eval' usage.
 1.0.4.95 
 	-  Issue 48: Using "Daylight Time" from Windows (or another OS)
 	   (http://code.google.com/p/hcalendar/issues/detail?id=48)

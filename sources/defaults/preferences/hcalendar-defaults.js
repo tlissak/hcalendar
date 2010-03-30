@@ -30,3 +30,4 @@ pref("hcalendar.24HourFormat", true);
 pref("hcalendar.autoDST", true);
 pref("hcalendar.openInANewTab", true);
 pref("hcalendar.selectAfterOpening", true);
+pref("hcalendar.debug.simulation", false);
