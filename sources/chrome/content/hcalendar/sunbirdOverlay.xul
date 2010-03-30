@@ -8,13 +8,9 @@
 <overlay id="hcalendar-overlay"
 xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-
 <stringbundleset id="stringbundleset">
-		
 	<stringbundle id="hcalendar-bundle" src="chrome://hcalendar/locale/hcalendar.properties"/>
-
 	<stringbundle id="hcalendar-locations" src="chrome://hcalendar/locale/hcalendar.locations"/>
-	
 </stringbundleset>
 
 <script type="application/x-javascript" src="chrome://hcalendar/content/prefManager.js" />
@@ -100,18 +96,14 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <statusbar id="status-bar">
 		
 <statusbarpanel id="statusbar-hcalendar-display"
- 
 	insertafter=""
 	hidden="false"
 	context="hcalendar-contextmenu"
 	tooltip="hcalendar-tooltip" 
 	onclick="HCalendar.clickHandler(event)"
- style="min-width: 16px; white-space: nowrap; padding: 0px;" />
-	
+ 	ondblclick="HCalendar.DblclickHandler(event)"
+	style="min-width: 16px; white-space: nowrap; padding: 0px;" />	
 </statusbar>
-
-
-
 
 
 </overlay>
