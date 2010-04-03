@@ -119,6 +119,8 @@
 			getElement("chkOpenInANewTab").checked = getPref("hcalendar.openInANewTab");
 			getElement("chkFocusAfterOpening").checked = getPref("hcalendar.selectAfterOpening");
 
+			UpdateByAutoDST();
+			
 			var charMin = "\u00BA";
 			getElement("sepLt").label = charMin;
 			getElement("sepLn").label = charMin;
@@ -216,6 +218,16 @@
 					document.getElementById("checkLocationByCoords").checked = true;
 					break;
 			}
+		}
+		function UpdateByAutoDST()
+		{
+			var hDstControl = document.getElementById("dstOption");
+			hDstControl.disabled = document.getElementById("autoDST").checked;
+			
+//			if (document.getElementById("autoDST").checked == true)
+//				hDstControl.disabled = true;
+//			else
+//				hDstControl.disabled = false;
 		}
 		function SendRequest_GetZipCoordinates()
 		{
@@ -399,7 +411,7 @@
 			<menulist id="coordLtNS">
 				<menupopup id="coordLtNSPopup">
 					<menuitem value="N" label="N"/>
-					<menuitem value="S" label="S"/>
+					<menuitem value="S" label="S"/>
 				</menupopup>
 			</menulist>
 			<textbox id="coordLnH" width="30"/>
@@ -409,7 +421,7 @@
 			<menulist id="coordLnWE">
 				<menupopup id="coordLnWEPopup">
 					<menuitem value="W" label="W"/>
-					<menuitem value="E" label="E"/>
+					<menuitem value="E" label="E"/>
 				</menupopup>
 			</menulist>
 			<label id="labelCoordsTimeZone" control="timeCoordsZoneList"/>
@@ -426,7 +438,7 @@
 			<checkbox id="chk24HourFormat" label="12 Hour Format (English only)"/>
 		</hbox>
 		<hbox align="center">
-			<checkbox id="autoDST" label="&hc.options.time.autoDST;"/>
+			<checkbox id="autoDST" label="&hc.options.time.autoDST;" oncommand="UpdateByAutoDST()"/>
 			<checkbox id="daySwitchBySunSet" label="&hc.options.time.switch;"/>			
 		</hbox>
 	</groupbox>
@@ -450,7 +462,6 @@
 		<hbox align="center">
 			<label value="&hc.options.font.color.holiday;" control="holidayColorPicker" width="50"/>
 			<colorpicker type="button" id="holidayColorPicker" palettename="standard" />
-
 		</hbox>
 		<hbox align="center">
 			<label value="&hc.options.font.size;" control="fontSize" width="50"/>

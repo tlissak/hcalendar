@@ -5,7 +5,7 @@ overlay chrome://browser/content/browser.xul chrome://hcalendar/content/browserO
 overlay	chrome://messenger/content/messenger.xul	chrome://hcalendar/content/browserOverlay-tb.xul
 
 # Sunbird
-overlay chrome://calendar/content/calendar.xul chrome://hcalendar/content/sunbirdOverlay.xul
+overlay chrome://calendar/content/calendar.xul chrome://hcalendar/content/sunbirdOverlay.xul application={718e30fb-e89b-41dd-9da7-e25a45638b28}
 #overlay chrome://sunbird/content/calendar.xul chrome://hcalendar/content/sunbirdOverlay.xul
 #overlay chrome://calendar/content/calendar-event-dialog.xul chrome://hcalendar/content/sunbirdOverlay.xul
 

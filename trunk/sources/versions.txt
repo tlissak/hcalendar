@@ -1,20 +1,22 @@
+1.0.4.98
+	- "DST" disabled, when "Automatically adjsut clock for DST" checked.
 1.0.4.97
-	-  Partial support chrome.manifest file for Sunbird 0.9
+	- Partial support chrome.manifest file for Sunbird 0.9
 1.0.4.96
-	-  Redesign: remove additional "eval' usage.
+	- Redesign: remove additional "eval' usage.
 1.0.4.95 
-	-  Issue 48: Using "Daylight Time" from Windows (or another OS)
-	   (http://code.google.com/p/hcalendar/issues/detail?id=48)
-	   http://javascript.about.com/library/bldst.htm
+	- Issue 48: Using "Daylight Time" from Windows (or another OS)
+	  (http://code.google.com/p/hcalendar/issues/detail?id=48)
+	  http://javascript.about.com/library/bldst.htm
 1.0.4.94
-	-  Issue 73: Hebrew Calendar extension doesn't work on Thunderbird 3.0.3.
-	   (http://code.google.com/p/hcalendar/issues/detail?id=73)
+	- Issue 73: Hebrew Calendar extension doesn't work on Thunderbird 3.0.3.
+	  (http://code.google.com/p/hcalendar/issues/detail?id=73)
 1.0.4.93
-	-  Redesign: remove all "eval" usage.
+	- Redesign: remove all "eval" usage.
 1.0.4.92
-	-  Issue 72: Hebrew Calendar extension doesn't work on Firefox 3.6.
-           Solution: Added file chrome.manifest (FF 3.6)
-	   (http://code.google.com/p/hcalendar/issues/detail?id=72)
+	- Issue 72: Hebrew Calendar extension doesn't work on Firefox 3.6.
+          Solution: Added file chrome.manifest (FF 3.6)
+	  (http://code.google.com/p/hcalendar/issues/detail?id=72)
 1.0.4.91
 	- Support Postbox 1.1.*
 1.0.4.90
