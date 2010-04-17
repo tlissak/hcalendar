@@ -41,11 +41,10 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 <script type="application/x-javascript" src="chrome://hcalendar/content/heb2civ.js" />
 
-
 <window id="main-window">
 
 <popupset id="mainPopupSet">
-
+heb2civ.js
 	<popup id="hcalendar-contextmenu">
 
 		<menuitem id="hc-menu-options" default="true" oncommand="HCalendar.popupOptions();"
@@ -60,8 +59,12 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 		<menuitem id="hc-menu-copy-to-clipboard" oncommand="HCalendar.copyToClipboard();"
  label="&hc.menu.clipboard.label;" accesskey="&hc.menu.clipboard.key;"/>
 
-		<menuitem id="hc-menu-copy-to-clipboard" oncommand="HCalendar.postToBuzz();"
+		<menuseparator/>
+		<menuitem id="hc-menu-buzz-hebrewDate" oncommand="HCalendar.postToBuzz();"
  label="&hc.menu.postToBuzz.label;" accesskey="&hc.menu.postToBuzz.key;"/>
+ 
+		<menuitem id="hc-menu-tweet-hebrewDate" oncommand="HCalendar.postToTweeter();"
+ label="&hc.menu.postToTweeter.label;" accesskey="&hc.menu.postToTweeter.key;"/>
  
 		<menuseparator/>
 		<menuitem id="hc-menu-openCalendarManager_CreateGoogleEvent" oncommand="HCalendar.calendarManagerCreateGoogleEvent();"
