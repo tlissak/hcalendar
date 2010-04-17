@@ -1104,6 +1104,14 @@ this.Entities.MONTH_NAME_ABBR,
 		this.smartOpenUrl(postToBuzzLine);
 		return ;
 	},
+	postToTweeter: function()
+	{
+		var hebrewDate = this.hHCalendar.label;
+		var author = "@HebrewCalendar";
+		var postToTweeterLine = "http://twitter.com/home/?status=" + hebrewDate + " " + author;
+		this.smartOpenUrl(postToTweeterLine);
+		return ;
+	},
 
 	calendarManagerCreateGoogleEvent: function()
 	{

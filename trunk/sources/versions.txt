@@ -1,3 +1,6 @@
+1.0.5.01
+	- Issue 75: Add menu item "Tweet Hebrew Date" 
+          (http://code.google.com/p/hcalendar/issues/detail?id=75)
 1.0.4.99
 	- Issue 74: Add menu item "Post to Buzz" 
 	  (http://code.google.com/p/hcalendar/issues/detail?id=74)
