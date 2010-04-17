@@ -1096,6 +1096,14 @@ this.Entities.MONTH_NAME_ABBR,
 		copy_clip(this.hHCalendar.label);
 		return ;
 	},
+	postToBuzz: function()
+	{
+		var hebrewDate = this.hHCalendar.label;
+		var link = "http://hcalendar.blogspot.com";
+		var postToBuzzLine = "http://www.google.com/buzz/post?message=" + hebrewDate + "&url=" + link;
+		this.smartOpenUrl(postToBuzzLine);
+		return ;
+	},
 
 	calendarManagerCreateGoogleEvent: function()
 	{
