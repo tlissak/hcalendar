@@ -1,3 +1,6 @@
+1.0.4.99
+	- Issue 74: Add menu item "Post to Buzz" 
+	  (http://code.google.com/p/hcalendar/issues/detail?id=74)
 1.0.4.98
 	- "DST" disabled, when "Automatically adjsut clock for DST" checked.
 1.0.4.97

@@ -60,6 +60,9 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 		<menuitem id="hc-menu-copy-to-clipboard" oncommand="HCalendar.copyToClipboard();"
  label="&hc.menu.clipboard.label;" accesskey="&hc.menu.clipboard.key;"/>
 
+		<menuitem id="hc-menu-copy-to-clipboard" oncommand="HCalendar.postToBuzz();"
+ label="&hc.menu.postToBuzz.label;" accesskey="&hc.menu.postToBuzz.key;"/>
+ 
 		<menuseparator/>
 		<menuitem id="hc-menu-openCalendarManager_CreateGoogleEvent" oncommand="HCalendar.calendarManagerCreateGoogleEvent();"
  label="&hc.menu.calendarManagerCreateEventInGoogle.label;" accesskey="&hc.menu.calendarManagerCreateEventInGoogle.key;"/>

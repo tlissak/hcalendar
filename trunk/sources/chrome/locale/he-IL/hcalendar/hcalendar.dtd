@@ -13,6 +13,8 @@
 <!ENTITY hc.menu.blog.label "פתח את הבלוג של hcalendar">
 <!ENTITY hc.menu.clipboard.key "ת">
 <!ENTITY hc.menu.clipboard.label "העתק תאריך עברי ללוח">
+<!ENTITY hc.menu.postToBuzz.label "Post To Buzz">
+<!ENTITY hc.menu.postToBuzz.key "z">
 <!ENTITY hc.menu.converter.key "מ">
 <!ENTITY hc.menu.converter.label "המרה...">
 <!ENTITY hc.menu.gematria.key "ג">
