@@ -1,3 +1,7 @@
+1.0.5.03
+	- Support Mozilla Thunderbird 3.1.*
+1.0.5.02
+	- Support Mozilla Sunbird 1.0b1
 1.0.5.01
 	- Issue 75: Add menu item "Tweet Hebrew Date" 
           (http://code.google.com/p/hcalendar/issues/detail?id=75)
