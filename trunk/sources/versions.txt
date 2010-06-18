@@ -1,3 +1,5 @@
+1.0.5.04
+	- Removed "heb2civ.js" from the top of the browser window.
 1.0.5.03
 	- Support Mozilla Thunderbird 3.1.*
 1.0.5.02
