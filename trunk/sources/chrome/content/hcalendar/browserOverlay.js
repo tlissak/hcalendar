@@ -76,6 +76,7 @@ var HCalendar =
 		this.format24Hour = true;
 
 		this.ShabbatStartsTime = "";
+		this.CandleLightingTime = null;
 		this.sunSetTime = 0;
 		this.sunRiseTime = 0;
 		this.currentParashaName = "";
@@ -362,6 +363,7 @@ var HCalendar =
 			var toolTipZmanimMessage = "";
 
 			this.ShabbatStartsTime = "";
+			this.CandleLightingTime = null;
 			if (this.isLocation())
 			{
 				var now = this.getNow();
@@ -374,6 +376,7 @@ var HCalendar =
 					civilDate += ", sunset: " + sunSet;
 
 					this.ShabbatStartsTime = sunData[2];
+					this.CandleLightingTime = sunData[5];
 					var zmanShema = sunData[3];
 					var zmanMinhaGdola = sunData[4];
 
@@ -576,10 +579,20 @@ var HCalendar =
 
 		if (this.ShabbatStartsTime != "")
 		{
-			if (this.language == 1 || this.language == 2)
-				showCalendarText = "\u05DB\u05E0\u05D9\u05E1\u05EA \u05E9\u05D1\u05EA " + this.ShabbatStartsTime + ", " + showCalendarText;
+			if (now_time >= this.CandleLightingTime)
+			{
+				if (this.language == 1 || this.language == 2)
+					showCalendarText = "\u05DB\u05E0\u05D9\u05E1\u05EA \u05E9\u05D1\u05EA " + this.ShabbatStartsTime + ", " + showCalendarText;
+				else
+					showCalendarText = "Shabbat began: " + this.ShabbatStartsTime + ", " + showCalendarText;
+			}
 			else
-				showCalendarText = "Shabbat begins: " + this.ShabbatStartsTime + ", " + showCalendarText;
+			{
+				if (this.language == 1 || this.language == 2)
+					showCalendarText = "\u05DB\u05E0\u05D9\u05E1\u05EA \u05E9\u05D1\u05EA " + this.ShabbatStartsTime + ", " + showCalendarText;
+				else
+					showCalendarText = "Shabbat begins: " + this.ShabbatStartsTime + ", " + showCalendarText;
+			}
 		}
 
 		this.hHCalendar.label = showCalendarText;
@@ -1415,10 +1428,13 @@ this.Entities.MONTH_NAME_ABBR,
 			sunData[0] = sunriseString;
 			sunData[1] = sunsetString;
 			sunData[2] = "";
+			sunData[5] = null;
 			if (date.getDay() == 5)
 			{
 				var ampmShabbat = this.language == 1 || this.language == 2 ? 0 : ampm;
-				sunData[2] = timeadj(time[3] - beforeShabbatLight/60.0, ampmShabbat)
+				var candleLightingTime = time[3] - beforeShabbatLight/60.0;
+				sunData[2] = timeadj(candleLightingTime, ampmShabbat)
+				sunData[5] = candleLightingTime;
 			}
 			sunData[3] = shemaString;
 			sunData[4] = minhaGdolaString;
