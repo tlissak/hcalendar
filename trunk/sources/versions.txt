@@ -1,5 +1,5 @@
 1.0.5.06
-	- Support Mozilla Forefox 4.0b2pre (Minefield).
+	- Support Mozilla Firefox 4.0b2pre (Minefield).
 1.0.5.05
 	- Issue 77:   	 showing "switching Shabbat" 
           (http://code.google.com/p/hcalendar/issues/detail?id=77)
