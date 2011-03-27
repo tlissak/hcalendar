@@ -1,9 +1,18 @@
+
+//
+// 2011/03/28: last version of clipboard implementation was found https://developer.mozilla.org/en/Using_the_Clipboard
+//
+
 //
 // function is copied from http://www.krikkit.net/howto_javascript_copy_clipboard.html
 //
 
 function copy_clip(meintext)
 {
+	const gClipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].getService(Components.interfaces.nsIClipboardHelper);
+	gClipboardHelper.copyString(meintext);
+	return true;
+/*
 	if (window.clipboardData)
    	{
       		// the IE-manier
@@ -48,4 +57,5 @@ function copy_clip(meintext)
    		clip.setData(trans,null,clipid.kGlobalClipboard);
    }
    return true;
+*/   
 }

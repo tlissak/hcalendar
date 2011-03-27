@@ -5,8 +5,23 @@
 
 <Description about="urn:mozilla:install-manifest">
 	<em:id>{C4A22BA1-6D61-45F1-82A9-140FD33F1110}</em:id>
-	<em:version>1.0.5.06</em:version>
-
+	<em:name>Hebrew Calendar</em:name>
+	<em:version>1.0.5.07</em:version>
+	<em:description>Show the Hebrew date in your browser's status bar.</em:description>
+	<em:creator>Igor Ziselman (http://hcalendar@gmail.com)</em:creator>
+	
+	<!-- optional items -->
+	<em:type>2</em:type> <!-- type=extension --> 	
+	<em:homepageURL>http://hcalendar.blogspot.com/</em:homepageURL>
+	<em:contributor>Hebrew Calendar engine by Abu Mami (http://kaluach.org/)</em:contributor>
+	<em:contributor>Jewish Calendar engine by Gabriel Zerbib (http://calj.net/)</em:contributor>
+	<em:contributor>Web Service ZipCodes by Sergey Kats (http://www.webservicelist.com/webservices/f.asp?fid=74105)</em:contributor>
+	<em:contributor>Hebrew (he-IL) Localized by Reuven Gonen</em:contributor>
+	<em:contributor>French (fr-FR) Localized by Benjamin Etienne</em:contributor>
+	<em:optionsURL>chrome://hcalendar/content/options.xul</em:optionsURL>
+	<em:aboutURL></em:aboutURL>
+	<em:unpack>true</em:unpack>
+	
 	<!-- Mozilla Firefox -->	
 	<em:targetApplication>
 		<Description>
@@ -73,20 +88,8 @@
 	
 	<!-- Netscape Navigator -->
 	<!-- {3db10fab-e461-4c80-8b97-957ad5f8ea47} -->
-	
-	<em:name>Hebrew Calendar</em:name>
-	<em:description>Show the Hebrew date in your browser's status bar.</em:description>
-	<em:creator>Igor Ziselman (http://hcalendar@gmail.com)</em:creator>
-	<em:homepageURL>http://hcalendar.blogspot.com/</em:homepageURL>
-	<em:contributor>Hebrew Calendar engine by Abu Mami (http://kaluach.org/)</em:contributor>
-	<em:contributor>Jewish Calendar engine by Gabriel Zerbib (http://calj.net/)</em:contributor>
-	<em:contributor>Web Service ZipCodes by Sergey Kats (http://www.webservicelist.com/webservices/f.asp?fid=74105)</em:contributor>
-	<em:contributor>Hebrew (he-IL) Localized by Reuven Gonen</em:contributor>
-	<em:contributor>French (fr-FR) Localized by Benjamin Etienne</em:contributor>
-
-	<em:optionsURL>chrome://hcalendar/content/options.xul</em:optionsURL>
-	<em:aboutURL></em:aboutURL>
-	
+		
+<!--
 	<em:file>
 		<Description about="urn:mozilla:extension:file:hcalendar.jar">
 			<em:package>content/hcalendar/</em:package>
@@ -95,6 +98,8 @@
 			<em:locale>locale/fr-FR/hcalendar/</em:locale>
 		</Description>
 	</em:file>
+-->
+	
 </Description>
 
 </RDF>

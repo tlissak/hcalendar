@@ -182,11 +182,13 @@
 			<label value="Value:" control="gematriyaValue" width="50"/>
 			<textbox id="gematriyaValue" width="260" readonly="true" />
 		</hbox>
+<!--		
 		<script type="text/javascript">
 			var Babylon_Affiliate = "BA43d7e5ca65ca0";
 			var Babylon_Language = "EN";
 		</script>
 		<script type="text/javascript" src="http://a1709.g.akamai.net/f/1709/2537/30d/online.babylon.com/trans_box/js/BabylonBox.js">
 		</script>
+-->		
 	</groupbox>
 </dialog>
