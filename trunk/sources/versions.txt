@@ -1,3 +1,5 @@
+1.0.5.07
+	- Fixing "Validation Warnings".
 1.0.5.06
 	- Support Mozilla Firefox 4.0b2pre (Minefield).
 1.0.5.05
