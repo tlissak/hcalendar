@@ -1,0 +1,20 @@
+prefwindow { width:68ex; }
+#specifiersLabel { text-decoration: underline; }
+#formatSpecifiers { 
+	font-size:1.7ex; 
+	overflow-x:visible;
+	overflow-y:scroll;
+	height:21ex;
+}
+groupbox > separator { height:1.6ex; }
+textbox[preference=position] { width:15ex; }
+
+/*  skin/toolbar-button.css  */
+
+#myextension-button {
+  list-style-image: url("chrome://hcalendar/skin/icon_32px.png");
+}
+
+toolbar[iconsize="small"] #myextension-button {
+  list-style-image: url("chrome://hcalendar/skin/icon_16px.png");
+}

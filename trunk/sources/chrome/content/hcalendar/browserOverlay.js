@@ -834,8 +834,7 @@ this.Entities.MONTH_NAME_ABBR,
 	clickHandler: function(event) 
 	{		
 		if (event.button == 0) 
-		{
-			
+		{			
 			this.forceRefresh();
 		
 		}	
@@ -844,13 +843,27 @@ this.Entities.MONTH_NAME_ABBR,
 	DblclickHandler: function (event)
 	{
 		if (event.button == 0) 
-		{
-			
-			this.popupOptions();
-		
+		{			
+			this.popupOptions();		
 		}
 	
 	},
+	onToolbarButtonCommand: function(event)
+	{
+		switch(event.button) {
+			case 0:
+			// Left click
+			this.popupOptions();
+			break;
+			case 1:
+			// Middle click
+			break;
+			case 2:
+			// Right click
+			break;
+		}	
+	},
+	
 	getHebrewDate: function(uDate)
 	{
 		var tday = uDate.getDate();

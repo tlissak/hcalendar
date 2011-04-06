@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?xml-stylesheet href="chrome://hcalendar/skin/hcalendar.css" type="text/css"?> 
+<?xml-stylesheet href="chrome://hcalendar/content/hcalendar.css" type="text/css"?> 
 
 <!DOCTYPE overlay SYSTEM "chrome://hcalendar/locale/hcalendar.dtd">
 <overlay id="hcalendar-overlay"
@@ -44,7 +44,7 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <window id="main-window">
 
 <popupset id="mainPopupSet">
-	<menupopup id="hcalendar-contextmenu">
+	<popup id="hcalendar-contextmenu">
 
 		<menuitem id="hc-menu-options" default="true" oncommand="HCalendar.popupOptions();"
  label="&hc.menu.options.label;" accesskey="&hc.menu.options.key;"/>
@@ -76,7 +76,7 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
  label="&hc.menu.open.label;" accesskey="&hc.menu.open.key;"/>
 		<menuitem id="hc-menu-openBlog" oncommand="HCalendar.popupOpenBlog();"
  label="&hc.menu.blog.label;" accesskey="&hc.menu.blog.key;"/>
-	</menupopup>
+	</popup>
 
 	<tooltip id="hcalendar-tooltip" orient="vertical">
 		<description id="hcalendar-ccalendar-value" value="" style="margin:0px;"/>
@@ -100,14 +100,5 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 	style="min-width: 16px; white-space: nowrap; padding: 0px;" />	
 </statusbar>
 
-<toolbarpalette id="BrowserToolbarPalette">
-  <toolbarbutton class="toolbarbutton-1"
-                 id="hcalendar-statusbarpanel"
-                 tooltiptext="hcalendar-tooltip"
-                 label="hcalendar"
-                 context="hcalendar-contextmenu"
-                 oncommand="HCalendar.onToolbarButtonCommand(event);">
-  </toolbarbutton>
-</toolbarpalette>
 
 </overlay>
