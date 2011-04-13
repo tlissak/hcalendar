@@ -1,3 +1,5 @@
+1.0.5.08
+	- Fixing "Validation Warnings" (security issues).
 1.0.5.07
 	- Fixing "Validation Warnings".
 1.0.5.06

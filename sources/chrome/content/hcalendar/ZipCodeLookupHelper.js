@@ -15,8 +15,8 @@ function ifNetscape()
 }
 function loadXMLDoc(url) {
 	if (window.XMLHttpRequest) {
-		if (ifNetscape())
-			netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
+//		if (ifNetscape())
+//			netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
 		req = new XMLHttpRequest();
 	        req.onreadystatechange = processReqChange;
 	        req.open("GET", url, true);
@@ -47,8 +47,8 @@ function processReqChange()
 			try
 			{
 				//alert(req.responseText)
-				if (ifNetscape())
-					netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
+//				if (ifNetscape())
+//					netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
 				// ...processing statements go here...
 				var response = req.responseXML.documentElement;
 
