@@ -1,3 +1,6 @@
+1.0.5.09
+	- Support Mozilla Firefox 5.*, 6.*.
+	- Added Oslo, Stockholm and Helsinki.
 1.0.5.08
 	- Fixing "Validation Warnings" (security issues).
 1.0.5.07
