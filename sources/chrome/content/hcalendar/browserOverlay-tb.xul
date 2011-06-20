@@ -50,7 +50,7 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 <popupset id="mainPopupSet">
 
-	<popup id="hcalendar-contextmenu">
+	<menupopup id="hcalendar-contextmenu">
 
 		<menuitem id="hc-menu-options" oncommand="HCalendar.popupOptions();"
  label="&hc.menu.options.label;" accesskey="&hc.menu.options.key;"/>
@@ -84,7 +84,7 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 		<menuitem id="hc-menu-openBlog" oncommand="HCalendar.popupOpenBlog();"
  label="&hc.menu.blog.label;" accesskey="&hc.menu.blog.key;"/>
 
-	</popup>
+	</menupopup>
 
 
 	<tooltip id="hcalendar-tooltip" orient="vertical">

@@ -1,3 +1,6 @@
+1.0.5.10
+	- Support Thunderbird 5.*
+	- Fixed "transparent menu" issue in Thunderbird
 1.0.5.09
 	- Support Mozilla Firefox 5.*, 6.*.
 	- Added Oslo, Stockholm and Helsinki.
