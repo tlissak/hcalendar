@@ -1,3 +1,6 @@
+1.0.5.11
+	- Issue 80: "TypeError: opener.opener is null"
+	  (http://code.google.com/p/hcalendar/issues/detail?id=80)
 1.0.5.10
 	- Support Thunderbird 5.*
 	- Fixed "transparent menu" issue in Thunderbird
