@@ -180,16 +180,19 @@
 			setPref("hcalendar.openInANewTab", getElement("chkOpenInANewTab").checked);
 			setPref("hcalendar.selectAfterOpening", getElement("chkFocusAfterOpening").checked);
 
+			var topOpener = getTopWindow();
+			
 			try
 			{
-				try
-				{
-					opener.HCalendarRefresh();
-				}
-				catch(e)
-				{
-					opener.opener.HCalendarRefresh();
-				}
+				topOpener.HCalendarRefresh();
+//				try
+//				{
+//					topOpener.HCalendarRefresh();
+//				}
+//				catch(e)
+//				{
+//					topOpener.opener.HCalendarRefresh();
+//				}
 			}
 			catch(e)
 			{
@@ -198,6 +201,14 @@
 
 			return true;
 		}
+        function getTopWindow()
+        {
+                var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"]
+                                .getService(Components.interfaces.nsIWindowMediator);
+                var w = wm.getMostRecentWindow("navigator:browser");
+
+                return w ? w : window.opener;
+        }		
 		function SetLocationType(newlocationType)
 		{
 			switch (newlocationType)
