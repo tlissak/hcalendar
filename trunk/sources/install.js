@@ -2,7 +2,7 @@
 const DISPLAY_NAME   = "Hebrew Calendar";
 const NAME           = "hcalendar";
 const KEY            = "/ZC/hcalendar";
-const VERSION        = "1.0.5.12";
+const VERSION        = "1.0.5.13";
 const LOCALE_LIST    = ["en-US"];
 const JAR_FILE       = NAME + ".jar";
 const PREFS_FILE     = "defaults/preferences/" + NAME + "-defaults.js"; 

@@ -1,3 +1,6 @@
+1.0.5.13
+	- Added Vancouver BC and Regina SK (Canada)
+	- Support Mozilla Firefox 12.*	
 1.0.5.12
 	- Support Thunderbird 6.*
 1.0.5.11
