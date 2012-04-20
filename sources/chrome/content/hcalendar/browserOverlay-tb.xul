@@ -51,8 +51,8 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <popupset id="mainPopupSet">
 
 	<menupopup id="hcalendar-contextmenu">
-
-		<menuitem id="hc-menu-options" oncommand="HCalendar.popupOptions();"
+	
+		<menuitem id="hc-menu-options" default="true" oncommand="HCalendar.popupOptions();"
  label="&hc.menu.options.label;" accesskey="&hc.menu.options.key;"/>
 
 		<menuitem id="hc-menu-converter" oncommand="HCalendar.showConverterWindow();"
@@ -86,15 +86,10 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 	</menupopup>
 
-
 	<tooltip id="hcalendar-tooltip" orient="vertical">
-
 		<description id="hcalendar-ccalendar-value" value="" style="margin:0px;"/>
-
 		<description id="hcalendar-zmanim-value" value="" style="margin:0px;"/>
-
 		<description id="hcalendar-tooltip-value" value="" style="margin:0px;"/>
-
 	</tooltip>
 
 </popupset>
@@ -102,17 +97,14 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 </window>
 
 <statusbar id="status-bar">
-		
-<statusbarpanel id="statusbar-hcalendar-display"
- 
-	insertafter=""
-	hidden="false"
-	context="hcalendar-contextmenu"
-	tooltip="hcalendar-tooltip" 
-	onclick="HCalendar.clickHandler(event)"
- style="min-width: 16px; white-space: nowrap; padding: 0px;" />
-	
+	<statusbarpanel id="statusbar-hcalendar-display"
+		insertafter=""
+		hidden="false"
+		context="hcalendar-contextmenu"
+		tooltip="hcalendar-tooltip" 
+		onclick="HCalendar.clickHandler(event)"
+		ondblclick="HCalendar.DblclickHandler(event)"		
+	style="min-width: 16px; white-space: nowrap; padding: 0px;" />	
 </statusbar>
-
 
 </overlay>
