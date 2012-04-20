@@ -4,6 +4,7 @@ content locale jar:chrome/hcalendar.jar!/locale/
 overlay chrome://browser/content/browser.xul 	chrome://hcalendar/content/browserOverlayFF3.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<4.0
 overlay chrome://browser/content/browser.xul 	chrome://hcalendar/content/browserOverlay.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0
 
+#Tbird
 overlay	chrome://messenger/content/messenger.xul	chrome://hcalendar/content/browserOverlay-tb.xul
 
 # Sunbird
