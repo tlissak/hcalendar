@@ -14,6 +14,7 @@ chdir ..\..\
 
 rmdir /S /Q SetupFiles\chrome\content
 rmdir /S /Q SetupFiles\chrome\locale
+rmdir /S /Q SetupFiles\chrome\skin
 del /Q SetupFiles\chrome\zip.exe
 del /Q SetupFiles\chrome\create_hcalendar.jar.cmd
 
