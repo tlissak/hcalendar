@@ -1,0 +1,70 @@
+<!-- saved from url=(0014)about:internet --> 
+
+<html>
+	<head>
+		<script TYPE="text/javascript" LANGUAGE="JavaScript" SRC="kdate.js"></script>
+		<script TYPE="text/javascript" LANGUAGE="JavaScript" SRC="luach.js"></script>
+		<script TYPE="text/javascript" LANGUAGE="JavaScript" SRC="prefManager.js"></script>
+		<script TYPE="text/javascript" LANGUAGE="JavaScript" SRC="HHolidaysHelper.js"></script>
+		<script TYPE="text/javascript" LANGUAGE="JavaScript" SRC="calj/jdates.js"></script>
+		<script TYPE="text/javascript" LANGUAGE="JavaScript" SRC="calj/parasha.js"></script>
+		<script TYPE="text/javascript" LANGUAGE="JavaScript" SRC="calj/parasha_loc.js"></script>
+	</head>
+
+	<body bgColor="#c0c0c0" onLoad="selectLoad()"><FONT face="Arial,Helvetica" size="2">
+		<b><center>
+		<form NAME="calendar_control">
+			
+<br/>
+			<center>
+				<font size="4" color="brown">KaluachJS - Abu Mami's Javascript Hebrew Calendar</font>
+			</center>
+			<br/>
+
+			<INPUT TYPE="button" NAME="prevbutton" VALUE="<" onClick="selectPrev()">
+			<font COLOR="#000080" FACE="Arial">
+				<SELECT NAME="month" onChange="selectForm(this.form)">
+
+					<OPTION>January
+<OPTION>February
+<OPTION>March
+<OPTION>April
+<OPTION>May
+<OPTION>June
+<OPTION>July
+<OPTION>August
+<OPTION>September
+<OPTION>October
+<OPTION>November
+<OPTION>December
+
+				</SELECT>
+			</font>
+			<INPUT TYPE="button" NAME="nextbutton" VALUE=">" onClick="selectNext()">
+			&nbsp&nbsp
+			
+<INPUT TYPE="button" NAME="prevY10button" VALUE="<<" onClick="selectPrevYear(10)">
+			<INPUT TYPE="button" NAME="prevYbutton" VALUE="<" onClick="selectPrevYear(1)">
+			<font COLOR="#000000" FACE="Arial">
+				<big>
+					<INPUT NAME="yr" TYPE="text" VALUE=" " SIZE=4 onChange="selectForm(this.form)" onFocus="this.blur()">
+				</big>
+			</font>
+			<INPUT TYPE="button" NAME="nextY10button" VALUE=">" onClick="selectNextYear(1)">
+			<INPUT TYPE="button" NAME="nextYbutton" VALUE=">>" onClick="selectNextYear(10)">
+			&nbsp&nbsp
+			<INPUT TYPE="button" NAME="currbutton" VALUE=" Today " onClick="selectCurrent()">
+&nbsp&nbsp
+			<FONT COLOR="#000000" FACE="Arial">Holidays:
+			<SELECT NAME="holidays" onChange="selectHolidays(this.form)">
+				<OPTION>Jewish
+				<OPTION>Civil
+				<OPTION>All
+				<OPTION>None
+			</SELECT>
+		</FORM>
+</center>
+
+	</body>
+
+</html>

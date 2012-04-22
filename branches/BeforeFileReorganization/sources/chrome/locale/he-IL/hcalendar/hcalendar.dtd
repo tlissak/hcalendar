@@ -1,0 +1,60 @@
+﻿<!ENTITY hc.converter.caption "HCalendar ממיר של">
+<!ENTITY hc.converter.civilDate "תאריך לועזי">
+<!ENTITY hc.converter.convert "המר">
+<!ENTITY hc.converter.day "יום">
+<!ENTITY hc.converter.hebrewDate "תאריך עברי">
+<!ENTITY hc.converter.month "חודש">
+<!ENTITY hc.converter.year "שנה">
+<!ENTITY hc.gematria.calculate "חשב">
+<!ENTITY hc.gematria.caption "גימטרייה">
+<!ENTITY hc.gematria.hebrewPrhase "ביטוי עברי">
+<!ENTITY hc.gematria.prhase "ביטוי">
+<!ENTITY hc.menu.blog.key "ב">
+<!ENTITY hc.menu.blog.label "פתח את הבלוג של hcalendar">
+<!ENTITY hc.menu.clipboard.key "ת">
+<!ENTITY hc.menu.clipboard.label "העתק תאריך עברי ללוח">
+<!ENTITY hc.menu.postToBuzz.label "Buzz Hebrew Date">
+<!ENTITY hc.menu.postToBuzz.key "z">
+<!ENTITY hc.menu.postToTweeter.label "Tweet Hebrew Date">
+<!ENTITY hc.menu.postToTweeter.key "T">
+<!ENTITY hc.menu.converter.key "מ">
+<!ENTITY hc.menu.converter.label "המרה...">
+<!ENTITY hc.menu.gematria.key "ג">
+<!ENTITY hc.menu.gematria.label "גימטרייה...">
+<!ENTITY hc.menu.calendarManagerCreateEventInGoogle.label "Create Shabbat Reminder in Google Calendar">
+<!ENTITY hc.menu.calendarManagerCreateEventInYahoo.label "Create Shabbat Reminder in Yahoo Calendar">
+<!ENTITY hc.menu.calendarManagerCreateEventInGoogle.key "R">
+<!ENTITY hc.menu.calendarManagerCreateEventInYahoo.key "Y">
+<!ENTITY hc.menu.open.key "ש">
+<!ENTITY hc.menu.open.label "פתח לוח שנה עברי">
+<!ENTITY hc.menu.options.key "א">
+<!ENTITY hc.menu.options.label "אפשרויות HCalendar...">
+<!ENTITY hc.options.caption "HCalendar אפשרויות">
+<!ENTITY hc.options.font.caption "גופנים וצבעים">
+<!ENTITY hc.options.font.color.holiday "חג">
+<!ENTITY hc.options.font.color.text "טקסט">
+<!ENTITY hc.options.font.size "גודל גופן">
+<!ENTITY hc.options.language "שפה">
+<!ENTITY hc.options.language.English "אנגלית">
+<!ENTITY hc.options.language.Heblish "Heblish">
+<!ENTITY hc.options.language.Hebrew "עברית">
+<!ENTITY hc.options.language.HebrewPlusNumbers "עברית (+מספרים)">
+<!ENTITY hc.options.location "מיקום">
+<!ENTITY hc.options.locationByCity "מיקום לפי עיר">
+<!ENTITY hc.options.locationByCoords "מיקום לפי קואורדינטה">
+<!ENTITY hc.options.locationByZip 'מיקום לפי מיקוד (ארה"ב וקנדה בלבד)'>
+<!ENTITY hc.options.locationByZipCoordButtonLabel "מצא קואורדינטות">
+<!ENTITY hc.options.locationByZipCoordButtonValue "מצא קואורדינטות...">
+<!ENTITY hc.options.locationByZipCoords "קואורדינטות אורך ורוחב">
+<!ENTITY hc.options.time.dst "שעון קיץ">
+<!ENTITY hc.options.time.options "אפשרויות זמן">
+<!ENTITY hc.options.time.switch "מעבר יום בשקיעה">
+<!ENTITY hc.options.time.autoDST "Automatically adjust clock for DST">
+<!ENTITY hc.options.opening.settings "Opening settings">
+<!ENTITY hc.options.open.in.a.new.tab "Open in a new tab">
+<!ENTITY hc.options.focus.tab "Focus/select tab after opening">
+<!ENTITY hc.gematria.caption "Gematria">
+<!ENTITY hc.gematria.hebrewPrhase "Hebrew phrase">
+<!ENTITY hc.gematria.prhase "Phrase">
+<!ENTITY hc.gematria.calculate "Calculate">
+<!ENTITY hc.gematria.virtualKeyboard "מקלדת וירטואלית">

@@ -1,0 +1,57 @@
+﻿<!ENTITY hc.menu.options.label "Options calendrier hébreu...">
+<!ENTITY hc.menu.options.key "O">
+<!ENTITY hc.menu.converter.label "Convertire...">
+<!ENTITY hc.menu.converter.key "n">
+<!ENTITY hc.menu.gematria.label "Géométrie...">
+<!ENTITY hc.menu.gematria.key "g">
+<!ENTITY hc.menu.clipboard.label "Copier dans le Presse-papiers la date en hébreu">
+<!ENTITY hc.menu.clipboard.key "C">
+<!ENTITY hc.menu.postToBuzz.label "Buzz Hebrew Date">
+<!ENTITY hc.menu.postToBuzz.key "z">
+<!ENTITY hc.menu.postToTweeter.label "Tweet Hebrew Date">
+<!ENTITY hc.menu.postToTweeter.key "T">
+<!ENTITY hc.menu.calendarManagerCreateEventInGoogle.label "Create Shabbat Reminder in Google Calendar">
+<!ENTITY hc.menu.calendarManagerCreateEventInYahoo.label "Create Shabbat Reminder in Yahoo Calendar">
+<!ENTITY hc.menu.calendarManagerCreateEventInGoogle.key "R">
+<!ENTITY hc.menu.calendarManagerCreateEventInYahoo.key "Y">
+<!ENTITY hc.menu.open.label "Ouvrir le calendrier hébreu">
+<!ENTITY hc.menu.open.key "H">
+<!ENTITY hc.menu.blog.label "Ouvrir le blog officiel du calendrier hébreu">
+<!ENTITY hc.menu.blog.key "b">
+<!ENTITY hc.options.caption "Options calendrier hébreu">
+<!ENTITY hc.options.language "Langage">
+<!ENTITY hc.options.language.English "English">
+<!ENTITY hc.options.language.Français "Français">
+<!ENTITY hc.options.language.Heblish "Heblish">
+<!ENTITY hc.options.language.Hebrew "Hebrew">
+<!ENTITY hc.options.language.HebrewPlusNumbers "Hébreu (+numéros)">
+<!ENTITY hc.options.location "Lieu">
+<!ENTITY hc.options.locationByCity "Lieu par ville">
+<!ENTITY hc.options.locationByZip "Lieu de Code postal (États-Unis et Canada uniquement)">
+<!ENTITY hc.options.locationByZipCoordButtonLabel "Trouver  les coordonnées">
+<!ENTITY hc.options.locationByZipCoordButtonValue "Trouver  les coordonnées...">
+<!ENTITY hc.options.locationByZipCoords "Coordonnées de latitude et de longitude">
+<!ENTITY hc.options.locationByCoords "Locations par coordonnées">
+<!ENTITY hc.options.time.options "Options d'heure">
+<!ENTITY hc.options.time.dst "Heure d'été (DST)">
+<!ENTITY hc.options.time.switch "Coucher du soleil">
+<!ENTITY hc.options.time.autoDST "Automatically adjust clock for DST">
+<!ENTITY hc.options.font.caption "Couleurs et Polices">
+<!ENTITY hc.options.font.color.text "Texte">
+<!ENTITY hc.options.font.color.holiday "Vacances">
+<!ENTITY hc.options.font.size "Police d'écriture">
+<!ENTITY hc.converter.caption "Convertir le calendrier en hébreu">
+<!ENTITY hc.converter.civilDate "Date civile">
+<!ENTITY hc.converter.year "Année">
+<!ENTITY hc.converter.month "Mois">
+<!ENTITY hc.converter.day "Jour">
+<!ENTITY hc.converter.convert "Convertir">
+<!ENTITY hc.converter.hebrewDate "Date en hébreu">
+<!ENTITY hc.options.opening.settings "Opening settings">
+<!ENTITY hc.options.open.in.a.new.tab "Open in a new tab">
+<!ENTITY hc.options.focus.tab "Focus/select tab after opening">
+<!ENTITY hc.gematria.caption "Géométrie">
+<!ENTITY hc.gematria.hebrewPrhase "Expression en hébreu">
+<!ENTITY hc.gematria.prhase "Phrase">
+<!ENTITY hc.gematria.calculate "Calculer">
+<!ENTITY hc.gematria.virtualKeyboard "Virtual Keyboard">

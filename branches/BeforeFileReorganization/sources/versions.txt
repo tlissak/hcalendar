@@ -1,0 +1,380 @@
+1.0.5.14
+	- Support Thunderbird 12.*
+	- Issue 86: Dialog Options cannot be opened by double click on HCalendar statusbar (Thunderbird)
+	  (http://code.google.com/p/hcalendar/issues/detail?id=86)
+1.0.5.13
+	- Added Vancouver BC and Regina SK (Canada)
+	- Support Mozilla Firefox 12.*	
+1.0.5.12
+	- Support Thunderbird 6.*
+1.0.5.11
+	- Issue 80: "TypeError: opener.opener is null"
+	  (http://code.google.com/p/hcalendar/issues/detail?id=80)
+1.0.5.10
+	- Support Thunderbird 5.*
+	- Fixed "transparent menu" issue in Thunderbird
+1.0.5.09
+	- Support Mozilla Firefox 5.*, 6.*.
+	- Added Oslo, Stockholm and Helsinki.
+1.0.5.08
+	- Fixing "Validation Warnings" (security issues).
+1.0.5.07
+	- Fixing "Validation Warnings".
+1.0.5.06
+	- Support Mozilla Firefox 4.0b2pre (Minefield).
+1.0.5.05
+	- Issue 77:   	 showing "switching Shabbat" 
+          (http://code.google.com/p/hcalendar/issues/detail?id=77)
+1.0.5.04
+	- Removed "heb2civ.js" from the top of the browser window.
+1.0.5.03
+	- Support Mozilla Thunderbird 3.1.*
+1.0.5.02
+	- Support Mozilla Sunbird 1.0b1
+1.0.5.01
+	- Issue 75: Add menu item "Tweet Hebrew Date" 
+          (http://code.google.com/p/hcalendar/issues/detail?id=75)
+1.0.4.99
+	- Issue 74: Add menu item "Post to Buzz" 
+	  (http://code.google.com/p/hcalendar/issues/detail?id=74)
+1.0.4.98
+	- "DST" disabled, when "Automatically adjsut clock for DST" checked.
+1.0.4.97
+	- Partial support chrome.manifest file for Sunbird 0.9
+1.0.4.96
+	- Redesign: remove additional "eval' usage.
+1.0.4.95 
+	- Issue 48: Using "Daylight Time" from Windows (or another OS)
+	  (http://code.google.com/p/hcalendar/issues/detail?id=48)
+	  http://javascript.about.com/library/bldst.htm
+1.0.4.94
+	- Issue 73: Hebrew Calendar extension doesn't work on Thunderbird 3.0.3.
+	  (http://code.google.com/p/hcalendar/issues/detail?id=73)
+1.0.4.93
+	- Redesign: remove all "eval" usage.
+1.0.4.92
+	- Issue 72: Hebrew Calendar extension doesn't work on Firefox 3.6.
+          Solution: Added file chrome.manifest (FF 3.6)
+	  (http://code.google.com/p/hcalendar/issues/detail?id=72)
+1.0.4.91
+	- Support Postbox 1.1.*
+1.0.4.90
+	- Added Tallin (http://www.timeanddate.com/worldclock/city.html?n=242); (Latitude: 59° 22' North, Longitude: 24° 48' East)
+1.0.4.89
+	- Added Riga (http://www.timeanddate.com/worldclock/city.html?n=602); (Latitude: 56° 53' North, Longitude: 24° 05' East)
+1.0.4.88
+	- Support Mozilla Firefox 3.6
+	- Support Thunderbird 3.0
+1.0.4.87
+	- Issue 71: Support Postbox
+	  (http://code.google.com/p/hcalendar/issues/detail?id=71)
+1.0.4.86
+	- Update: Show "omer day" details (http://www.chabad.org/holidays/sefirah/omer-calendar.htm).
+	  (http://code.google.com/p/hcalendar/issues/detail?id=70)
+1.0.4.85
+	- Update: Show "omer day" details (http://www.chabad.org/holidays/sefirah/omer-calendar.htm).
+	  (http://code.google.com/p/hcalendar/issues/detail?id=70)
+1.0.4.84
+	- Show "omer day" details (http://www.chabad.org/holidays/sefirah/omer-calendar.htm).
+	  (http://code.google.com/p/hcalendar/issues/detail?id=70)
+	- Issue 69: Support Mozilla Firefox 3.5b4 
+	  (http://code.google.com/p/hcalendar/issues/detail?id=69)
+1.0.4.83
+	- Issue 68: Israeli Holidays - Charedi Option.
+	  (http://code.google.com/p/hcalendar/issues/detail?id=68)
+	- Issue 09:"HCalendar converter": add checkbox "after sunset" for more correct civil -> hebrew convert
+	  (http://code.google.com/p/hcalendar/issues/detail?id=9)
+1.0.4.81
+	- Issue 65: Firefox 3.1b3 Support
+	  (http://code.google.com/p/hcalendar/issues/detail?id=65)
+1.0.4.80
+	- Issue 64: Vav-Tet or Tet-Vav? 
+	  (http://code.google.com/p/hcalendar/issues/detail?id=64)
+1.0.4.79
+	- Issue 46 (in progress): Sunbird 0.8 (0.9) - installation failed
+	  (http://code.google.com/p/hcalendar/issues/detail?id=46)
+	- Issue 59:  	 Create Shabbat Reminder in Google calendar
+	  (http://code.google.com/p/hcalendar/issues/detail?id=59)
+	- 61:  	 Create Shabbat Reminder in Yahoocalendar   	
+	  (http://code.google.com/p/hcalendar/issues/detail?id=61)
+1.0.4.78
+	- Issue 63: Firefox 3.1b2 Support
+	  (http://code.google.com/p/hcalendar/issues/detail?id=63)
+1.0.4.77
+	- Issue 61: Create Shabbat Reminder in Yahoo calendar
+      	  (http://code.google.com/p/hcalendar/issues/detail?id=61)
+1.0.4.76
+	- Issue 35: hcalendar and ColorfulTabs extensions conflict.
+      	  (http://code.google.com/p/hcalendar/issues/detail?id=59)
+1.0.4.75
+	- Issue 59: Create Shabbat Reminder in Google calendar
+      	  (http://code.google.com/p/hcalendar/issues/detail?id=59)
+1.0.4.74
+	- Issue 58: add timezone GMT-4:30
+      	  (http://code.google.com/p/hcalendar/issues/detail?id=58)
+1.0.4.73
+	- Issue 57: sefirat haomer error: "44th(Mem-He)"
+      	  (http://code.google.com/p/hcalendar/issues/detail?id=57)
+1.0.4.72
+    	- Issue 56: Add "Hebrew Virtual Keyboard" into "Gematria" dialog.
+      	  (http://code.google.com/p/hcalendar/issues/detail?id=56)
+1.0.4.71
+	- Issue 52: yom hashoah missing
+	  (http://code.google.com/p/hcalendar/issues/detail?id=52)
+	- Issue 55: add "Yom Hazikaron"
+	  (http://code.google.com/p/hcalendar/issues/detail?id=55)
+1.0.4.70
+	- Issue 53: Support Mozilla Firefox 3.0
+	  (http://code.google.com/p/hcalendar/issues/detail?id=53)
+1.0.4.69
+	- Issue 45: Firefox 3.0 Pre Release Support
+	  (http://code.google.com/p/hcalendar/issues/detail?id=45)
+1.0.4.68
+	- Issue 44: Firefox 3.0b5 Support
+	  (http://code.google.com/p/hcalendar/issues/detail?id=44)
+1.0.4.67
+	- Issue 41: Firefox 3.0b4 Support
+	  (http://code.google.com/p/hcalendar/issues/detail?id=41)
+1.0.4.66
+	- Issue 40: Firefox 3.0b3 Support
+	  (http://code.google.com/p/hcalendar/issues/detail?id=40)
+1.0.4.65
+	- Issue 39: Adar 1 display problem in Hebrew
+	  (http://code.google.com/p/hcalendar/issues/detail?id=39)
+1.0.4.64
+	- Issue 37: Show Purim Koton and Shushan Purim Koton (by mdmarkow)
+	  (http://code.google.com/p/hcalendar/issues/detail?id=37)
+	- Issue 38: Add Kfar Saba
+          (http://code.google.com/p/hcalendar/issues/detail?id=38) 
+1.0.4.63
+	- Issue 33: ½ hour increments in GMT (Australia)
+	  (http://code.google.com/p/hcalendar/issues/detail?id=33)
+1.0.4.62
+	- Issue 34: A problem in Parsha switching.
+	  (http://code.google.com/p/hcalendar/issues/detail?id=34)
+1.0.4.61
+	- Support Mozilla Firefox v3.0
+1.0.4.60
+	- Issue 32: Open Hebrew calendar and blog pages in a new tab (not new FF)
+	  (http://code.google.com/p/hcalendar/issues/detail?id=32)
+1.0.4.59
+	- Issue 30: Translate to French (Benjamin Etienne)
+	  (http://code.google.com/p/hcalendar/issues/detail?id=30)
+1.0.4.58
+	- Issue 27: Support Netscape Navigator 9.0
+	  (http://code.google.com/p/hcalendar/issues/list?updated=27&ts=1193781766)
+	- Issue 28: Support Flock 0.9
+	  (http://code.google.com/p/hcalendar/issues/detail?id=28)
+1.0.4.57
+	- Issue 25: Show "X days before Shabbat" with option "Day switch by sunset".
+	  (http://code.google.com/p/hcalendar/issues/detail?id=25)
+1.0.4.56
+	- Issue 20: In dialog "Converter" to show relevant Parasha.
+	  (http://code.google.com/p/hcalendar/issues/detail?id=20)
+	- Issue 22: Show Parasha in "Hebrew Calendar" page.
+	  (http://code.google.com/p/hcalendar/issues/detail?id=22)
+1.0.4.55
+	- Issue 7:"Show parasha in Israel" (show correct Diaspora holidays)
+	  (http://code.google.com/p/hcalendar/issues/detail?id=7)
+	- Issue 21: ""Hebrew Calendar" page shoud show holidays by defined language (English or Hebrew)."
+	  (http://code.google.com/p/hcalendar/issues/detail?id=21)
+1.0.4.54
+	- Issue 14:add an option to be able to set the time to show in AM-PM format as well
+	  (http://code.google.com/p/hcalendar/issues/detail?id=14&can=1)
+1.0.4.53
+	- Issue 19: Add "Shmini Atzeret, Simchat Torah"
+	  (http://code.google.com/p/hcalendar/issues/detail?id=19)
+1.0.4.52
+	- Issue 5: all holidays (in Israel) with "(d)" are fixed
+	  (http://code.google.com/p/hcalendar/issues/detail?id=5)
+1.0.4.51 
+	- "Beit Arye" instead of "Beit Arie"
+1.0.4.50
+	- Issue 1 menu "Open Hebrew Calendar" doesn't open correct "Hebrew Calendar" page
+	- Issue 15 "add coordinates of Beit Arie"
+	- Enhancement 8 "Compatibility with Sunbird v0.5.*" (http://code.google.com/p/hcalendar/issues/detail?id=8&can=2&q=)
+1.0.4.49
+	- Enhancement 3 "Compatibility with Sunbird" (http://code.google.com/p/hcalendar/issues/detail?id=3&can=2&q=)
+1.0.4.48 
+	- BUG004 "Instead of Mem-Sofit should be regular Mem in Sfirat HaOmer showing;
+1.0.4.47
+	- translate few holiday names to Hebrew (by Zvi);
+1.0.4.46
+	- Montreal is added;
+	- improvement (Hebrew language) of Omer showing; 
+1.0.4.45
+	- fix the problem with displaying "Israel Independence Day" (thanks to David);
+1.0.4.44
+	- improvement of Omer showing;
+1.0.4.43
+	- Support Thunderbird 2.0.0.0;1.0.4.42
+	- Show "Count Today's Omer";
+	- Buenos Aires, Argentina is added;
+1.0.4.41
+	- translated to Hebrew by Reuven;
+	- Hong Kong coordinates are changed;
+1.0.4.40
+	- Converter "Hebrew to Civil" is implemented;
+	- Dallas, Texas is added;
+	- Firefox 2 Release Candidate is supported;
+1.0.4.39
+	- "year showing problem" is fixed (Language "Hebrew (+numbers)");
+1.0.4.38
+	- Hong Kong is added;
+	- Mexico City is reincluded;
+	- Denver is added;
+1.0.4.37
+	- fix spell error;
+1.0.4.36
+	- hide error window "ReferenceError: JEvent is not defined";
+1.0.4.35
+	- Show Hebrew week's day (thanks for Stan).
+1.0.4.34
+	- "Leil Shabbat" is shown from Friday sunset to Shabbat sunrise (thanks for Stan).
+1.0.4.33
+	- Seoul is added;
+	- Frankfurt is added;
+	- Showing and calculation of Hebrew year's are changed (thanks for Mendel);
+1.0.4.32
+	- Mexico is added;
+	- support Mozilla Firefox 2.0b2;
+1.0.4.31
+	- Vienna (Austria) is added;
+1.0.4.30
+	- support Mozilla Firefox 2.0;
+1.0.4.29
+	- translated to Hebrew by Reuven; 
+1.0.4.28
+	- show "Shema" and "Minha Gdola" times in hint;
+1.0.4.27
+	- new strings are translated to Hebrew;
+1.0.4.26
+	- new options "Show Parsha in Israel" is added;
+1.0.4.25 
+	- Jewish Calendar Engine by by Gabriel Zerbib (http://calj.net/) is inserted;
+1.0.4.24
+	- gematria: fixing of problems (mem, nun, kaf, tzadi, pe);
+1.0.4.23
+	- gematriya window is added;
+	- Hebrew locale version is fixed (new strings are used by English only);
+	- Parsha names are added for few monthes;
+1.0.4.22
+	- date converter (Civil -> Hebrew) is added;
+1.0.4.21
+	- few locations are added;
+1.0.4.20
+	- hint viewing optimization
+1.0.4.19
+	- "Erev Shabbat" is changed to "Leil Shabbat"
+1.0.4.18
+	- "Options" dialog improvements;
+        - "evening" GUI improvements;
+1.0.4.17
+	- "Options" dialog improvements;
+1.0.4.16
+        - "Shabbat begins" is translated to Hebrew;
+	- "Parsha hint" optimization (ask Parsha name once in week);
+1.0.4.15
+	- show Parsha in hint;
+	- spell mistake is fixed;
+	- problem with Locations (Hebrew version only) is fixed;
+1.0.4.12
+	- translated to Hebrew;
+1.0.4.11
+	- Beit-Shemesh is added;
+	- problem with coordinates is fixed;
+1.0.4.10
+	- location by coordinates is added;
+	- "Tu b Shvat" is translated to Hebrew;
+1.0.4.09
+	- font size is added;
+	- all strings are removed from dialog "Options" to .dtd file;
+1.0.4.08
+	- few locations are added;
+1.0.4.07
+        - few locations are added;
+	- color picker is added in dialog "Options";
+	- .dtd file is created (for menu only);
+1.0.4.06
+        - few locations are added;
+        - few GUI changes are made in "Options" dialog;
+1.0.4.05
+	- refactoring (dialog "Options", optimization of menu filling);
+1.0.4.04
+        - correct support of Thunderbird 1.5 (popup menu, hint, open links);
+	- translate "evening" to Hebrew;
+1.0.4.03
+	- add new feature "switch day by sunset";
+1.0.4.02
+        - change menu caption from "Copy to Clipboard" to "Copy Hebrew Date to Clipboard";
+1.0.4.01
+        - locations Prague, Tokio, Minsk are added;
+        - menu command "Copy to clipboard" is added;
+1.0.4.00
+	- location by North America ZIP code;
+	- location "Rio de Janeiro" is added;
+1.0.3.20
+	- add Chicago, Paris;
+1.0.3.19
+        - show "Shabbat Candle Lighting Time";
+        NOTE: PLEASE, PAY ATTENTION, Shabbat time of the hcalendar CANNOT be absolutely exact.
+1.0.3.18
+        - Berlin is added;
+1.0.3.17
+	- add language Heblish (English + Hebrew numbers);
+        - Toronto, New York, London are added;
+1.0.3.16
+	- select colors by color table;
+	- add few Israeli towns;
+	- show sunrise and sunset in hint message;
+1.0.3.15
+	- show "sun rise" time in hint message;
+	- add "Text Color" (default: black);
+        - change default of "holiday color" from red to blue;
+	- dialog "About" improvement;
+1.0.3.14
+        - dialog "Options"
+          - "holiday color" selection is added;
+
+1.0.3.12
+        - fix spelling mistakes;
+	- fix gershaim problems;
+	- fix location default problem;
+	- correct showing update by "options" dialog changes (from browser menu);
+
+1.0.3.10
+        - create dialog "Options"
+          - "Language" combobox;
+          - "Location" combobox;
+	- "Hanukkah" is translated to Hebrew;
+
+1.0.2.94
+	- show Hebrew day
+	- 3 languages support (English, Hebrew, Heblish)
+
+1.0.2.36
+        - support Netscape
+
+1.0.2.29
+        - small design changes
+
+1.0.2.26
+        - support Mozilla Suite
+        - support Mozilla Thunderbird
+
+1.0.2.8
+	- improvement showing of date on Hebrew
+
+1.0.2.2
+	- traslate on Hebrew
+		- Shabbat
+		- year (as hebrew letters)
+	- red color for Hebrew holidays (include Shabbat)
+	- tooltip (show number days before Shabbat)
+
+1.0.1.32
+	- select language (English/Hebrew)
+	- translate monthes on Hebrew
+
+1.0.1.2 
+	- show "Shabbat" and Hebrew holidays
