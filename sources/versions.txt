@@ -5,7 +5,7 @@
 	- Issue 87 Files reorganization
 		- removed file .autoreg
 		- removed file install.js
-		- removed (not FF & Thunderbird) from install.rdf
+		- removed (not FF & Thunderbird) from install.rdf and relevant .xul files
 	  (http://code.google.com/p/hcalendar/issues/detail?id=87)
 1.0.5.13
 	- Added Vancouver BC and Regina SK (Canada)
