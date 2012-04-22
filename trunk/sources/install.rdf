@@ -39,67 +39,7 @@
 			<em:maxVersion>12.*</em:maxVersion>			
 		</Description>		
 	</em:targetApplication>
-				
-	<!-- Mozilla Suite -->   
-	<em:targetApplication>      
-		<Description>        
-			<em:id>{86c18b42-e466-45a9-ae7a-9b95ba6f5640}</em:id>        
-			<em:minVersion>1.7</em:minVersion>        
-			<em:maxVersion>1.8+</em:maxVersion>      
-		</Description>   
-	</em:targetApplication>
 
-	<!-- Sunbird -->   
-	<em:targetApplication>      
-		<Description>        
-			<em:id>{718e30fb-e89b-41dd-9da7-e25a45638b28}</em:id>        
-			<em:minVersion>0.3</em:minVersion>        
-			<em:maxVersion>1.0b1</em:maxVersion>
-		</Description>   
-	</em:targetApplication>
-
-	<!-- Flock -->
-	<em:targetApplication>
-  		<Description>
-    			<em:id>{a463f10c-3994-11da-9945-000d60ca027b}</em:id>
-    			<em:minVersion>0.8</em:minVersion>
-    			<em:maxVersion>1.0+</em:maxVersion>
-  		</Description>
-	</em:targetApplication>
-	
-	<!-- Spicebird -->
-	<!-- http://wiki.spicebird.org/Developer:Addons#Notes -->
-    <em:targetApplication>
-      <Description>        
-        <em:id>{ee53ece0-255c-4cc6-8a7e-81a8b6e5ba2c}</em:id>
-        <em:minVersion>0.7.1</em:minVersion>
-        <em:maxVersion>0.7.1</em:maxVersion>
-      </Description>
-    </em:targetApplication>	
-	
-	<!-- Postbox -->
-	<em:targetApplication>
-		<Description>
-			<em:id>postbox@postbox-inc.com</em:id>
-			<em:minVersion>1.0b13</em:minVersion>
-			<em:maxVersion>1.1.*</em:maxVersion>
-		</Description>
-	</em:targetApplication>	
-	
-	<!-- Netscape Navigator -->
-	<!-- {3db10fab-e461-4c80-8b97-957ad5f8ea47} -->
-		
-<!--
-	<em:file>
-		<Description about="urn:mozilla:extension:file:hcalendar.jar">
-			<em:package>content/hcalendar/</em:package>
-			<em:locale>locale/en-US/hcalendar/</em:locale>
-			<em:locale>locale/he-IL/hcalendar/</em:locale>
-			<em:locale>locale/fr-FR/hcalendar/</em:locale>
-		</Description>
-	</em:file>
--->
-	
 </Description>
 
 </RDF>
