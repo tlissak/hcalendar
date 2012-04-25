@@ -8,6 +8,8 @@
 		- removed (not FF & Thunderbird) from install.rdf and relevant .xul files
 		- add-ons aren't package to .jar file
 	  (http://code.google.com/p/hcalendar/issues/detail?id=87)
+	  - Issue 89 (setTimeout or setInterval)
+	  (http://code.google.com/p/hcalendar/issues/detail?id=89)
 1.0.5.13
 	- Added Vancouver BC and Regina SK (Canada)
 	- Support Mozilla Firefox 12.*	
