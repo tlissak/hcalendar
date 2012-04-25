@@ -1,5 +1,5 @@
-content hcalendar jar:chrome/hcalendar.jar!/content/hcalendar/
-content locale jar:chrome/hcalendar.jar!/locale/
+content hcalendar chrome/content/hcalendar/
+skin hcalendar classic/1.0 chrome/skin/
 
 #FF
 overlay chrome://browser/content/browser.xul 	chrome://hcalendar/content/browserOverlayFF3.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<4.0
@@ -10,7 +10,6 @@ overlay	chrome://messenger/content/messenger.xul	chrome://hcalendar/content/brow
 
 style chrome://global/content/customizeToolbar.xul chrome://hcalendar/skin/hcalendar.css
 
-locale	hcalendar	en-US jar:chrome/hcalendar.jar!/locale/en-US/hcalendar/
-locale	hcalendar	he-IL jar:chrome/hcalendar.jar!/locale/he-IL/hcalendar/
-locale	hcalendar	fr-FR jar:chrome/hcalendar.jar!/locale/fr-FR/hcalendar/
-
+locale	hcalendar	en-US chrome/locale/en-US/hcalendar/
+locale	hcalendar	he-IL chrome/locale/he-IL/hcalendar/
+locale	hcalendar	fr-FR chrom/locale/fr-FR/hcalendar/

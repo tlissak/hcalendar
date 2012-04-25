@@ -1,4 +1,6 @@
 
+SET XPI_FILE_NAME=hcalendar1.0.5.14-fx+tb.xpi
+
 rem
 rem prepare SetupFiles folder
 rem
@@ -6,23 +8,23 @@ rmdir /S /Q SetupFiles
 mkdir SetupFiles
 xcopy /E /y ..\sources\*.* SetupFiles\*.*
 
-copy zip.exe SetupFiles\chrome\
-copy create_hcalendar.jar.cmd SetupFiles\chrome\
-chdir SetupFiles\chrome\
-call create_hcalendar.jar.cmd
-chdir ..\..\
+rem copy zip.exe SetupFiles\chrome\
+rem copy create_hcalendar.jar.cmd SetupFiles\chrome\
+rem chdir SetupFiles\chrome\
+rem call create_hcalendar.jar.cmd
+rem chdir ..\..\
 
-rmdir /S /Q SetupFiles\chrome\content
-rmdir /S /Q SetupFiles\chrome\locale
-rmdir /S /Q SetupFiles\chrome\skin
-del /Q SetupFiles\chrome\zip.exe
-del /Q SetupFiles\chrome\create_hcalendar.jar.cmd
+rem rmdir /S /Q SetupFiles\chrome\content
+rem rmdir /S /Q SetupFiles\chrome\locale
+rem rmdir /S /Q SetupFiles\chrome\skin
+rem del /Q SetupFiles\chrome\zip.exe
+rem del /Q SetupFiles\chrome\create_hcalendar.jar.cmd
 
 copy zip.exe SetupFiles
 chdir SetupFiles
-zip.exe -r hcalendar1.0.5.14-fx+fl+mz+ns+tb.xpi *.* -x *.exe
+zip.exe -r %XPI_FILE_NAME% *.* -x *.exe
 chdir ..
 
-dir SetupFiles\hcalendar1.0.5.14-fx+fl+mz+ns+tb.xpi
-xcopy /Y SetupFiles\hcalendar1.0.5.14-fx+fl+mz+ns+tb.xpi .\
+dir SetupFiles\%XPI_FILE_NAME%
+xcopy /Y SetupFiles\%XPI_FILE_NAME% .\
 pause
