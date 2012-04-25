@@ -160,7 +160,7 @@ var HCalendar =
 		
 		this.updateView();
 		
-		this.Timer = window.setInterval(HCalendarTimer, this.timerInterval);
+		this.Timer = window.setInterval(function() { HCalendarTimer(); }, this.timerInterval);
 	
 	},
 
@@ -1472,7 +1472,6 @@ window.addEventListener("load", function() { HCalendar.init(); }, false);
 window.addEventListener("focus", function() { 	HCalendar.forceRefresh(); }, false);
 
 window.addEventListener("unload", function() { HCalendar.destruct(); }, false);
-
 
 function HCalendarTimer() { //safer out here
 	HCalendar.smartViewUpdate();
