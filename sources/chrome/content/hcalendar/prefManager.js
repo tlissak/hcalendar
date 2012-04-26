@@ -1,5 +1,9 @@
+//
+//	references:
+//		- https://developer.mozilla.org/en/Code_snippets/Preferences
+//
 function HCalendar_PrefManager() {
-	this.domain = "hcalendar";	
+	// this.domain = "hcalendar";	
 	return this;
 }
 HCalendar_PrefManager.prototype = {
@@ -13,7 +17,7 @@ HCalendar_PrefManager.prototype = {
 	},
 	rootBranch: null,
 	getRootBranch: function() {
-		if (!this.rootBranch) { this.rootBranch = this.getService().getBranch(null); }
+		if (!this.rootBranch) { this.rootBranch = this.getService().getBranch("extensions."); }
 		return this.rootBranch;
 	},
 	prefTypes: new Array(),
@@ -31,7 +35,7 @@ HCalendar_PrefManager.prototype = {
 	},
 	getPref: function(strName) {
 		var strType = this.getPrefType(strName);
-
+		
 		try
 		{		
 			switch (strType)
@@ -76,5 +80,27 @@ HCalendar_PrefManager.prototype = {
 		{
 			dump(ex + "\n");
 		}
+	},
+	migrateToBranchExtensions: function()
+	{
+		this.convertPrefs();
+	},
+	convertPrefs: function()  {
+		let prefService= Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService);
+		let old=prefService.getBranch('hcalendar.');
+		let mew=prefService.getBranch('extensions.hcalendar.');
+		if (mew.getPrefType('prefsmigrated')==mew.PREF_BOOL && mew.getBoolPref('prefsmigrated')) return;
+		var children=old.getChildList("", {});
+		for (var i=0;i<children.length;i++) {
+			if (old.prefHasUserValue(children[i])) {
+               let type= old.getPrefType(children[i]);
+               if (type==old.PREF_BOOL)   mew.setBoolPref(children[i], old.getBoolPref(children[i]));
+               if (type==old.PREF_INT)    mew.setIntPref (children[i], old.getIntPref (children[i]));
+               if (type==old.PREF_STRING) mew.setCharPref(children[i], old.getCharPref(children[i]));
+               old.clearUserPref(children[i]);
+			}
+		}
+	
+		mew.setBoolPref('prefsmigrated', true);		
 	}
 }

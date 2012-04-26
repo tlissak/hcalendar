@@ -2,13 +2,15 @@
  // Copyright (C) 2005  Igor Ziselman (hcalendar.blogspot.com)
 
 // For licensing terms, please refer to readme.txt in this extension's XPInstall 
-
 // package or its installation directory on your computer.
 
+//
+//	References:
+//	- https://developer.mozilla.org/en/XUL_School/JavaScript_Object_Management
+//
 
 function HCalendar_EntityConstants() 
-{
-	
+{	
 	this.SECONDS = "s";
 	this.MINUTES = "m";
 	this.HOURS_12 = "h";
@@ -35,8 +37,7 @@ function HCalendar_EntityConstants()
 }
 
 var HCalendar = 
-{
-	
+{	
 	arrDays: new Array(""),
 
 	arrDaysAbbr: new Array(""),
@@ -50,8 +51,7 @@ var HCalendar =
 	positioned: false, 
 	Time: new Object(), 
 	Timer: null,
-	
-	
+		
 	init: function() 
 	{
 		this.language = 0;
@@ -98,6 +98,7 @@ var HCalendar =
 		this.hToolTipCCalendar = document.getElementById("hcalendar-ccalendar-value");
 		this.hToolTipZmanim = document.getElementById("hcalendar-zmanim-value");
 		this.Prefs = new HCalendar_PrefManager();
+		this.Prefs.migrateToBranchExtensions();
 
 		this.bOpenInANewTab = true;
 		this.bSelectAfterOpening = true;
