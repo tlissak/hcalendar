@@ -12,6 +12,8 @@
 	  (http://code.google.com/p/hcalendar/issues/detail?id=88)
 	  - Issue 89 (setTimeout or setInterval)
 	  (http://code.google.com/p/hcalendar/issues/detail?id=89)
+	  - Issue 90 (to wrap your "loose" variables; add namespace)
+	  (http://code.google.com/p/hcalendar/issues/detail?id=90)
 1.0.5.13
 	- Added Vancouver BC and Regina SK (Canada)
 	- Support Mozilla Firefox 12.*	
