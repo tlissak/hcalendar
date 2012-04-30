@@ -1,5 +1,5 @@
 // Hebrew Calendar extension for Mozilla Firefox
- // Copyright (C) 2005  Igor Ziselman (hcalendar.blogspot.com)
+ // Copyright (C) 2005-2012  Igor Ziselman (hcalendar.blogspot.com)
 
 // For licensing terms, please refer to readme.txt in this extension's XPInstall 
 // package or its installation directory on your computer.
@@ -9,34 +9,14 @@
 //	- https://developer.mozilla.org/en/XUL_School/JavaScript_Object_Management
 //
 
-function HCalendar_EntityConstants() 
-{	
-	this.SECONDS = "s";
-	this.MINUTES = "m";
-	this.HOURS_12 = "h";
-	this.HOURS_12_ZEROED = "hh";
-	this.HOURS_24 = "H";
-	this.HOURS_24_ZEROED = "HH";
-	this.AMPM_LOWER = "am";
-	this.AMPM_LOWER_ABBR = "a.m.";
-	this.AMPM_UPPER = "AM";
-	this.AMPM_UPPER_ABBR = "A.M.";
-	this.GMT_OFFSET = "offset";
-	this.YEAR = "yyyy";
-	this.YEAR_ABBR = "yy";
-	this.MONTH = "m";
-	this.MONTH_ZEROED = "mm";
-	this.DAY = "d";
-	this.DAY_ZEROED = "dd";
-	this.DAY_ORDINAL = "ddd";
-	this.MONTH_NAME = "month";
-	this.MONTH_NAME_ABBR = "mth";
-	this.WEEKDAY = "weekday";
-	this.WEEKDAY_ABBR = "wkd";
-	return this;
-}
+/**
+ * HCalendarChrome namespace.
+ */
+if ("undefined" == typeof(HCalendarChrome)) {
+  var HCalendarChrome = {};
+};
 
-var HCalendar = 
+HCalendarChrome.HCalendar = 
 {	
 	arrDays: new Array(""),
 
@@ -51,7 +31,34 @@ var HCalendar =
 	positioned: false, 
 	Time: new Object(), 
 	Timer: null,
-		
+
+	HCalendar_EntityConstants:function()
+	{	
+		this.SECONDS = "s";
+		this.MINUTES = "m";
+		this.HOURS_12 = "h";
+		this.HOURS_12_ZEROED = "hh";
+		this.HOURS_24 = "H";
+		this.HOURS_24_ZEROED = "HH";
+		this.AMPM_LOWER = "am";
+		this.AMPM_LOWER_ABBR = "a.m.";
+		this.AMPM_UPPER = "AM";
+		this.AMPM_UPPER_ABBR = "A.M.";
+		this.GMT_OFFSET = "offset";
+		this.YEAR = "yyyy";
+		this.YEAR_ABBR = "yy";
+		this.MONTH = "m";
+		this.MONTH_ZEROED = "mm";
+		this.DAY = "d";
+		this.DAY_ZEROED = "dd";
+		this.DAY_ORDINAL = "ddd";
+		this.MONTH_NAME = "month";
+		this.MONTH_NAME_ABBR = "mth";
+		this.WEEKDAY = "weekday";
+		this.WEEKDAY_ABBR = "wkd";
+		return this;
+	},
+	
 	init: function() 
 	{
 		this.language = 0;
@@ -80,7 +87,7 @@ var HCalendar =
 		this.sunSetTime = 0;
 		this.sunRiseTime = 0;
 		this.currentParashaName = "";
-		this.Entities = new HCalendar_EntityConstants();
+		this.Entities = new this.HCalendar_EntityConstants();
 
 		this.hHCalendar = document.getElementById("statusbar-hcalendar-display");
 		this.hToolTip = document.getElementById("hcalendar-tooltip-value");
@@ -116,7 +123,7 @@ var HCalendar =
 
 		if (!this.positioned) 
 		{ 
-			window.setTimeout(function() { HCalendar.setPanelPosition(); }, 1000); 
+			window.setTimeout(function() { HCalendarChrome.HCalendar.setPanelPosition(); }, 1000); 
 		}
 
 		//this.upDateMenu();
@@ -184,7 +191,7 @@ var HCalendar =
 	forceShowParasha: function()
 	{
 		this.showParashaForDayImpl();
-		//window.setTimeout(function() { HCalendar.showParashaForDayImpl(); }, 5000); 
+		//window.setTimeout(function() { HCalendarChrome.HCalendar.showParashaForDayImpl(); }, 5000); 
 		//showParashaForDay(uDate, this.upDateParashaAnswer);
 	},
 	showParashaForDayImpl: function()
@@ -198,19 +205,18 @@ var HCalendar =
 	{
 		if (status == 0)
 		{
-			HCalendar.currentParashaName = parashaName;
+			HCalendarChrome.HCalendar.currentParashaName = parashaName;
 
-			var uDate = HCalendar.getCorrectDay();
+			var uDate = HCalendarChrome.HCalendar.getCorrectDay();
 			var uShabbatDate = FindShabbat(uDate);
-			var parashaDateKey = HCalendar.dateToStr(uShabbatDate);
+			var parashaDateKey = HCalendarChrome.HCalendar.dateToStr(uShabbatDate);
 
-			HCalendar.setPref("hcalendar.parashaDate", parashaDateKey);
-			HCalendar.setPref("hcalendar.parashaName", HCalendar.currentParashaName);
+			HCalendarChrome.HCalendar.setPref("hcalendar.parashaDate", parashaDateKey);
+			HCalendarChrome.HCalendar.setPref("hcalendar.parashaName", HCalendarChrome.HCalendar.currentParashaName);
 
-			HCalendar.showParasha();
-			HCalendar.forceRefresh();
-		}
-		
+			HCalendarChrome.HCalendar.showParasha();
+			HCalendarChrome.HCalendar.forceRefresh();
+		}		
 	},
 	getCorrectDay: function()
 	{
@@ -243,8 +249,8 @@ var HCalendar =
 	},
 	dateToStandard: function (uDate)
 	{
-		var date = HCalendar.zeroed(uDate.getDate());
-		var month = HCalendar.zeroed(uDate.getMonth() + 1);
+		var date = HCalendarChrome.HCalendar.zeroed(uDate.getDate());
+		var month = HCalendarChrome.HCalendar.zeroed(uDate.getMonth() + 1);
 		var year = uDate.getFullYear();
 		return year.toString() + month.toString() + date.toString();
 	},
@@ -735,12 +741,11 @@ var HCalendar =
 			this.forceShowParasha();
 	},
 	buildDateViewArrays: function(strFormat) 
-	{
-		
+	{		
 		var arrEntities = new Array(
 			this.Entities.MONTH_NAME,
 			
-this.Entities.MONTH_NAME_ABBR,
+			this.Entities.MONTH_NAME_ABBR,
 			this.Entities.WEEKDAY,
 			this.Entities.WEEKDAY_ABBR,
 			this.Entities.YEAR,	
@@ -750,7 +755,6 @@ this.Entities.MONTH_NAME_ABBR,
 			this.Entities.DAY_ORDINAL,
 			this.Entities.DAY_ZEROED,
 			this.Entities.DAY );
-
 	},
 	
 	zeroed: function(numIn) 
@@ -1468,16 +1472,15 @@ this.Entities.MONTH_NAME_ABBR,
 	}
 }
 
-window.addEventListener("load", function() { HCalendar.init(); }, false);
+window.addEventListener("load", function() { HCalendarChrome.HCalendar.init(); }, false);
 
-window.addEventListener("focus", function() { 	HCalendar.forceRefresh(); }, false);
+window.addEventListener("focus", function() { HCalendarChrome.HCalendar.forceRefresh(); }, false);
 
-window.addEventListener("unload", function() { HCalendar.destruct(); }, false);
+window.addEventListener("unload", function() { HCalendarChrome.HCalendar.destruct(); }, false);
 
 function HCalendarTimer() { //safer out here
-	HCalendar.smartViewUpdate();
+	HCalendarChrome.HCalendar.smartViewUpdate();
 }
 
-function HCalendarRefresh() { HCalendar.load_and_updateView();
-}
+function HCalendarRefresh() { HCalendarChrome.HCalendar.load_and_updateView(); }
 function HCalendarLocations() { return document.getElementById("hcalendar-locations"); } 

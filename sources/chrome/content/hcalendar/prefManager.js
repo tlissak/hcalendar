@@ -2,8 +2,9 @@
 //	references:
 //		- https://developer.mozilla.org/en/Code_snippets/Preferences
 //
+
 function HCalendar_PrefManager() {
-	// this.domain = "hcalendar";	
+	// this.domain = "hcalendar";
 	return this;
 }
 HCalendar_PrefManager.prototype = {
@@ -86,14 +87,14 @@ HCalendar_PrefManager.prototype = {
 		this.convertPrefs();
 	},
 	convertPrefs: function()  {
-		let prefService= Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService);
-		let old=prefService.getBranch('hcalendar.');
-		let mew=prefService.getBranch('extensions.hcalendar.');
+		var prefService= Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService);
+		var old=prefService.getBranch('hcalendar.');
+		var mew=prefService.getBranch('extensions.hcalendar.');
 		if (mew.getPrefType('prefsmigrated')==mew.PREF_BOOL && mew.getBoolPref('prefsmigrated')) return;
 		var children=old.getChildList("", {});
 		for (var i=0;i<children.length;i++) {
 			if (old.prefHasUserValue(children[i])) {
-               let type= old.getPrefType(children[i]);
+               var type = old.getPrefType(children[i]);
                if (type==old.PREF_BOOL)   mew.setBoolPref(children[i], old.getBoolPref(children[i]));
                if (type==old.PREF_INT)    mew.setIntPref (children[i], old.getIntPref (children[i]));
                if (type==old.PREF_STRING) mew.setCharPref(children[i], old.getCharPref(children[i]));
