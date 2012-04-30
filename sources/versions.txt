@@ -8,12 +8,14 @@
 		- removed (not FF & Thunderbird) from install.rdf and relevant .xul files
 		- add-ons aren't package to .jar file
 	  (http://code.google.com/p/hcalendar/issues/detail?id=87)
-	  - Issue 88 (	preference names begin with "extensions.")
+	  - Issue 88: preference names begin with "extensions."
 	  (http://code.google.com/p/hcalendar/issues/detail?id=88)
-	  - Issue 89 (setTimeout or setInterval)
+	  - Issue 89: setTimeout or setInterval
 	  (http://code.google.com/p/hcalendar/issues/detail?id=89)
-	  - Issue 90 (to wrap your "loose" variables; add namespace)
+	  - Issue 90: to wrap your "loose" variables; add namespace
 	  (http://code.google.com/p/hcalendar/issues/detail?id=90)
+	  - Issue 91: Remove "Buzz Hebrew Data" menu item
+	  (http://code.google.com/p/hcalendar/issues/detail?id=91)
 1.0.5.13
 	- Added Vancouver BC and Regina SK (Canada)
 	- Support Mozilla Firefox 12.*	
