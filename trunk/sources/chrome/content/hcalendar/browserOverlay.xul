@@ -58,10 +58,7 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 		<menuitem id="hc-menu-copy-to-clipboard" oncommand="HCalendarChrome.HCalendar.copyToClipboard();"
  label="&hc.menu.clipboard.label;" accesskey="&hc.menu.clipboard.key;"/>
 
-		<menuseparator/>
-		<menuitem id="hc-menu-buzz-hebrewDate" oncommand="HCalendarChrome.HCalendar.postToBuzz();"
- label="&hc.menu.postToBuzz.label;" accesskey="&hc.menu.postToBuzz.key;"/>
- 
+		<menuseparator/> 
 		<menuitem id="hc-menu-tweet-hebrewDate" oncommand="HCalendarChrome.HCalendar.postToTweeter();"
  label="&hc.menu.postToTweeter.label;" accesskey="&hc.menu.postToTweeter.key;"/>
  

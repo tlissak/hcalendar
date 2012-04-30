@@ -1127,14 +1127,14 @@ HCalendarChrome.HCalendar =
 		copy_clip(this.hHCalendar.label);
 		return ;
 	},
-	postToBuzz: function()
-	{
-		var hebrewDate = this.hHCalendar.label;
-		var link = "http://hcalendar.blogspot.com";
-		var postToBuzzLine = "http://www.google.com/buzz/post?message=" + hebrewDate + "&url=" + link;
-		this.smartOpenUrl(postToBuzzLine);
-		return ;
-	},
+//	postToBuzz: function()
+//	{
+//		var hebrewDate = this.hHCalendar.label;
+//		var link = "http://hcalendar.blogspot.com";
+//		var postToBuzzLine = "http://www.google.com/buzz/post?message=" + hebrewDate + "&url=" + link;
+//		this.smartOpenUrl(postToBuzzLine);
+//		return ;
+//	},
 	postToTweeter: function()
 	{
 		var hebrewDate = this.hHCalendar.label;
