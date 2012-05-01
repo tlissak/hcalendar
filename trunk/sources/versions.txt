@@ -1,3 +1,6 @@
+1.0.6.1
+	- Issue 92: "Tweet Hebrew Date" shows error message
+	  (http://code.google.com/p/hcalendar/issues/detail?id=92)
 1.0.6.0
 	- Support Thunderbird 12.*
 	- Issue 86: Dialog Options cannot be opened by double click on HCalendar statusbar (Thunderbird)
