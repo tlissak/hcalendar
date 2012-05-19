@@ -1143,6 +1143,14 @@ HCalendarChrome.HCalendar =
 		this.smartOpenUrl(postToTweeterLine);
 		return ;
 	},
+	
+	shareToFB: function()
+	{
+		var linkToExtensionPage = "https://addons.mozilla.org/en-US/firefox/addon/1379";
+		var shareToFaceBookLine = "http://www.facebook.com/sharer.php?u=" + linkToExtensionPage;
+		this.smartOpenUrl(shareToFaceBookLine);
+		return ;
+	},
 
 	calendarManagerCreateGoogleEvent: function()
 	{
