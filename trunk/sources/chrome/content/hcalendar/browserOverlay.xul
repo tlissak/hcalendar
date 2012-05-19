@@ -62,7 +62,7 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 		<menuitem id="hc-menu-tweet-hebrewDate" oncommand="HCalendarChrome.HCalendar.postToTweeter();"
  label="&hc.menu.postToTweeter.label;" accesskey="&hc.menu.postToTweeter.key;"/>
 		<menuitem id="hc-menu-share-toFB" oncommand="HCalendarChrome.HCalendar.shareToFB();"
- label="&hc.menu.shareToFB.label;" accesskey="&hc.menu.shareToFB.key;"/>
+ label="&hc.menu.shareToFB.label;" accesskey="&hc.menu.shareToFB.key;" class="menuitem-iconic" image="chrome://hcalendar/skin/ShareLinkToFB.PNG"/>
  
 		<menuseparator/>
 		<menuitem id="hc-menu-openCalendarManager_CreateGoogleEvent" oncommand="HCalendarChrome.HCalendar.calendarManagerCreateGoogleEvent();"

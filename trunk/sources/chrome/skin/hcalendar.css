@@ -18,3 +18,7 @@ textbox[preference=position] { width:15ex; }
 toolbar[iconsize="small"] #myextension-button {
   list-style-image: url("chrome://hcalendar/skin/icon_16px.png");
 }
+
+#imgShareLinkToFBId {
+  list-style-image: url("chrome://hcalendar/skin/ShareLinkToFB.PNG");
+}  
