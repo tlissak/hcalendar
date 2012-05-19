@@ -10,6 +10,8 @@
 <!ENTITY hc.menu.postToBuzz.key "z">
 <!ENTITY hc.menu.postToTweeter.label "Tweet Hebrew Date">
 <!ENTITY hc.menu.postToTweeter.key "T">
+<!ENTITY hc.menu.shareToFB.label "Share HCalendar Extension Link To Facebook">
+<!ENTITY hc.menu.shareToFB.key "F">
 <!ENTITY hc.menu.calendarManagerCreateEventInGoogle.label "Create Shabbat Reminder in Google Calendar">
 <!ENTITY hc.menu.calendarManagerCreateEventInYahoo.label "Create Shabbat Reminder in Yahoo Calendar">
 <!ENTITY hc.menu.calendarManagerCreateEventInGoogle.key "R">

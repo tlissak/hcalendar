@@ -17,6 +17,8 @@
 <!ENTITY hc.menu.postToBuzz.key "z">
 <!ENTITY hc.menu.postToTweeter.label "Tweet Hebrew Date">
 <!ENTITY hc.menu.postToTweeter.key "T">
+<!ENTITY hc.menu.shareToFB.label "Share HCalendar Extension Link To Facebook">
+<!ENTITY hc.menu.shareToFB.key "F">
 <!ENTITY hc.menu.converter.key "מ">
 <!ENTITY hc.menu.converter.label "המרה...">
 <!ENTITY hc.menu.gematria.key "ג">
