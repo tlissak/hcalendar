@@ -66,9 +66,9 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
  
 		<menuseparator/>
 		<menuitem id="hc-menu-openCalendarManager_CreateGoogleEvent" oncommand="HCalendarChrome.HCalendar.calendarManagerCreateGoogleEvent();"
- label="&hc.menu.calendarManagerCreateEventInGoogle.label;" accesskey="&hc.menu.calendarManagerCreateEventInGoogle.key;"/>
+ label="&hc.menu.calendarManagerCreateEventInGoogle.label;" accesskey="&hc.menu.calendarManagerCreateEventInGoogle.key;" class="menuitem-iconic" image="chrome://hcalendar/skin/createReminderInGoogleCalendar.png"/>
 		<menuitem id="hc-menu-openCalendarManager_CreateYahooEvent" oncommand="HCalendarChrome.HCalendar.calendarManagerCreateYahooEvent();"
- label="&hc.menu.calendarManagerCreateEventInYahoo.label;" accesskey="&hc.menu.calendarManagerCreateEventInYahoo.key;"/>
+ label="&hc.menu.calendarManagerCreateEventInYahoo.label;" accesskey="&hc.menu.calendarManagerCreateEventInYahoo.key;" class="menuitem-iconic" image="chrome://hcalendar/skin/createReminderInYahooCalendar.png"/>
  
 		<menuseparator/>		
 		<menuitem id="hc-menu-openKaluach" oncommand="HCalendarChrome.HCalendar.popupOpenKaluach();"
