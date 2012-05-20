@@ -81,7 +81,7 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
  label="&hc.menu.open.label;" accesskey="&hc.menu.open.key;" class="menuitem-iconic" image="chrome://hcalendar/skin/icon-calendar.png" />
 
 		<menuitem id="hc-menu-openBlog" oncommand="HCalendar.popupOpenBlog();"
- label="&hc.menu.blog.label;" accesskey="&hc.menu.blog.key;"/>
+ label="&hc.menu.blog.label;" accesskey="&hc.menu.blog.key;" class="menuitem-iconic" image="chrome://hcalendar/skin/blogger_16.png" />
 
 	</menupopup>
 
