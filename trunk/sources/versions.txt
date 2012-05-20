@@ -1,3 +1,4 @@
+1.0.6.3
 1.0.6.2
 	- Issue 93:	Add "share HCalendar extension link to Facebook"
 	  (http://code.google.com/p/hcalendar/issues/detail?id=93)
