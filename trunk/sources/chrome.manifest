@@ -12,4 +12,4 @@ style chrome://global/content/customizeToolbar.xul chrome://hcalendar/skin/hcale
 
 locale	hcalendar	en-US chrome/locale/en-US/hcalendar/
 locale	hcalendar	he-IL chrome/locale/he-IL/hcalendar/
-locale	hcalendar	fr-FR chrom/locale/fr-FR/hcalendar/
+locale	hcalendar	fr-FR chrome/locale/fr-FR/hcalendar/
