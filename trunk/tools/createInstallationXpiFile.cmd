@@ -1,5 +1,5 @@
 
-SET XPI_FILE_NAME=hcalendar1.0.6.3-fx+tb.xpi
+SET XPI_FILE_NAME=hcalendar1.0.6.4-fx+tb.xpi
 
 rem
 rem prepare SetupFiles folder

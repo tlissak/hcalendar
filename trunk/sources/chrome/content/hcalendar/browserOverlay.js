@@ -1139,7 +1139,7 @@ HCalendarChrome.HCalendar =
 	{
 		var hebrewDate = this.hHCalendar.label;
 		var author = "@HebrewCalendar";
-		var postToTweeterLine = "http://www.twitter.com/home/?status=" + hebrewDate + " " + author;
+		var postToTweeterLine = "http://www.twitter.com/home?status=" + hebrewDate + " " + author;
 		this.smartOpenUrl(postToTweeterLine);
 		return ;
 	},
@@ -1273,6 +1273,9 @@ HCalendarChrome.HCalendar =
 	},
 	smartOpenUrl: function(url)
 	{
+		url = encodeURI(url);
+		url = url.replace(/%2520/g, "+");
+		url = url.replace(/%20/g, "+");
 		var processedIfNotBrowser = this.processIfNotBrowser(url);
 		if (processedIfNotBrowser)
 			return ;
