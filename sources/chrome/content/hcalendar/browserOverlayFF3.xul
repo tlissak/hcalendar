@@ -46,32 +46,32 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <popupset id="mainPopupSet">
 	<popup id="hcalendar-contextmenu">
 
-		<menuitem id="hc-menu-options" default="true" oncommand="HCalendar.popupOptions();"
+		<menuitem id="hcalendar-menu-options" default="true" oncommand="HCalendar.popupOptions();"
  label="&hc.menu.options.label;" accesskey="&hc.menu.options.key;"/>
 
-		<menuitem id="hc-menu-converter" oncommand="HCalendar.showConverterWindow();"
+		<menuitem id="hcalendar-menu-converter" oncommand="HCalendar.showConverterWindow();"
  label="&hc.menu.converter.label;" accesskey="&hc.menu.converter.key;"/>
 
-		<menuitem id="hc-menu-gematriya" oncommand="HCalendar.showGematriyaWindow();"
+		<menuitem id="hcalendar-menu-gematriya" oncommand="HCalendar.showGematriyaWindow();"
  label="&hc.menu.gematria.label;" accesskey="&hc.menu.gematria.key;"/>
 
-		<menuitem id="hc-menu-copy-to-clipboard" oncommand="HCalendar.copyToClipboard();"
+		<menuitem id="hcalendar-menu-copy-to-clipboard" oncommand="HCalendar.copyToClipboard();"
  label="&hc.menu.clipboard.label;" accesskey="&hc.menu.clipboard.key;"/>
 
 		<menuseparator/>
-		<menuitem id="hc-menu-tweet-hebrewDate" oncommand="HCalendar.postToTweeter();"
+		<menuitem id="hcalendar-menu-tweet-hebrewDate" oncommand="HCalendar.postToTweeter();"
  label="&hc.menu.postToTweeter.label;" accesskey="&hc.menu.postToTweeter.key;"/>
  
 		<menuseparator/>
-		<menuitem id="hc-menu-openCalendarManager_CreateGoogleEvent" oncommand="HCalendar.calendarManagerCreateGoogleEvent();"
+		<menuitem id="hcalendar-menu-openCalendarManager_CreateGoogleEvent" oncommand="HCalendar.calendarManagerCreateGoogleEvent();"
  label="&hc.menu.calendarManagerCreateEventInGoogle.label;" accesskey="&hc.menu.calendarManagerCreateEventInGoogle.key;"/>
-		<menuitem id="hc-menu-openCalendarManager_CreateYahooEvent" oncommand="HCalendar.calendarManagerCreateYahooEvent();"
+		<menuitem id="hcalendar-menu-openCalendarManager_CreateYahooEvent" oncommand="HCalendar.calendarManagerCreateYahooEvent();"
  label="&hc.menu.calendarManagerCreateEventInYahoo.label;" accesskey="&hc.menu.calendarManagerCreateEventInYahoo.key;"/>
  
 		<menuseparator/>		
-		<menuitem id="hc-menu-openKaluach" oncommand="HCalendar.popupOpenKaluach();"
+		<menuitem id="hcalendar-menu-openKaluach" oncommand="HCalendar.popupOpenKaluach();"
  label="&hc.menu.open.label;" accesskey="&hc.menu.open.key;"/>
-		<menuitem id="hc-menu-openBlog" oncommand="HCalendar.popupOpenBlog();"
+		<menuitem id="hcalendar-menu-openBlog" oncommand="HCalendar.popupOpenBlog();"
  label="&hc.menu.blog.label;" accesskey="&hc.menu.blog.key;"/>
 	</popup>
 
@@ -87,7 +87,7 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 <statusbar id="status-bar">
 		
-<statusbarpanel id="statusbar-hcalendar-display"
+<statusbarpanel id="hcalendar-statusbar-display"
 	insertafter=""
 	hidden="false"
 	context="hcalendar-contextmenu"

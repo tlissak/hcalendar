@@ -3,6 +3,8 @@
 	- Issue 98: Mozilla Add-ons: Hebrew Calendar 1.0.6.1 Preliminary Reviewed (Issue #3): encodeURIComponent 
 	  (http://code.google.com/p/hcalendar/issues/detail?id=98)
 	- Support Firefox 13.*
+	- Issue 97: Mozilla Add-ons: Hebrew Calendar 1.0.6.1 Preliminary Reviewed (Issue #2)
+	  (http://code.google.com/p/hcalendar/issues/detail?id=97)
 1.0.6.3
 	- Added several icons for menu items.
 1.0.6.2
