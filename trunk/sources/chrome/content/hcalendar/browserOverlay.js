@@ -89,7 +89,7 @@ HCalendarChrome.HCalendar =
 		this.currentParashaName = "";
 		this.Entities = new this.HCalendar_EntityConstants();
 
-		this.hHCalendar = document.getElementById("statusbar-hcalendar-display");
+		this.hHCalendar = document.getElementById("hcalendar-statusbar-display");
 		this.hToolTip = document.getElementById("hcalendar-tooltip-value");
 		
 		var hBundle = document.getElementById("hcalendar-bundle");
@@ -230,7 +230,7 @@ HCalendarChrome.HCalendar =
 	},
 	showParasha: function()
 	{
-		var panelParasha = document.getElementById("hc-parasha-panel");
+		var panelParasha = document.getElementById("hcalendar-parasha-panel");
 		if (panelParasha != null)
 		{
 			panelParasha.setAttribute("label", this.currentParashaName);
@@ -1137,6 +1137,7 @@ HCalendarChrome.HCalendar =
 //	},
 	postToTweeter: function()
 	{
+		//var hebrewDate = encodeURIComponent(this.hHCalendar.label);
 		var hebrewDate = this.hHCalendar.label;
 		var author = "@HebrewCalendar";
 		var postToTweeterLine = "http://www.twitter.com/home?status=" + hebrewDate + " " + author;
@@ -1273,9 +1274,9 @@ HCalendarChrome.HCalendar =
 	},
 	smartOpenUrl: function(url)
 	{
-		url = encodeURI(url);
-		url = url.replace(/%2520/g, "+");
-		url = url.replace(/%20/g, "+");
+		//url = encodeURI(url);
+		//url = url.replace(/%2520/g, "+");
+		//url = url.replace(/%20/g, "+");
 		var processedIfNotBrowser = this.processIfNotBrowser(url);
 		if (processedIfNotBrowser)
 			return ;
