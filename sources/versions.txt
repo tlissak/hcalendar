@@ -1,3 +1,5 @@
+1.0.6.5
+	- Support Firefox 15.*
 1.0.6.4
 	- fixed "localization fr-FR" warning;
 	- Issue 98: Mozilla Add-ons: Hebrew Calendar 1.0.6.1 Preliminary Reviewed (Issue #3): encodeURIComponent 
