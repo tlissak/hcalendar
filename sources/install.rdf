@@ -6,7 +6,7 @@
 <Description about="urn:mozilla:install-manifest">
 	<em:id>{C4A22BA1-6D61-45F1-82A9-140FD33F1110}</em:id>
 	<em:name>Hebrew Calendar</em:name>
-	<em:version>1.0.6.6</em:version>
+	<em:version>1.0.6.7</em:version>
 	<em:description>Show the Hebrew date in your browser's status bar.</em:description>
 	<em:creator>Igor Ziselman (http://hcalendar@gmail.com)</em:creator>
 	

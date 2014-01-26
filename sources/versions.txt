@@ -1,3 +1,5 @@
+1.0.6.7
+	- Add Kharkiv (50.0045° N, 36.2314° E)
 1.0.6.6
 	- Workaround for bug (FF crash,  https://bugzilla.mozilla.org/show_bug.cgi?id=952110)
 1.0.6.5
