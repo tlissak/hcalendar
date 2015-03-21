@@ -1,0 +1,1 @@
+Mozilla Extension (hcalendar) to show Hebrew Date in Firefox (Mozilla products) status bar.
